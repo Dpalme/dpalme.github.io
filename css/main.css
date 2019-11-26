@@ -263,7 +263,7 @@ a.selected {
 /* Create four equal columns that sits next to each other */
 .column {
     flex: 20%;
-    max-width: 30%;
+    max-width: 40%;
 	padding: 0 4px;
 	margin: auto;
 }
@@ -281,9 +281,16 @@ a.selected {
 	display: flex;
 	flex-direction: column;
 	color: var(--font);
-	background: var(--accent3);
+	background: var(--bg2);
 	text-align: center;
 	margin-bottom: 1vw;
+}
+
+.bottom_proyect {
+	width: 100%;
+	color: var(--font);
+	background: var(--bg3);
+	margin: auto;
 }
 
 .proyect h5{	
@@ -296,13 +303,6 @@ a.selected {
 	max-width: 100%;
 	max-height: 100%;
 	display: block; 
-}
-
-.bottom_proyect {
-	width: 100%;
-	color: var(--font);
-	background: var(--accent3);
-	margin: auto;
 }
 
 .bottom_proyect a {
