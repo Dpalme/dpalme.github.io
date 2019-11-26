@@ -12,15 +12,15 @@
 /* Global Variables */
 
 :root {
-	--bg: #0E3554;
-	--bg2: #174167;
-	--bg3: #425D88;
-	--bg4: #174167;
-	--bg5: #0E3554	;
-	--font: #CCBEBD;
-	--accent: #CE82EE;
-	--accent2: #B883EB;
-	--accent3: #665DB6;
+	--bg: #101115;
+    --bg2: #3a3c65;
+    --bg3: #5369ce;
+    --bg4: #5d4db6;
+    --bg5: #9060ce;
+    --font: #f0f0f0;
+    --accent: #f03e10;
+    --accent2: #ffbe2d;
+    --accent3: #f07d30;
 }
 
 body {
