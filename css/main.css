@@ -12,12 +12,12 @@
 /* Global Variables */
 
 :root {
-	--bg: #101115;
-    --bg2: #3a3c65;
-    --font: #f0f0f0;
-    --accent: #f03e10;
-    --accent2: #ffbe2d;
-    --accent3: #f07d30;
+	--bg: #F0F0F0;
+	--bg2: #EAEAEA;
+	--bg3: #DEDEDE;
+    --font: #000000;
+    --accent: #3875B7;
+    --accent2: #DF643A;
 }
 
 html {
@@ -84,7 +84,7 @@ h2 {
 }
 
 h1 {
-	background: linear-gradient(90deg, var(--accent2), var(--accent3), var(--accent), var(--accent2));
+	background: linear-gradient(90deg, var(--accent2), var(--accent), var(--accent), var(--accent2));
 	-webkit-background-clip: text;
 	-moz-background-clip: text;
 	background-clip: text;
@@ -263,6 +263,11 @@ a.selected {
     padding: 32px;
 }
 
+.row {
+	display: flex;
+	flex: row 50%;
+}
+
 .column {
     flex: 50%;
     max-width: 40%;
@@ -278,7 +283,7 @@ a.selected {
 	display: flex;
 	flex-direction: column;
 	color: var(--font);
-	background: var(--bg);
+	background: var(--bg3);
 	text-align: center;
 	margin-bottom: 1vw;
 	border-radius: 1rem;
@@ -323,15 +328,14 @@ a.selected {
 .bottom_proyect a {
 	width: 30%;
 	color: var(--font);
-	background: var(--accent3);
 	border-radius: 1rem;
+	border: solid var(--accent);
 	margin: auto;
 	padding: .4vw;
 }
 
 .bottom_proyect a:hover {
-	color: var(--font) !important;
-	background: var(--accent);
+	border: solid var(--accent2);
 	animation: none;
 }
 
