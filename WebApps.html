@@ -1,9 +1,12 @@
 <html>
 	<head>
-		<style id="stndz-style"></style>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>WebApps</title>
-		<link href="css/main.css" rel="stylesheet" type="text/css">
-		<link rel="SHORTCUT ICON" href="images/Dicon.png">
+		<link href="css/main.css" rel="stylesheet" type="text/css" />
+		<link rel="SHORTCUT ICON" href="images/Dicon.png"/>
+		<script src="js/main.js"></script>
     </head>
  	<body>
 		<nav class="navBar">
@@ -16,35 +19,91 @@
 			</div>
 			
 			<div class="navBar_2">
+				<a onclick="Invert()">NIGHT MODE</a>
 				<a id="Home" href="index.html">HOME</a>
-				<a id="Proyects" href="#proyects">PROYECTS</a>
+				<a id="Proyects" href="index.html#proyects">PROYECTS</a>
 				<a id="WebApps" class="selected" href="WebApps.html">WEBAPPS</a>
 				<a id="Contact" href="Contact.html">CONTACT</a>
 				<a class="cv" href="CV.html">CV</a>
 			</div>
 		</nav>
 
-		<div class="collumn">
-			<a href="WebApps/F=G.html" > Gravitational Attraction</a>
-			<br>
-			<a href="WebApps/TDC.html" > Time Dilation Calculator</a>
-			<br>
-			<a href="WebApps/DecisionMaker.html" > Decision Maker</a>
-			<br>
-			<a href="WebApps/VectorCalc.Html" > Vector Calculator</a>
-			<br>
-			<a href="WebApps/M.html" > Slope Calculator</a>
-			<br>
-			<a href="WebApps/LengthContraction.html" > Length Contraction</a>
-			<br>
-			<a href="WebApps/cillisi.html" > Cillisi</a>
-			<br>
-			<a href="WebApps/https://drive.google.com/open?id=0B5xSt2wAJGz3SDlkZjRCNkRCUWs" > Running in the 
-			eighties</a>
-			<br>
-			<a href="WebApps/https://drive.google.com/open?id=0B5xSt2wAJGz3Qk1xZGlrR2xOa0E" > Sisyphus</a>
-			<br>
-			<a href="WebApps/https://drive.google.com/open?id=0B5xSt2wAJGz3VFBJemxVMWFvMlk" > The Getter</a>
+		<div class="row">
+			<div class="column">
+				<div  class="proyect">
+					<h2>Decision Maker</h2>
+					<span>
+						<p>Chooses a random option from up to 5 inputs.</p>
+					</span>
+					<div class="bottom_proyect">
+						<a href="WebApps/DecisionMaker.html">Open</a>
+					</div>
+				</div>
+	
+				<div  class="proyect">
+					<h2>Vector Calculator</h2>
+					<span>
+						<p>Calculates the resulting vector from the sum of n vectors.</p>
+					</span>
+					<div class="bottom_proyect">
+						<a href="WebApps/VectorCalc.Html">Open</a>
+					</div>
+				</div>
+
+				<div  class="proyect">
+					<h2>Slope Calculator</h2>
+					<span>
+						<p>Calculates the slope given 2 coordinates.</p>
+					</span>
+					<div class="bottom_proyect">
+						<a href="WebApps/M.html">Open</a>
+					</div>
+				</div>
+
+				<div  class="proyect">
+					<h2>Cillisi</h2>
+					<span>
+						<p>Replaces all vowels on a text with i.</p>
+					</span>
+					<div class="bottom_proyect">
+						<a href="WebApps/cillisi.html">Open</a>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="column">
+				<div  class="proyect">
+					<h2>Gravitational Attraction</h2>
+					<span>
+						<p>Calculates the Gravitational Attraction given the mass of 2 objects and their distance.</p>
+					</span>
+					<div class="bottom_proyect">
+						<a href="WebApps/F=G.html">Open</a>
+					</div>
+				</div>
+
+				<div  class="proyect">
+					<h2>Time Dilation Calculator</h2>
+					<span>
+						<p>Calculates the time dilation for a given speed according to a static point of reference.</p>
+					</span>
+					<div class="bottom_proyect">
+						<a href="WebApps/TDC.html">Open</a>
+					</div>
+				</div>
+
+				<div  class="proyect">
+					<h2>Length Contraction</h2>
+					<span>
+						<p>Calculates the apparent lenght contraction of an object given the relative speed to it.</p>
+					</span>
+					<div class="bottom_proyect">
+						<a href="WebApps/LengthContraction.html">Open</a>
+					</div>
+				</div>
+
+			</div>
 		</div>
 
 	</body>
