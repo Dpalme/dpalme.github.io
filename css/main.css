@@ -142,6 +142,10 @@ h1 {
 	margin: 0;
 }
 
+.topDiv {
+	margin: .25vw 0vw 0vw 5vw;
+}
+
 .navBar_2 {
 	display: flex;
 	position: absolute;
@@ -149,6 +153,7 @@ h1 {
 	width: 50%;
 	flex-direction: row;
 	padding: 1rem 0rem;
+	margin: 1vw 2vw;
 }
 
 .navBar_2 a {
@@ -187,7 +192,7 @@ a.selected {
 }
 
 .separation {
-	margin-bottom: 20vw;
+	margin-bottom: 3vw;
 }
 
 .cv {
