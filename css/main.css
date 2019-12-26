@@ -1,23 +1,29 @@
 @font-face {
-	font-family: 'GothamBook';
-	src: url('fonts/gotham/GothamBook.woff2') format('woff2'), /* Super Modern Browsers */ url('fonts/gotham/GothamBook.woff') format('woff'),
-		/* Pretty Modern Browsers */ url('fonts/gotham/GothamBook.ttf') format('truetype'); /* Safari, Android, iOS */
+	font-family: "GothamBook";
+	src: url("fonts/gotham/GothamBook.woff2") format("woff2"),
+		/* Super Modern Browsers */ url("fonts/gotham/GothamBook.woff")
+			format("woff"),
+		/* Pretty Modern Browsers */ url("fonts/gotham/GothamBook.ttf")
+			format("truetype"); /* Safari, Android, iOS */
 }
 @font-face {
-	font-family: 'GothamLight';
-	src: url('fonts/gotham/Gotham-Light.woff2') format('woff2'), /* Super Modern Browsers */ url('fonts/gotham/Gotham-Light.woff') format('woff'),
-		/* Pretty Modern Browsers */ url('fonts/gotham/GothamLight.ttf') format('truetype'); /* Safari, Android, iOS */
+	font-family: "GothamLight";
+	src: url("fonts/gotham/Gotham-Light.woff2") format("woff2"),
+		/* Super Modern Browsers */ url("fonts/gotham/Gotham-Light.woff")
+			format("woff"),
+		/* Pretty Modern Browsers */ url("fonts/gotham/GothamLight.ttf")
+			format("truetype"); /* Safari, Android, iOS */
 }
 
 /* Global Variables */
 
 :root {
-	--bg: #F0F0F0;
-	--bg2: #EAEAEA;
-	--bg3: #DEDEDE;
-    --font: #000000;
-    --accent: #3875B7;
-    --accent2: #DF643A;
+	--bg: #f0f0f0;
+	--bg2: #eaeaea;
+	--bg3: #dedede;
+	--font: #000000;
+	--accent: #3875b7;
+	--accent2: #df643a;
 }
 
 html {
@@ -26,12 +32,9 @@ html {
 
 body {
 	background-color: var(--background);
-	width: 100%;
-	margin: 0;
-	padding: 0;
 	background-image: linear-gradient(180deg, var(--bg), var(--bg2));
 	color: var(--font);
-	font-family: 'GothamBook', sans-serif;
+	font-family: "GothamBook", sans-serif;
 	font-size: 1rem;
 }
 
@@ -39,19 +42,17 @@ a {
 	margin: auto;
 	text-decoration: none;
 	color: var(--font);
-	font-family: 'GothamLight', sans-serif;
+	font-family: "GothamLight", sans-serif;
 	cursor: pointer;
-}
-
-a:hover {
-	animation: Fade 0.2s linear forwards;
+	outline: 0;
+	padding: 0.7rem 0;
 }
 
 p {
 	position: relative;
 	font-size: 1.2rem;
 	text-align: center;
-	width: 60%;
+	width: 90%;
 	margin: auto;
 	padding: 2vw 0 2vw 0;
 }
@@ -59,7 +60,7 @@ p {
 h6 {
 	font-size: 1rem;
 	margin: auto;
-	font-family: 'GothamLight', sans-serif;
+	font-family: "GothamLight", sans-serif;
 }
 
 h4 {
@@ -73,7 +74,7 @@ h3 {
 	margin-left: 5vw;
 	margin-top: 0.2vw;
 	margin-bottom: 0.2vw;
-	font-family: 'GothamLight', sans-serif;
+	font-family: "GothamLight", sans-serif;
 }
 
 h2 {
@@ -85,7 +86,13 @@ h2 {
 }
 
 h1 {
-	background: linear-gradient(90deg, var(--accent2), var(--accent), var(--accent), var(--accent2));
+	background: linear-gradient(
+		90deg,
+		var(--accent2),
+		var(--accent),
+		var(--accent),
+		var(--accent2)
+	);
 	-webkit-background-clip: text;
 	-moz-background-clip: text;
 	background-clip: text;
@@ -143,14 +150,11 @@ h1 {
 }
 
 .topDiv {
-	margin: .25vw 0vw 0vw 5vw;
+	margin: 0.25vw 0vw 0vw 5vw;
 }
 
 .navBar_2 {
 	display: flex;
-	position: absolute;
-	right: 0;
-	width: 50%;
 	flex-direction: row;
 	padding: 1rem 0rem;
 	margin: 1vw 2vw;
@@ -160,8 +164,23 @@ h1 {
 	margin: auto;
 	text-decoration: none;
 	color: var(--font);
-	font-family: 'GothamLight', sans-serif;
+	font-family: "GothamLight", sans-serif;
 	font-size: 1rem;
+}
+
+.navBar_2 a:after {
+	display:block;
+  	content: '';
+  	border-bottom: solid 3px var(--accent);
+	transform: scaleX(0);  
+	transform-origin:  0% 50%;
+  	transition: transform 250ms ease;
+}
+
+.navBar_2 a:hover:after { transform: scaleX(1); }	
+
+.navBar_2 a:hover {
+	color: var(--accent);
 }
 
 .navBar_2 a:hover {
@@ -187,8 +206,6 @@ h1 {
 
 a.selected {
 	color: var(--accent);
-	padding: 0.7rem 0;
-	box-shadow: 0 0.1rem var(--accent);
 }
 
 .separation {
@@ -218,7 +235,7 @@ a.selected {
 	display: flex;
 	margin: auto;
 	flex-flow: row wrap;
-	padding: .5rem 1rem;
+	padding: 0.5rem 1rem;
 	text-align: center;
 	align-items: center;
 	justify-items: center;
@@ -261,28 +278,29 @@ a.selected {
 	background: var(--accent);
 	width: 5vw;
 	height: 0.2vw;
-	transform: translate(0vw, .2vw);
+	transform: translate(0vw, 0.2vw);
 }
 
 .header {
-    text-align: center;
-    padding: 32px;
+	text-align: center;
+	padding: 32px;
 }
 
 .row {
 	display: flex;
-	flex: row 50%;
+	flex-direction: row;
+	max-width: 90%;
+	margin: auto;
 }
 
 .column {
-    flex: 50%;
-    max-width: 40%;
+	width: 80%;
 	padding: 0 4px;
 	margin: auto;
 }
 
 .footer {
-    margin-top: 10vw;
+	margin-top: 10vw;
 }
 
 .proyect {
@@ -294,7 +312,7 @@ a.selected {
 	margin-bottom: 1vw;
 	border-radius: 1rem;
 	overflow: hidden;
-	padding: 0 1vw 0 1vw;
+	padding: 0.5rem 1rem;
 }
 
 .proyect span {
@@ -303,20 +321,23 @@ a.selected {
 	padding: 1vw 0 1vw 0;
 }
 
-.proyect h6, h5, h2 {
+.proyect h6,
+h5,
+h2 {
 	margin: 0;
 }
 
 .proyect h6 {
 	display: inline;
-	font-size: .8rem;
+	font-size: 0.8rem;
+	padding: 0.5rem 0;
 }
 
-.proyect h5{	
+.proyect h5 {
 	font-size: 1.2rem;
-	padding: .5vh;
+	padding: 0.5vh;
 	text-transform: uppercase;
-	font-family: 'GothamLight', sans-serif;
+	font-family: "GothamLight", sans-serif;
 }
 
 .proyect h2 {
@@ -332,12 +353,11 @@ a.selected {
 }
 
 .bottom_proyect a {
-	width: 30%;
 	color: var(--font);
 	border-radius: 1rem;
 	border: solid var(--accent);
 	margin: auto;
-	padding: .4vw;
+	padding: 0.4rem 1rem;
 }
 
 .bottom_proyect a:hover {
@@ -345,36 +365,25 @@ a.selected {
 	animation: none;
 }
 
+.content {
+	padding: 0vw 3vw 1vw 3vw;
+	margin: auto;
+}
 
 /* Mobile */
-  
-@media (max-width: 800px) {
-    .column {
-        flex: 50%;
-        max-width: 80%;
+
+@media (max-width: 1100px) {
+	.row {
+		flex-direction: column;
+		max-width: 90%;
 	}
-	
+
 	.navBar {
 		flex-direction: column;
+		height: 20vh;
 	}
-}
-  
-@media (max-width: 600px) {
-    .column {
-        flex: 100%;
-        max-width: 80%;
-	}
-	
-	.navBar {
-		flex-direction: column;
-	}
-}
 
-/* Animations */
-
-@keyframes Fade {
-	100% {
-		color: var(--accent);
-		box-shadow: 0 0.1rem var(--accent);
+	.column {
+		max-width: 100%;
 	}
 }

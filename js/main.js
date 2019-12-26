@@ -1,4 +1,9 @@
 var inverted = false;
+let home;
+let proyects;
+let webapps;
+let contact;
+let cv;
 
 function Invert(){
     if(inverted){
@@ -21,7 +26,7 @@ function Invert(){
     }
 }
 
-function create_proyect_full(title, year, skills, descriptor, source_link){
+function create_proyect_basic(title, year, skills, descriptor){
     main_div = document.createElement("div");
     main_div.classList.add("proyect");
 
@@ -45,6 +50,29 @@ function create_proyect_full(title, year, skills, descriptor, source_link){
     span.appendChild(skills_tag);
     span.appendChild(descriptor_tag);
     main_div.appendChild(span);
+
+    return main_div;
+}
+
+function create_proyect_download(title, year, skills, descriptor, link){
+    base = create_proyect_basic(title, year, skills, descriptor);
+
+    bottom_proyect = document.createElement("div");
+    bottom_proyect.classList.add("bottom_proyect");
+
+    download_tag = document.createElement("a");
+    download_tag.innerText = "Download";
+    download_tag.setAttribute("href", link);
+    download_tag.setAttribute("target", "_blank");
+    bottom_proyect.appendChild(download_tag);
+
+    base.appendChild(bottom_proyect);
+
+    return base;
+}
+
+function create_proyect_source(title, year, skills, descriptor, source_link){
+    base = create_proyect_basic(title, year, skills, descriptor);
 
     bottom_proyect = document.createElement("div");
     bottom_proyect.classList.add("bottom_proyect");
@@ -55,36 +83,14 @@ function create_proyect_full(title, year, skills, descriptor, source_link){
     source_tag.setAttribute("target", "_blank");
     bottom_proyect.appendChild(source_tag);
 
-    main_div.appendChild(bottom_proyect);
+    base.appendChild(bottom_proyect);
 
-    return main_div;
+    return base;
 }
 
 
 function create_proyect_full(title, year, skills, descriptor, source_link, view_link){
-    main_div = document.createElement("div");
-    main_div.classList.add("proyect");
-
-    title_tag = document.createElement("h2");
-    title_tag.innerText = title ;
-    
-    year_tag = document.createElement("h6");
-    year_tag.innerText = year;
-    
-    main_div.appendChild(title_tag);
-    main_div.appendChild(year_tag);
-
-    span = document.createElement("span");
-
-    skills_tag = document.createElement("h5");
-    skills_tag.innerText = skills;
-
-    descriptor_tag = document.createElement("p");
-    descriptor_tag.innerText = descriptor;
-
-    span.appendChild(skills_tag);
-    span.appendChild(descriptor_tag);
-    main_div.appendChild(span);
+    base = create_proyect_basic(title, year, skills, descriptor);
 
     bottom_proyect = document.createElement("div");
     bottom_proyect.classList.add("bottom_proyect");
@@ -101,15 +107,13 @@ function create_proyect_full(title, year, skills, descriptor, source_link, view_
     view_tag.setAttribute("target", "_blank");
     bottom_proyect.appendChild(view_tag);
 
-    main_div.appendChild(bottom_proyect);
+    base.appendChild(bottom_proyect);
 
-    return main_div;
+    return base;
 }
 
-function header(){
-    navBar = document.createElement("span");
-    navBar.classList.add("navBar");
 
+function header(){
     topDiv = document.createElement("div");
     topDiv.classList.add("topDiv")
 
@@ -129,15 +133,12 @@ function header(){
     bottomDiv = document.createElement("div");
     bottomDiv.classList.add("navBar_2");
 
-    invertLink = document.createElement("a");
     home = document.createElement("a");
     proyects = document.createElement("a");
     webapps = document.createElement("a");
     contact = document.createElement("a");
     cv = document.createElement("a");
 
-    invertLink.innerText = "INVERT";
-    invertLink.setAttribute("onclick", "Invert()");
     home.setAttribute("onclick", "add_home()");
     home.innerText = "HOME";
     home.setAttribute("id", "Home");
@@ -150,26 +151,27 @@ function header(){
     cv.setAttribute("onclick", "add_cv()");
     cv.innerText = "CV";
 
-    bottomDiv.appendChild(invertLink);
     bottomDiv.appendChild(home);
     bottomDiv.appendChild(proyects);
     bottomDiv.appendChild(webapps);
     bottomDiv.appendChild(contact);
     bottomDiv.appendChild(cv);
 
-    if (document.title === "Dpalme") home.classList.add("selected");
-    if (document.title === "WebApps") webapps.classList.add("selected");
-    if (document.title === "CV") cv.classList.add("selected");
-    if (document.title === "Contact") contact.classList.add("selected");
-
-    navBar.appendChild(topDiv);
-    navBar.appendChild(bottomDiv);
-    document.getElementById("header").appendChild(navBar);
+    document.getElementById("header").appendChild(topDiv);
+    document.getElementById("header").appendChild(bottomDiv);
+    home.classList.add("selected");
+    Invert();
 }
 
 
 function add_home(){
     while (document.getElementById("content").firstChild) document.getElementById("content").removeChild(document.getElementById("content").firstChild);
+
+    home.classList.add("selected");
+    proyects.classList.remove("selected");
+    webapps.classList.remove("selected");
+    contact.classList.remove("selected");
+    cv.classList.remove("selected");
 
     about = document.createElement("h2");
     about.innerHTML = "About"
@@ -196,28 +198,66 @@ function add_home(){
 
 function add_proyects(){
     while (document.getElementById("content").firstChild) document.getElementById("content").removeChild(document.getElementById("content").firstChild);
+
+    home.classList.remove("selected");
+    proyects.classList.add("selected");
+    webapps.classList.remove("selected");
+    contact.classList.remove("selected");
+    cv.classList.remove("selected");
+
+    title = document.createElement("h2");
+    title.innerText = "Proyects";
+    title.classList.add("separation");
+    document.getElementById("content").appendChild(title);
+
     row = document.createElement("div");
     row.classList.add("row");
+
     coll1 = document.createElement("div");
     coll1.classList.add("column");
-    document.getElementById("content").appendChild(create_proyect_full("Caesar Cypher", "2019", "HTML, CSS, JS, Python", "Using statistical analysis, this program decodes encoded messages that use the Caesar Cypher.", "https://github.com/Dpalme/CaesarCypher", "https://dpalme.github.io/CaesarCypher/"));
-    document.getElementById("content").appendChild(create_proyect_full("Brawlout Overlay", "2018", "Lua, Rainmeter", "Created a simple UI overlay to be used when streaming competitive Brawlout.", "https://github.com/Dpalme/Brawlout-Overlay", "https://refugiosangregorio.com"));
-    document.getElementById("content").appendChild(create_proyect_full("Compra Local", "2019", "HTML, CSS, JS", "Created a simple UI mockup using native js that replicates React behaviour.", "https://github.com/Dpalme/Compra-Local", "https://dpalme.github.io/Compra-Local/"));
+    coll1.appendChild(create_proyect_full("Caesar Cypher", "2019", "HTML, CSS, JS, Python", "Using statistical analysis, this program decodes encoded messages that use the Caesar Cypher.", "https://github.com/Dpalme/CaesarCypher", "https://dpalme.github.io/CaesarCypher/"));
+    coll1.appendChild(create_proyect_full("Brawlout Overlay", "2018", "Lua, Rainmeter", "Created a simple UI overlay to be used when streaming competitive Brawlout.", "https://github.com/Dpalme/Brawlout-Overlay", "https://refugiosangregorio.com"));
+    coll1.appendChild(create_proyect_full("Compra Local", "2019", "HTML, CSS, JS", "Created a simple UI mockup using native js that replicates React behaviour.", "https://github.com/Dpalme/Compra-Local", "https://dpalme.github.io/Compra-Local/"));
+    coll1.appendChild(create_proyect_download("Sisyphus", "2017", "Unity, C#", "A game about pushing a boulder up a mountain.", "https://drive.google.com/open?id=0B5xSt2wAJGz3Qk1xZGlrR2xOa0E"));
+    row.appendChild(coll1);
 
     coll2 = document.createElement("div");
     coll2.classList.add("column");
+    coll2.appendChild(create_proyect_source("Assembly 8086 Compiler", "2019", "Python", "It runs Asembly 8086 code using python.", "https://github.com/Dpalme/Assembly-8086"));
+    coll2.appendChild(create_proyect_full("Refugio San Gregorio", "2019", "HTML, CSS", "A webpage made for a dog refuge located in Mexico City.", "https://github.com/DpalmeITESM/dpalmeitesm.github.io", "https://refugiosangregorio.com"));
+    coll2.appendChild(create_proyect_download("The Getter", "2017", "Unity, C#", "A game about catching as many cubes before the timer runs out.", "https://drive.google.com/open?id=0B5xSt2wAJGz3VFBJemxVMWFvMlk"));
+    coll2.appendChild(create_proyect_download("Running in the eighties", "2017", "Unity, C#", "A proceduraly generated game where you have to drive to the finish line.", "https://drive.google.com/open?id=0B5xSt2wAJGz3SDlkZjRCNkRCUWs"));
+    row.appendChild(coll2);
+
+    document.getElementById("content").appendChild(row);
 }
 
 function add_web_apps(){
     while (document.getElementById("content").firstChild) document.getElementById("content").removeChild(document.getElementById("content").firstChild);
+    
+    home.classList.remove("selected");
+    proyects.classList.remove("selected");
+    webapps.classList.add("selected");
+    contact.classList.remove("selected");
+    cv.classList.remove("selected");
 }
 
 function add_contact(){
     while (document.getElementById("content").firstChild) document.getElementById("content").removeChild(document.getElementById("content").firstChild);
+    
+    home.classList.remove("selected");
+    proyects.classList.remove("selected");
+    webapps.classList.remove("selected");
+    contact.classList.add("selected");
+    cv.classList.remove("selected");
 }
 
 function add_cv(){
     while (document.getElementById("content").firstChild) document.getElementById("content").removeChild(document.getElementById("content").firstChild);
+    
+    home.classList.remove("selected");
+    proyects.classList.remove("selected");
+    webapps.classList.remove("selected");
+    contact.classList.remove("selected");
+    cv.classList.add("selected");
 }
-
-Invert();
