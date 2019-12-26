@@ -162,6 +162,7 @@ h1 {
 
 .navBar_2 a {
 	margin: auto;
+	padding: 1vw 2vw;
 	text-decoration: none;
 	color: var(--font);
 	font-family: "GothamLight", sans-serif;
@@ -184,7 +185,7 @@ h1 {
 }
 
 .navBar_2 a:hover {
-	padding: 0.7rem 0;
+	padding: 1vw 2vw;
 }
 
 .Logo {
