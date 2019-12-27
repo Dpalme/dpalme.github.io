@@ -35,12 +35,16 @@ body {
 textarea {
 	background: var(--bg3);
 	color: var(--font);
-	border: solid var(--accent);
-	border-radius: 1rem;	
+	border: none;	
 	font-size: 1rem;
 	margin: auto;
 	font-family: "GothamLight", sans-serif;
 	padding: 1vw;
+	outline: none;
+}
+
+textarea:focus{
+	border-bottom: solid var(--accent);
 }
 
 p {
@@ -48,7 +52,6 @@ p {
 	margin: 0;
 	font-size: 2rem;
 	text-transform: capitalize;
-	background-color: var(--bg);
 }
 
 h1 {
@@ -72,18 +75,23 @@ a {
 	padding: 1rem;
 }
 
-button:hover{
-	border: solid var(--accent2);
+table {
+	text-align: center;
 }
 
-input[type='number'], input[type='text'], button {
+button:hover, button:focus, input:focus{
+	border-bottom: solid var(--accent2);
+	outline: none;
+}
+
+input, button {
 	font-family: "GothamLight", sans-serif;
 	color: var(--font);
 	background: var(--bg);
 	text-transform: uppercase;
 	color: var(--font);
-	border-radius: 1rem;
-	border: solid var(--accent);
+	border: none;
+	border-bottom: solid var(--accent);
 	margin: auto;
 	padding: 0.4rem 1rem;
 }

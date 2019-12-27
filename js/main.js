@@ -1,6 +1,11 @@
 var inverted = false;
+
+let hamburger;
+let navLinks;
+let links;
+
 let home;
-let proyects;
+let projects;
 let webapps;
 let contact;
 let cv;
@@ -51,8 +56,8 @@ function create_element_class_text(type, text, clas){
 }
 
 
-function create_proyect_basic(title, year, skills, descriptor) {
-	main_div = create_element_class("div", "proyect")
+function create_project_basic(title, year, skills, descriptor) {
+	main_div = create_element_class("div", "project")
 
 	main_div.appendChild(create_element("h2", title));
 	main_div.appendChild(create_element("h6", year));
@@ -67,49 +72,49 @@ function create_proyect_basic(title, year, skills, descriptor) {
 }
 
 function create_web_app(title, descriptor, link) {
-	main_div = create_element_class("div", "proyect")
+	main_div = create_element_class("div", "project")
     main_div.appendChild(create_element("h2", title));
     
 	span = document.createElement("span");
 	span.appendChild(create_element("p", descriptor));
     
     main_div.appendChild(span);
-    main_div.appendChild(create_bottom_proyect(link, "Open"));
+    main_div.appendChild(create_bottom_project(link, "Open"));
 
 	return main_div;
 }
 
-function create_bottom_proyect(link, text){
-    bottom_proyect = create_element_class("div", "bottom_proyect");
-    bottom_proyect.appendChild(create_button(link, text))
-	return bottom_proyect
+function create_bottom_project(link, text){
+    bottom_project = create_element_class("div", "bottom_project");
+    bottom_project.appendChild(create_button(link, text))
+	return bottom_project
 }
 
-function create_proyect_download(title, year, skills, descriptor, link) {
-	base = create_proyect_basic(title, year, skills, descriptor);
-	base.appendChild(create_bottom_proyect(link, "Download"))
+function create_project_download(title, year, skills, descriptor, link) {
+	base = create_project_basic(title, year, skills, descriptor);
+	base.appendChild(create_bottom_project(link, "Download"))
 
 	return base;
 }
 
-function create_proyect_source(title, year, skills, descriptor, source_link) {
-	base = create_proyect_basic(title, year, skills, descriptor);
-	base.appendChild(create_bottom_proyect(source_link, "Source"))
+function create_project_source(title, year, skills, descriptor, source_link) {
+	base = create_project_basic(title, year, skills, descriptor);
+	base.appendChild(create_bottom_project(source_link, "Source"))
 
 	return base;
 }
 
-function create_proyect_full(
+function create_project_full(
 	title,
 	year,
 	skills,
 	descriptor,
 	source_link,
 	view_link) {
-	base = create_proyect_basic(title, year, skills, descriptor);
-    bottom_proyect = create_bottom_proyect(source_link, "Source")
-	bottom_proyect.appendChild(create_button(view_link, "View"))
-	base.appendChild(bottom_proyect);
+	base = create_project_basic(title, year, skills, descriptor);
+    bottom_project = create_bottom_project(source_link, "Source")
+	bottom_project.appendChild(create_button(view_link, "View"))
+	base.appendChild(bottom_project);
 
 	return base;
 }
@@ -121,32 +126,48 @@ function create_header_option(object, text, onclick){
 }
 
 function header() {
-    topDiv = create_element_class("div", "topDiv");
+    hamburger = create_element_class("div", "hamburger");
+    hamburger.setAttribute("onclick", "navLinks.classList.toggle('open')");
+    hamburger.appendChild(create_element_class("div", "line"));
+    hamburger.appendChild(create_element_class("div", "line"));
+    hamburger.appendChild(create_element_class("div", "line"));
 
+    topDiv = create_element_class("div", "topDiv");
     logo = create_element_class_text("a", "Diego", "Logo")
 	logo.appendChild(create_element_class_text("span", "Palmerín", "text-primary"));
 	topDiv.appendChild(logo);
-
 	topDiv.appendChild(create_element("h3", "Front-End Developer | Student | Mexico City"));
 
-    bottomDiv = create_element_class("div", "navBar_2");
+    navLinks = create_element_class("ul", "nav-links");
+
+    li1 = document.createElement("li");
+    li2 = document.createElement("li");
+    li3 = document.createElement("li");
+    li4 = document.createElement("li");
+    li5 = document.createElement("li");
 
     home = create_header_option(home, "Home", "add_home()");
-	proyects = create_header_option(proyects, "Proyects", "add_proyects()");
+	projects = create_header_option(projects, "projects", "add_projects()");
 	webapps = create_header_option(webapps, "WebApps", "add_web_apps()");
 	contact = create_header_option(contact, "Contact", "add_contact()");
 	cv = create_header_option(cv, "CV", "add_cv()");
 
-	bottomDiv.appendChild(home);
-	bottomDiv.appendChild(proyects);
-	bottomDiv.appendChild(webapps);
-	bottomDiv.appendChild(contact);
-	bottomDiv.appendChild(cv);
+	li1.appendChild(home);
+	li2.appendChild(projects);
+	li3.appendChild(webapps);
+	li4.appendChild(contact);
+    li5.appendChild(cv);
+    navLinks.appendChild(li1);
+    navLinks.appendChild(li2);
+    navLinks.appendChild(li3);
+    navLinks.appendChild(li4);
+    navLinks.appendChild(li5);
 
+    document.getElementById("header").appendChild(hamburger);
 	document.getElementById("header").appendChild(topDiv);
-	document.getElementById("header").appendChild(bottomDiv);
+	document.getElementById("header").appendChild(navLinks);
 	home.classList.add("selected");
-	Invert();
+    Invert();
 }
 
 function add_home() {
@@ -155,8 +176,9 @@ function add_home() {
 			.getElementById("content")
 			.removeChild(document.getElementById("content").firstChild);
 
+    navLinks.classList.remove('open')
 	home.classList.add("selected");
-	proyects.classList.remove("selected");
+	projects.classList.remove("selected");
 	webapps.classList.remove("selected");
 	contact.classList.remove("selected");
 	cv.classList.remove("selected");
@@ -186,20 +208,21 @@ function add_home() {
 	document.getElementById("content").appendChild(thirdLine);
 }
 
-function add_proyects() {
+function add_projects() {
 	while (document.getElementById("content").firstChild)
 		document
 			.getElementById("content")
 			.removeChild(document.getElementById("content").firstChild);
 
+    navLinks.classList.remove('open');
 	home.classList.remove("selected");
-	proyects.classList.add("selected");
+	projects.classList.add("selected");
 	webapps.classList.remove("selected");
 	contact.classList.remove("selected");
 	cv.classList.remove("selected");
 
 	title = document.createElement("h2");
-	title.innerText = "Proyects";
+	title.innerText = "projects";
 	title.classList.add("separation");
 	document.getElementById("content").appendChild(title);
 
@@ -209,7 +232,7 @@ function add_proyects() {
 	coll1 = document.createElement("div");
 	coll1.classList.add("column");
 	coll1.appendChild(
-		create_proyect_full(
+		create_project_full(
 			"Caesar Cypher",
 			"2019",
 			"HTML, CSS, JS, Python",
@@ -219,7 +242,7 @@ function add_proyects() {
 		)
 	);
 	coll1.appendChild(
-		create_proyect_full(
+		create_project_full(
 			"Brawlout Overlay",
 			"2018",
 			"Lua, Rainmeter",
@@ -229,7 +252,7 @@ function add_proyects() {
 		)
 	);
 	coll1.appendChild(
-		create_proyect_full(
+		create_project_full(
 			"Compra Local",
 			"2019",
 			"HTML, CSS, JS",
@@ -239,7 +262,7 @@ function add_proyects() {
 		)
 	);
 	coll1.appendChild(
-		create_proyect_download(
+		create_project_download(
 			"Sisyphus",
 			"2017",
 			"Unity, C#",
@@ -252,7 +275,7 @@ function add_proyects() {
 	coll2 = document.createElement("div");
 	coll2.classList.add("column");
 	coll2.appendChild(
-		create_proyect_source(
+		create_project_source(
 			"Assembly 8086 Compiler",
 			"2019",
 			"Python",
@@ -261,7 +284,7 @@ function add_proyects() {
 		)
 	);
 	coll2.appendChild(
-		create_proyect_full(
+		create_project_full(
 			"Refugio San Gregorio",
 			"2019",
 			"HTML, CSS",
@@ -271,7 +294,7 @@ function add_proyects() {
 		)
 	);
 	coll2.appendChild(
-		create_proyect_download(
+		create_project_download(
 			"The Getter",
 			"2017",
 			"Unity, C#",
@@ -280,7 +303,7 @@ function add_proyects() {
 		)
 	);
 	coll2.appendChild(
-		create_proyect_download(
+		create_project_download(
 			"Running in the eighties",
 			"2017",
 			"Unity, C#",
@@ -299,8 +322,9 @@ function add_web_apps() {
 			.getElementById("content")
 			.removeChild(document.getElementById("content").firstChild);
 
-	home.classList.remove("selected");
-	proyects.classList.remove("selected");
+    navLinks.classList.remove('open');
+    home.classList.remove("selected");
+	projects.classList.remove("selected");
 	webapps.classList.add("selected");
 	contact.classList.remove("selected");
 	cv.classList.remove("selected");
@@ -386,8 +410,9 @@ function add_contact() {
 			.getElementById("content")
 			.removeChild(document.getElementById("content").firstChild);
 
-	home.classList.remove("selected");
-	proyects.classList.remove("selected");
+    navLinks.classList.remove('open');
+    home.classList.remove("selected");
+	projects.classList.remove("selected");
 	webapps.classList.remove("selected");
 	contact.classList.add("selected");
 	cv.classList.remove("selected");
@@ -400,8 +425,9 @@ function add_cv() {
 			.removeChild(document.getElementById("content").firstChild);
 
 	home.classList.remove("selected");
-	proyects.classList.remove("selected");
+	projects.classList.remove("selected");
 	webapps.classList.remove("selected");
 	contact.classList.remove("selected");
-	cv.classList.add("selected");
+    cv.classList.add("selected");
+    navLinks.classList.remove('open');
 }
