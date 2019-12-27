@@ -122,6 +122,7 @@ function create_project_full(
 function create_header_option(object, text, onclick){
     object = create_element("a", text.toUpperCase());
     object.setAttribute("onclick", onclick);
+    object.classList.add("header-link");
     return object
 }
 
@@ -147,10 +148,11 @@ function header() {
     li5 = document.createElement("li");
 
     home = create_header_option(home, "Home", "add_home()");
-	projects = create_header_option(projects, "projects", "add_projects()");
+	projects = create_header_option(projects, "Projects", "add_projects()");
 	webapps = create_header_option(webapps, "WebApps", "add_web_apps()");
 	contact = create_header_option(contact, "Contact", "add_contact()");
-	cv = create_header_option(cv, "CV", "add_cv()");
+    cv = create_header_option(cv, "CV", "add_cv()");
+    cv.classList.add("cv");
 
 	li1.appendChild(home);
 	li2.appendChild(projects);
@@ -168,6 +170,16 @@ function header() {
 	document.getElementById("header").appendChild(navLinks);
 	home.classList.add("selected");
     Invert();
+    add_home();
+}
+
+function remove_selected(){
+    navLinks.classList.remove('open')
+	home.classList.remove("selected");
+	projects.classList.remove("selected");
+	webapps.classList.remove("selected");
+	contact.classList.remove("selected");
+	cv.classList.remove("selected");
 }
 
 function add_home() {
@@ -176,36 +188,14 @@ function add_home() {
 			.getElementById("content")
 			.removeChild(document.getElementById("content").firstChild);
 
-    navLinks.classList.remove('open')
-	home.classList.add("selected");
-	projects.classList.remove("selected");
-	webapps.classList.remove("selected");
-	contact.classList.remove("selected");
-	cv.classList.remove("selected");
+    remove_selected();
+    home.classList.add("selected");
 
-	about = document.createElement("h2");
-	about.innerHTML = "About";
-	document.getElementById("content").appendChild(about);
-
-	firstLine = document.createElement("p");
-	firstLine.innerText =
-		"I'm 20 years old and I'm currently enrolled in Computer Science at Instituto Tecnológico de Monterrey Campus Estado de México.";
-	document.getElementById("content").appendChild(firstLine);
-
-	secondLine = document.createElement("p");
-	secondLine.innerText =
-		"I'm interested in combining art and technology to create user experiences. My main focus is currently Web Development though I am well versed in Python, C# and Java.";
-	secondLine.classList.add("separation");
-	document.getElementById("content").appendChild(secondLine);
-
-	skills = document.createElement("h2");
-	skills.innerText = "Skills";
-	document.getElementById("content").appendChild(skills);
-
-	thirdLine = document.createElement("p");
-	thirdLine.innerText = "Python | HTML | CSS | JS | Java | C# | GIT | Scrum";
-	thirdLine.classList.add("separation");
-	document.getElementById("content").appendChild(thirdLine);
+	document.getElementById("content").appendChild(create_element("h2", "About"));
+	document.getElementById("content").appendChild(create_element("p", "I'm 20 years old and I'm currently enrolled in Computer Science at Instituto Tecnológico de Monterrey Campus Estado de México."));
+	document.getElementById("content").appendChild(create_element_class_text("p", "I'm interested in combining art and technology to create user experiences. My main focus is currently Web Development though I am well versed in Python, C# and Java.", "separation"));
+	document.getElementById("content").appendChild(create_element("h2", "Skills"));
+    document.getElementById("content").appendChild(create_element_class_text("p", "Python | HTML | CSS | JS | Java | C# | GIT | Scrum", "separation"));
 }
 
 function add_projects() {
@@ -214,23 +204,14 @@ function add_projects() {
 			.getElementById("content")
 			.removeChild(document.getElementById("content").firstChild);
 
-    navLinks.classList.remove('open');
-	home.classList.remove("selected");
+    remove_selected();
 	projects.classList.add("selected");
-	webapps.classList.remove("selected");
-	contact.classList.remove("selected");
-	cv.classList.remove("selected");
 
-	title = document.createElement("h2");
-	title.innerText = "projects";
-	title.classList.add("separation");
-	document.getElementById("content").appendChild(title);
+	document.getElementById("content").appendChild(create_element_class_text("h2", "Projects", "separation"));
 
-	row = document.createElement("div");
-	row.classList.add("row");
+	row = create_element_class("div", "row");
 
-	coll1 = document.createElement("div");
-	coll1.classList.add("column");
+	coll1 = create_element_class("div", "collumn");
 	coll1.appendChild(
 		create_project_full(
 			"Caesar Cypher",
@@ -272,8 +253,7 @@ function add_projects() {
 	);
 	row.appendChild(coll1);
 
-	coll2 = document.createElement("div");
-	coll2.classList.add("column");
+	coll2 = create_element_class("div", "collumn");
 	coll2.appendChild(
 		create_project_source(
 			"Assembly 8086 Compiler",
@@ -322,23 +302,14 @@ function add_web_apps() {
 			.getElementById("content")
 			.removeChild(document.getElementById("content").firstChild);
 
-    navLinks.classList.remove('open');
-    home.classList.remove("selected");
-	projects.classList.remove("selected");
+    remove_selected();
 	webapps.classList.add("selected");
-	contact.classList.remove("selected");
-	cv.classList.remove("selected");
 
-	title = document.createElement("h2");
-	title.innerText = "Web Apps";
-	title.classList.add("separation");
-	document.getElementById("content").appendChild(title);
+	document.getElementById("content").appendChild(create_element_class_text("h2", "Web Apps", "separation"));
 
-	row = document.createElement("div");
-	row.classList.add("row");
+    row = create_element_class("div", "row");
 
-	coll1 = document.createElement("div");
-	coll1.classList.add("column");
+	coll1 = create_element_class("div", "collumn");
 	coll1.appendChild(
 		create_web_app(
 			"Decision Maker",
@@ -369,8 +340,7 @@ function add_web_apps() {
 	);
 	row.appendChild(coll1);
 
-	coll2 = document.createElement("div");
-	coll2.classList.add("column");
+	coll2 = create_element_class("div", "collumn");
 	coll2.appendChild(
 		create_web_app(
 			"Gravitational Attraction",
@@ -410,12 +380,8 @@ function add_contact() {
 			.getElementById("content")
 			.removeChild(document.getElementById("content").firstChild);
 
-    navLinks.classList.remove('open');
-    home.classList.remove("selected");
-	projects.classList.remove("selected");
-	webapps.classList.remove("selected");
+    remove_selected();
 	contact.classList.add("selected");
-	cv.classList.remove("selected");
 }
 
 function add_cv() {
@@ -424,10 +390,6 @@ function add_cv() {
 			.getElementById("content")
 			.removeChild(document.getElementById("content").firstChild);
 
-	home.classList.remove("selected");
-	projects.classList.remove("selected");
-	webapps.classList.remove("selected");
-	contact.classList.remove("selected");
+	remove_selected();
     cv.classList.add("selected");
-    navLinks.classList.remove('open');
 }
