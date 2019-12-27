@@ -1,94 +1,29 @@
 <HTML>
 	<head>
 		<title>Decision Maker</title>
-		<link href="css/mystyle.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="../css/mystyle.css"/>
 		<link rel="SHORTCUT ICON" HREF="images/Dico.png" />
 	</head>
 	<body>
-		<br />
-		<h1>DPALME</h1>
-		<br />
-		<br /><button onclick="GetGood()">2 Opciones</button><br />
-		<br /><button onclick="GetRight()">3 Opciones</button><br />
-		<br /><button onclick="GetRekt()">4 Opciones</button><br />
-		<br /><button onclick="GetFuk()">5 Opciones</button><br />
+		<br>
+		<h1>Decision Maker</h1>
+		<div class="center">
+			<a>Options:</a>
+			<input type="number" id="number" min="2"/>
+			
+			<button onclick="Calculate(document.getElementById('number').value)">Go</button>
+		</div>
 		<script>
-			var One;
-			var Two;
-			var Three;
-			var Four;
-			var Five;
-			var n;
 
-			function GetGood() {
-				var One = prompt('Opción 1');
-				var Two = prompt('Opción 2');
-				n = Math.random();
-				if (n <= 0.5) {
-					confirm('Escojo' + ' ' + One);
-				} else {
-					confirm('Escojo' + ' ' + Two);
+			function Calculate(number) {
+				opciones = [];
+				for(i = 0; i < number; i++){
+					opciones.push(prompt("Option " + (i+1) + ":"));
 				}
+				n = Math.random();
+				confirm(opciones[Math.round(n*number)])
 			}
 
-			function GetRight() {
-				One = prompt('Opción 1');
-				Two = prompt('Opción 2');
-				Three = prompt('Opción 3');
-				n = Math.random();
-				if (n <= 0.33) {
-					confirm('Escojo' + ' ' + One);
-				}
-				if (n >= 0.66) {
-					confirm('Escojo' + ' ' + Two);
-				} else {
-					confirm('Escojo' + ' ' + Three);
-				}
-			}
-
-			function GetRekt() {
-				One = prompt('Opción 1');
-				Two = prompt('Opción 2');
-				Three = prompt('Opción 3');
-				Four = prompt('Opción 4');
-				n = Math.random();
-				if (n <= 0.25) {
-					confirm('Escojo' + ' ' + One);
-				}
-				if (n <= 0.5 && n >= 0.26) {
-					confirm('Escojo' + ' ' + Two);
-				}
-				if (n >= 0.75 && n >= 0.51) {
-					confirm('Escojo' + ' ' + Three);
-				}
-				if (n >= 0.76) {
-					confirm('Escojo' + ' ' + Four);
-				}
-			}
-
-			function GetFuk() {
-				One = prompt('Opción 1');
-				Two = prompt('Opción 2');
-				Three = prompt('Opción 3');
-				Four = prompt('Opción 4');
-				Five = prompt('Opción 5');
-				n = Math.random();
-				if (n <= 0.2) {
-					confirm('Escojo' + ' ' + One);
-				}
-				if (n <= 0.4 && n >= 0.21) {
-					confirm('Escojo' + ' ' + Two);
-				}
-				if (n <= 0.6 && n >= 0.41) {
-					confirm('Escojo' + ' ' + Three);
-				}
-				if (n <= 0.8 && n >= 0.61) {
-					confirm('Escojo' + ' ' + Four);
-				}
-				if (n >= 0.8) {
-					confirm('Escojo' + ' ' + Five);
-				}
-			}
 		</script>
 	</body>
 </HTML>

@@ -1,137 +1,93 @@
 @font-face {
-	font-family: 'Didhot';
-	src: url('../fonts/Didhot-Regular.woff2') format('woff2');
+	font-family: "GothamBook";
+	src: url("fonts/gotham/GothamBook.woff2") format("woff2"),
+		/* Super Modern Browsers */ url("fonts/gotham/GothamBook.woff")
+			format("woff"),
+		/* Pretty Modern Browsers */ url("fonts/gotham/GothamBook.ttf")
+			format("truetype"); /* Safari, Android, iOS */
+}
+@font-face {
+	font-family: "GothamLight";
+	src: url("fonts/gotham/Gotham-Light.woff2") format("woff2"),
+		/* Super Modern Browsers */ url("fonts/gotham/Gotham-Light.woff")
+			format("woff"),
+		/* Pretty Modern Browsers */ url("fonts/gotham/GothamLight.ttf")
+			format("truetype"); /* Safari, Android, iOS */
 }
 
 :root {
-	--font-color: #ffffff;
-	--background-color: #222;
-	--accent-color: #fa5b8f;
+	--bg: #101010;
+	--bg2: #202020;
+	--bg3: #303030;
+	--font: #f0f0f0;
+	--accent: #3875b7;
+	--accent2: #df643a;
 }
 
 body {
-	margin: 3%;
-	padding: 0;
-	background: var(--background-color);
-	color: var(--font-color);
-	font-family: 'Didhot', 'Times New Roman', serif;
-	font-weight: 100;
+	background-color: var(--background);
+	background-image: linear-gradient(180deg, var(--bg), var(--bg2));
+	color: var(--font);
+	font-family: "GothamBook", sans-serif;
+	font-size: 1rem;
 }
 
 textarea {
-	background: var(--background-color);
-	color: var(--font-color);
-	font-family: 'Didhot', 'Times New Roman', serif;
-	font-weight: 100;
-	font-size: 1.4em;
-}
-
-.titulo {
-	z-index: 2;
-	font-size: 50px;
-	text-align: center;
-	width: 100%;
-	position: absolute;
-	top: 50%;
-	left: 50%;
+	background: var(--bg3);
+	color: var(--font);
+	border: solid var(--accent);
+	border-radius: 1rem;	
+	font-size: 1rem;
+	margin: auto;
+	font-family: "GothamLight", sans-serif;
+	padding: 1vw;
 }
 
 p {
-	font-size: 30px;
-	text-transform: capitalize;
-	background-color: var(--background-color);
-	border: var(--font-color);
-	border-width: 2px;
-	border-style: solid;
+	display: inline;
 	margin: 0;
+	font-size: 2rem;
+	text-transform: capitalize;
+	background-color: var(--bg);
 }
 
 h1 {
-	font-size: 60;
+	font-size: 4rem;
 	text-align: center;
-	letter-spacing: 4px;
-	line-height: 85px;
-	background-color: var(--accent-color);
-	border: var(--font-color);
-	border-style: solid;
-	border-width: 15;
-	width: 45%;
-	height: 80px;
-	margin: 0;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-h3 {
-	font-size: 48px;
+	margin: auto;
 }
 
 a {
-	color: var(--font-color);
+	color: var(--font);
 	text-transform: uppercase;
 	text-decoration: none;
 }
 
 .center {
-	margin: 0;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: justify;
-	text-align-last: justify;
-	letter-spacing: auto;
-	width: 30vw;
-	height: 30vw;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	text-align: center;
+	width: 60%;
 	padding: 1rem;
 }
 
-text {
-	color: var(--font-color);
-	text-transform: uppercase;
+button:hover{
+	border: solid var(--accent2);
 }
 
-button {
-	color: var(--font-color);
-	background: var(--background-color-color);
-	border: var(--font-color);
-	font-family: 'Helvetica-Light';
-	border-style: solid;
-	padding: 20px;
-	border-width: 1px;
-	text-align: center;
-	font-size: 38px;
-	width: auto;
-	line-height: 18px;
-	letter-spacing: 3px;
+input[type='number'], input[type='text'], button {
+	font-family: "GothamLight", sans-serif;
+	color: var(--font);
+	background: var(--bg);
 	text-transform: uppercase;
+	color: var(--font);
+	border-radius: 1rem;
+	border: solid var(--accent);
+	margin: auto;
+	padding: 0.4rem 1rem;
 }
 
-input[type='number'] {
-	color: var(--font-color);
-	background: var(--background-color-color);
-	border: var(--font-color);
-	font-family: 'Helvetica-Light';
-	border-style: solid;
-	padding: 10px;
-	border-width: 1px;
-	text-align: center;
-	font-size: 38px;
-	width: auto;
-	line-height: 18px;
-	letter-spacing: 3px;
-	text-transform: uppercase;
-}
-
-input[type='text'] {
-	color: var(--font-color);
-	background: var(--accent-color);
-	border: var(--background-color);
-	font-family: 'Helvetica-Light';
-	border-style: solid;
-	padding: 20px;
-	border-width: 1px;
-	text-align: center;
-	font-size: 38px;
-	width: auto;
-	line-height: 18px;
-	letter-spacing: 3px;
+input[type='number']{
+	width: 5rem;
 }
