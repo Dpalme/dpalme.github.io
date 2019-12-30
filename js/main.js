@@ -16,8 +16,8 @@ function Invert() {
 		document.documentElement.style.setProperty("--bg2", "#EAEAEA");
 		document.documentElement.style.setProperty("--bg3", "#DEDEDE");
 		document.documentElement.style.setProperty("--font", "#000");
-		document.documentElement.style.setProperty("--accent", "#3875B7");
-		document.documentElement.style.setProperty("--accent2", "#DF643A");
+		document.documentElement.style.setProperty("--accent", "#DF643A");
+		document.documentElement.style.setProperty("--accent2", "#3875B7");
 		inverted = false;
 	} else {
 		document.documentElement.style.setProperty("--bg", "#101010");
@@ -55,22 +55,6 @@ function create_element_class_text(type, text, clas){
     return element
 }
 
-
-function create_project_basic(title, year, skills, descriptor) {
-	main_div = create_element_class("div", "project")
-
-	main_div.appendChild(create_element("h2", title));
-	main_div.appendChild(create_element("h6", year));
-
-	span = document.createElement("span");
-
-	span.appendChild(create_element("h5", skills));
-	span.appendChild(create_element("p", descriptor));
-	main_div.appendChild(span);
-
-	return main_div;
-}
-
 function create_web_app(title, descriptor, link) {
 	main_div = create_element_class("div", "project")
     main_div.appendChild(create_element("h2", title));
@@ -80,6 +64,27 @@ function create_web_app(title, descriptor, link) {
     
     main_div.appendChild(span);
     main_div.appendChild(create_bottom_project(link, "Open"));
+
+	return main_div;
+}
+
+
+function create_project_basic(title, year, skills, descriptor) {
+	main_div = create_element_class("div", "project")
+
+	top_div = create_element_class("div", "project_title");
+
+	top_div.appendChild(create_element("h2", title));
+	top_div.appendChild(create_element("h6", year));
+
+	main_div.appendChild(top_div)
+
+	span = document.createElement("span");
+
+	span.appendChild(create_element("h5", skills));
+	span.appendChild(create_element("p", descriptor));
+	top_div.appendChild(span);
+	main_div.appendChild(top_div);
 
 	return main_div;
 }
@@ -138,6 +143,7 @@ function header() {
 	logo.appendChild(create_element_class_text("span", "Palmerín", "text-primary"));
 	topDiv.appendChild(logo);
 	topDiv.appendChild(create_element("h3", "Front-End Developer | Student | Mexico City"));
+	topDiv.setAttribute("onclick", "Invert()");
 
     navLinks = create_element_class("ul", "nav-links");
 
@@ -209,8 +215,6 @@ function add_projects() {
 
 	document.getElementById("content").appendChild(create_element_class_text("h2", "Projects", "separation"));
 
-	row = create_element_class("div", "row");
-
 	coll1 = create_element_class("div", "collumn");
 	coll1.appendChild(
 		create_project_full(
@@ -251,10 +255,7 @@ function add_projects() {
 			"https://drive.google.com/open?id=0B5xSt2wAJGz3Qk1xZGlrR2xOa0E"
 		)
 	);
-	row.appendChild(coll1);
-
-	coll2 = create_element_class("div", "collumn");
-	coll2.appendChild(
+	coll1.appendChild(
 		create_project_source(
 			"Assembly 8086 Compiler",
 			"2019",
@@ -263,7 +264,7 @@ function add_projects() {
 			"https://github.com/Dpalme/Assembly-8086"
 		)
 	);
-	coll2.appendChild(
+	coll1.appendChild(
 		create_project_full(
 			"Refugio San Gregorio",
 			"2019",
@@ -273,7 +274,7 @@ function add_projects() {
 			"https://refugiosangregorio.com"
 		)
 	);
-	coll2.appendChild(
+	coll1.appendChild(
 		create_project_download(
 			"The Getter",
 			"2017",
@@ -282,7 +283,7 @@ function add_projects() {
 			"https://drive.google.com/open?id=0B5xSt2wAJGz3VFBJemxVMWFvMlk"
 		)
 	);
-	coll2.appendChild(
+	coll1.appendChild(
 		create_project_download(
 			"Running in the eighties",
 			"2017",
@@ -291,9 +292,8 @@ function add_projects() {
 			"https://drive.google.com/open?id=0B5xSt2wAJGz3SDlkZjRCNkRCUWs"
 		)
 	);
-	row.appendChild(coll2);
 
-	document.getElementById("content").appendChild(row);
+	document.getElementById("content").appendChild(coll1);
 }
 
 function add_web_apps() {
