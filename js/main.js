@@ -348,6 +348,13 @@ function add_web_apps() {
 	coll1 = create_element_class("div", "collumn");
 	coll1.appendChild(
 		create_web_app(
+			"Random Poem",
+			"Collection of poems from different authors on different languages.",
+			"https://dpalme.github.io/Random-Poem/"
+		)
+	);
+	coll1.appendChild(
+		create_web_app(
 			"Decision Maker",
 			"Chooses a random option.",
 			"WebApps/DecisionMaker.html"
@@ -372,13 +379,6 @@ function add_web_apps() {
 			"Cillisi",
 			"Replaces all vowels on a text with i.",
 			"WebApps/cillisi.html"
-		)
-	);
-	coll1.appendChild(
-		create_web_app(
-			"Random Poem",
-			"Collection of poems from different authors on different languages.",
-			"https://dpalme.github.io/Random-Poem/"
 		)
 	);
 	row.appendChild(coll1);
