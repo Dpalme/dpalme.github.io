@@ -11,18 +11,18 @@ let cv;
 
 function Invert() {
 	if (inverted) {
-		document.documentElement.style.setProperty("--bg", "#F0F0F0");
-		document.documentElement.style.setProperty("--bg2", "#ECECEC");
-		document.documentElement.style.setProperty("--font", "#111");
-		document.documentElement.style.setProperty("--accent", "#1DB954");
-		document.documentElement.style.setProperty("--accent2", "#3875B7");
-		inverted = false;
-	} else {
 		document.documentElement.style.setProperty("--bg", "#121212");
 		document.documentElement.style.setProperty("--bg2", "#040404");
 		document.documentElement.style.setProperty("--font", "#eee");
 		document.documentElement.style.setProperty("--accent", "#3875B7");
 		document.documentElement.style.setProperty("--accent2", "#1DB954");
+		inverted = false;
+	} else {
+		document.documentElement.style.setProperty("--bg", "#F0F0F0");
+		document.documentElement.style.setProperty("--bg2", "#C0C0C0");
+		document.documentElement.style.setProperty("--font", "#111");
+		document.documentElement.style.setProperty("--accent", "#1DB954");
+		document.documentElement.style.setProperty("--accent2", "#3875B7");
 		inverted = true;
 	}
 }
@@ -123,6 +123,7 @@ function create_project_full(
 function create_header_option(object, text, onclick) {
 	object = create_element("a", text.toUpperCase());
 	object.setAttribute("onclick", onclick);
+	object.setAttribute("tabindex", "0");
 	object.classList.add("header-link");
 	return object;
 }
@@ -205,7 +206,7 @@ function add_home() {
 	add_to_content(
 		create_element_class_text(
 			"p",
-			"I'm interested in combining art and technology to create user experiences. Even though my main focus is Web Development, I am well versed in Python, C# and Java.",
+			"I'm interested in combining art and technology to create intuitive user experiences and important content.",
 			"separation"
 		)
 	);
@@ -213,12 +214,12 @@ function add_home() {
 	add_to_content(
 		create_element_class_text(
 			"p",
-			"Python | HTML | CSS | JS | Java | C# | GIT | Scrum",
+			"Python | HTML | CSS | JavaScript | Java | C# | GIT | Scrum",
 			"separation"
 		)
 	);
 
-	add_to_content(create_element_class_text("h2", "Contact", "separation"));
+	add_to_content(create_element("h2", "Contact"));
 
 	coll = create_element_class("div", "contact_form");
 

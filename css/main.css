@@ -149,7 +149,7 @@ footer {
 	color: var(--font);
 }
 
-::selection {
+:focus {
 	background: var(--bg);
 	color: var(--font);
 }
@@ -184,7 +184,7 @@ footer {
 	padding: 1.5vw 5vw 0vw 0vw;
 }
 
-.nav-links li a{
+.header-link{
 	display: flex;
 	margin: auto;
 	padding: .25rem .5rem;
@@ -193,21 +193,15 @@ footer {
 	font-family: "GothamLight", sans-serif;
 	font-size: 1rem;
 	outline: 0;
-	cursor: pointer;
 }
 
-.nav-links li a:after {
-	display:block;
-  	content: '';
-  	border-bottom: solid 3px var(--accent);
-	transform: scaleX(0);  
-	transform-origin:  0% 50%;
-  	transition: transform .3s ease;
+.header-link:hover{
+	color: var(--accent);
 }
 
-.nav-links li a:hover:after { transform: scaleX(1);}	
-
-.nav-links li a:hover {	color: var(--accent);}
+.header-link:focus { 
+	border: solid 1px var(--accent);
+}
 
 .nav-links li a.selected { color: var(--accent);}
 
@@ -223,7 +217,7 @@ footer {
 	margin: 0;
 }
 
-.Logo:hover {
+.Logo:hover, .Logo {
 	user-select: none;
 	animation: none;
 }
@@ -242,7 +236,7 @@ footer {
 	outline: 0.1rem solid var(--accent);
 }
 
-.cv:hover {
+.cv:hover, .cv:focus {
 	color: var(--accent);
 }
 
@@ -331,7 +325,7 @@ footer {
 	transition:all .5s ease;
 }
 
-.bottom_project a:hover {
+.bottom_project a:hover, a:focus {
 	background-position:left bottom;
 }
 
@@ -359,7 +353,8 @@ footer {
 	transition:all .5s ease;
 }
 
-.web_app:hover { background-position: left bottom;}
+.web_app:hover,
+.web_app:focus { background-position: left bottom;}
 
 .web_app span {
 	display: flex;
@@ -379,36 +374,23 @@ footer {
 	text-align: center;
 }
 
-.web_bottom {
-	display: flex;
-	flex-direction: column;
-	margin: auto;
-	height: 4rem;
-}
-
-.web_bottom a {
-	color: var(--font);
-	border-radius: 1rem;
-	border: solid var(--accent);
-	margin: auto;
-	padding: 0.4rem 1rem;
-}
-
-.web_bottom a:hover {
-	border: solid var(--accent2);
-	animation: none;
-}
-
 .contact_form {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 }
 
 .contact_form a {
 	padding: 1rem;
 	margin: 1rem auto;
 	border: solid 1px var(--accent);
+	background: linear-gradient(to right, var(--accent) 65%, transparent 65%);
+    background-size: 300% 100%;
+    background-position:right bottom;
+	transition:all .5s ease;
 }
+
+.contact_form a:hover,
+.contact_form a:focus { background-position: left bottom;}
 
 /* Mobile */
 
