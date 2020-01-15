@@ -13,19 +13,17 @@ let cv;
 function Invert() {
 	if (inverted) {
 		document.documentElement.style.setProperty("--bg", "#F0F0F0");
-		document.documentElement.style.setProperty("--bg2", "#EAEAEA");
-		document.documentElement.style.setProperty("--bg3", "#DEDEDE");
-		document.documentElement.style.setProperty("--font", "#000");
-		document.documentElement.style.setProperty("--accent", "#DF643A");
+		document.documentElement.style.setProperty("--bg2", "#ECECEC");
+		document.documentElement.style.setProperty("--font", "#111");
+		document.documentElement.style.setProperty("--accent", "#1DB954");
 		document.documentElement.style.setProperty("--accent2", "#3875B7");
 		inverted = false;
 	} else {
-		document.documentElement.style.setProperty("--bg", "#101010");
-		document.documentElement.style.setProperty("--bg2", "#202020");
-		document.documentElement.style.setProperty("--bg3", "#303030");
-		document.documentElement.style.setProperty("--font", "#f0f0f0");
+		document.documentElement.style.setProperty("--bg", "#121212");
+		document.documentElement.style.setProperty("--bg2", "#040404");
+		document.documentElement.style.setProperty("--font", "#eee");
 		document.documentElement.style.setProperty("--accent", "#3875B7");
-		document.documentElement.style.setProperty("--accent2", "#DF643A");
+		document.documentElement.style.setProperty("--accent2", "#1DB954");
 		inverted = true;
 	}
 }
@@ -56,18 +54,14 @@ function create_element_class_text(type, text, clas) {
 }
 
 function create_web_app(title, descriptor, link) {
-	main_div = create_element_class("div", "web_app");
+	main_div = create_button(link, "");
+	main_div.classList.add("web_app");
 	main_div.appendChild(create_element("h2", title));
 
 	span = document.createElement("span");
 	span.appendChild(create_element("p", descriptor));
 
 	main_div.appendChild(span);
-
-	bottom = create_element_class("div", "web_bottom");
-	bottom.appendChild(create_button(link, "Open"));
-	main_div.appendChild(bottom);
-
 	return main_div;
 }
 
@@ -186,7 +180,6 @@ function header() {
 	document.getElementById("header").appendChild(topDiv);
 	document.getElementById("header").appendChild(navLinks);
 	home.classList.add("selected");
-	Invert();
 	add_home();
 }
 
@@ -208,17 +201,17 @@ function add_home() {
 	remove_selected();
 	home.classList.add("selected");
 
-	document.getElementById("content").appendChild(create_element("h2", "About"));
+	add_to_content(create_element("h2", "About"));
 	add_to_content(
 		create_element(
 			"p",
-			"I'm 20 years old and I'm currently enrolled in Computer Science at Instituto Tecnológico de Monterrey Campus Estado de México."
+			"I'm 20 years old and I'm currently enrolled in Instituto Tecnológico de Monterrey Campus Estado de México studying Computer Science and focusing on web development."
 		)
 	);
 	add_to_content(
 		create_element_class_text(
 			"p",
-			"I'm interested in combining art and technology to create user experiences. My main focus is currently Web Development though I am well versed in Python, C# and Java.",
+			"I'm interested in combining art and technology to create user experiences. Even though my main focus is Web Development, I am well versed in Python, C# and Java.",
 			"separation"
 		)
 	);
@@ -418,6 +411,8 @@ function add_contact() {
 	remove_selected();
 	contact.classList.add("selected");
 
+	add_to_content(create_element_class_text("h2", "Contact", "separation"));
+
 	coll = create_element_class("div", "contact_form");
 
 	coll.appendChild(
@@ -426,6 +421,13 @@ function add_contact() {
 			"LinkedIn"
 		)
 	);
+	
+	coll.appendChild(
+		create_button(
+			"mailto:dpalme@me.com",
+			"dpalme@me.com"
+		)
+	)
 
 	add_to_content(coll);
 }
@@ -438,4 +440,23 @@ function add_cv() {
 
 	remove_selected();
 	cv.classList.add("selected");
+
+	add_to_content(create_element_class_text("h2", "CV", "separation"));
+
+	coll = create_element_class("div", "contact_form");
+
+	coll.appendChild(
+		create_button(
+			"CVEng.html",
+			"English"
+		)
+	)
+
+	coll.appendChild(
+		create_button(
+			"CVEs.html",
+			"Español"
+		)
+	)
+	add_to_content(coll);
 }
