@@ -322,20 +322,17 @@ footer {
 .bottom_project a {
 	color: var(--font);
 	border-radius: 1rem;
-	border: solid 2px var(--accent);
-	background: linear-gradient(to right, var(--accent) 65%, transparent 65%);
-    background-size: 300% 100%;
-    background-position:right bottom;
+	border: solid 2px var(--accent2);
 	margin: auto;
 	padding: 0.4rem 1rem;
-	background: linear-gradient(to right, var(--accent) 65%, transparent 65%);
+	background: linear-gradient(to right, var(--accent2) 65%, transparent 65%);
     background-size: 300% 100%;
     background-position:right bottom;
 	transition:all .5s ease;
 }
 
 .bottom_project a:hover {
-    background-position:left bottom;
+	background-position:left bottom;
 }
 
 .content {
@@ -404,11 +401,12 @@ footer {
 
 .contact_form {
 	display: flex;
-	flex: row;
+	flex-direction: column;
 }
 
 .contact_form a {
 	padding: 1rem;
+	margin: 1rem auto;
 	border: solid 1px var(--accent);
 }
 
@@ -487,6 +485,8 @@ footer {
 
 	.bottom_project {
 		flex-direction: row;
+		height: 4rem;
+		width: 100%;
 	}
 
 	.content {

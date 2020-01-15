@@ -7,7 +7,6 @@ let links;
 let home;
 let projects;
 let webapps;
-let contact;
 let cv;
 
 function Invert() {
@@ -155,25 +154,21 @@ function header() {
 	li1 = document.createElement("li");
 	li2 = document.createElement("li");
 	li3 = document.createElement("li");
-	li4 = document.createElement("li");
 	li5 = document.createElement("li");
 
 	home = create_header_option(home, "Home", "add_home()");
 	projects = create_header_option(projects, "Projects", "add_projects()");
 	webapps = create_header_option(webapps, "WebApps", "add_web_apps()");
-	contact = create_header_option(contact, "Contact", "add_contact()");
 	cv = create_header_option(cv, "CV", "add_cv()");
 	cv.classList.add("cv");
 
 	li1.appendChild(home);
 	li2.appendChild(projects);
 	li3.appendChild(webapps);
-	li4.appendChild(contact);
 	li5.appendChild(cv);
 	navLinks.appendChild(li1);
 	navLinks.appendChild(li2);
 	navLinks.appendChild(li3);
-	navLinks.appendChild(li4);
 	navLinks.appendChild(li5);
 
 	document.getElementById("header").appendChild(hamburger);
@@ -188,7 +183,6 @@ function remove_selected() {
 	home.classList.remove("selected");
 	projects.classList.remove("selected");
 	webapps.classList.remove("selected");
-	contact.classList.remove("selected");
 	cv.classList.remove("selected");
 }
 
@@ -223,6 +217,26 @@ function add_home() {
 			"separation"
 		)
 	);
+
+	add_to_content(create_element_class_text("h2", "Contact", "separation"));
+
+	coll = create_element_class("div", "contact_form");
+
+	coll.appendChild(
+		create_button(
+			"https://www.linkedin.com/in/diego-palmerin-b7510818a/",
+			"LinkedIn"
+		)
+	);
+	
+	coll.appendChild(
+		create_button(
+			"mailto:dpalme@me.com",
+			"dpalme@me.com"
+		)
+	)
+
+	add_to_content(coll);
 }
 
 function add_projects() {
@@ -402,36 +416,6 @@ function add_web_apps() {
 	add_to_content(row);
 }
 
-function add_contact() {
-	while (document.getElementById("content").firstChild)
-		document
-			.getElementById("content")
-			.removeChild(document.getElementById("content").firstChild);
-
-	remove_selected();
-	contact.classList.add("selected");
-
-	add_to_content(create_element_class_text("h2", "Contact", "separation"));
-
-	coll = create_element_class("div", "contact_form");
-
-	coll.appendChild(
-		create_button(
-			"https://www.linkedin.com/in/diego-palmerin-b7510818a/",
-			"LinkedIn"
-		)
-	);
-	
-	coll.appendChild(
-		create_button(
-			"mailto:dpalme@me.com",
-			"dpalme@me.com"
-		)
-	)
-
-	add_to_content(coll);
-}
-
 function add_cv() {
 	while (document.getElementById("content").firstChild)
 		document
@@ -441,7 +425,7 @@ function add_cv() {
 	remove_selected();
 	cv.classList.add("selected");
 
-	add_to_content(create_element_class_text("h2", "CV", "separation"));
+	add_to_content(create_element("h2", "CV"));
 
 	coll = create_element_class("div", "contact_form");
 
