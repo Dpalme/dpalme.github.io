@@ -134,6 +134,10 @@ function create_header_option(object, text, onclick) {
 	return object;
 }
 
+function add_to_content(element) {
+	document.getElementById("content").appendChild(element);
+}
+
 function header() {
 	hamburger = create_element_class("div", "hamburger");
 	hamburger.setAttribute("onclick", "navLinks.classList.toggle('open')");
@@ -205,35 +209,27 @@ function add_home() {
 	home.classList.add("selected");
 
 	document.getElementById("content").appendChild(create_element("h2", "About"));
-	document
-		.getElementById("content")
-		.appendChild(
-			create_element(
-				"p",
-				"I'm 20 years old and I'm currently enrolled in Computer Science at Instituto Tecnológico de Monterrey Campus Estado de México."
-			)
-		);
-	document
-		.getElementById("content")
-		.appendChild(
-			create_element_class_text(
-				"p",
-				"I'm interested in combining art and technology to create user experiences. My main focus is currently Web Development though I am well versed in Python, C# and Java.",
-				"separation"
-			)
-		);
-	document
-		.getElementById("content")
-		.appendChild(create_element("h2", "Skills"));
-	document
-		.getElementById("content")
-		.appendChild(
-			create_element_class_text(
-				"p",
-				"Python | HTML | CSS | JS | Java | C# | GIT | Scrum",
-				"separation"
-			)
-		);
+	add_to_content(
+		create_element(
+			"p",
+			"I'm 20 years old and I'm currently enrolled in Computer Science at Instituto Tecnológico de Monterrey Campus Estado de México."
+		)
+	);
+	add_to_content(
+		create_element_class_text(
+			"p",
+			"I'm interested in combining art and technology to create user experiences. My main focus is currently Web Development though I am well versed in Python, C# and Java.",
+			"separation"
+		)
+	);
+	add_to_content(create_element("h2", "Skills"));
+	add_to_content(
+		create_element_class_text(
+			"p",
+			"Python | HTML | CSS | JS | Java | C# | GIT | Scrum",
+			"separation"
+		)
+	);
 }
 
 function add_projects() {
@@ -245,9 +241,7 @@ function add_projects() {
 	remove_selected();
 	projects.classList.add("selected");
 
-	document
-		.getElementById("content")
-		.appendChild(create_element_class_text("h2", "Projects", "separation"));
+	add_to_content(create_element_class_text("h2", "Projects", "separation"));
 
 	coll1 = create_element_class("div", "collumn");
 	coll1.appendChild(
@@ -327,7 +321,7 @@ function add_projects() {
 		)
 	);
 
-	document.getElementById("content").appendChild(coll1);
+	add_to_content(coll1);
 }
 
 function add_web_apps() {
@@ -339,9 +333,7 @@ function add_web_apps() {
 	remove_selected();
 	webapps.classList.add("selected");
 
-	document
-		.getElementById("content")
-		.appendChild(create_element_class_text("h2", "Web Apps", "separation"));
+	add_to_content(create_element_class_text("h2", "Web Apps", "separation"));
 
 	row = create_element_class("div", "row");
 
@@ -349,7 +341,7 @@ function add_web_apps() {
 	coll1.appendChild(
 		create_web_app(
 			"Decision Maker",
-			"Chooses a random option from up to 5 inputs.",
+			"Chooses a random option.",
 			"WebApps/DecisionMaker.html"
 		)
 	);
@@ -414,7 +406,7 @@ function add_web_apps() {
 	);
 	row.appendChild(coll2);
 
-	document.getElementById("content").appendChild(row);
+	add_to_content(row);
 }
 
 function add_contact() {
@@ -425,6 +417,17 @@ function add_contact() {
 
 	remove_selected();
 	contact.classList.add("selected");
+
+	coll = create_element_class("div", "contact_form");
+
+	coll.appendChild(
+		create_button(
+			"https://www.linkedin.com/in/diego-palmerin-b7510818a/",
+			"LinkedIn"
+		)
+	);
+
+	add_to_content(coll);
 }
 
 function add_cv() {

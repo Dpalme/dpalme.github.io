@@ -32,6 +32,7 @@
 
 html {
 	scroll-behavior: smooth;
+	height: 100%;
 }
 
 body {
@@ -40,6 +41,7 @@ body {
 	color: var(--font);
 	font-family: "GothamBook", sans-serif;
 	font-size: 1rem;
+	background-attachment: fixed
 }
 
 a {
@@ -240,6 +242,8 @@ nav h3 {
 }
 
 .collumn {
+	display: flex;
+	flex-direction: column;
 	width: 80%;
 	padding: 0 4px;
 	margin: auto;
@@ -370,6 +374,16 @@ nav h3 {
 .web_bottom a:hover {
 	border: solid var(--accent2);
 	animation: none;
+}
+
+.contact_form {
+	display: flex;
+	flex: row;
+}
+
+.contact_form a {
+	padding: 2vw;
+	border: solid 1px var(--accent);
 }
 
 /* Mobile */
