@@ -1,16 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Dpalme</title>
-		<link href="css/main.css" rel="stylesheet" type="text/css" />
-		<link rel="SHORTCUT ICON" href="images/Dicon.png" />
-		<script src="js/main.js"></script>
-	</head>
-	<body onload="header()">
-		<nav id="header"></nav>
-		<div id="content" class="content"></div>
-	</body>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Dpalme</title>
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/peoria.css">
+	<link rel="SHORTCUT ICON" href="images/Dicon.png" />
+	<!script src="js/main.js">
+		</script>
+</head>
+
+<body>
+	<header class="green-secondary-bg white relative">
+		<div class="container">
+			<div class="hamburger" onclick="document.querySelector('ul').classList.toggle('open');">
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+			</div>
+			<div>
+				<h2>Diego<span class="black">Palmerín</span></h2>
+				<p>Front-End Developer | Student | Mexico City</p>
+			</div>
+		</div>
+
+		<ul class="nav-links">
+			<li><a class="header-link" href="#about">About</a></li>
+			<li><a class="header-link" href="#projects">Projects</a></li>
+			<li><a class="header-link" href="#webapps">WebApps</a></li>
+			<li><a class="header-link cv" href="#cv">CV</a></li>
+		</ul>
+	</header>
+
+	<div class="fullscreen">
+		<div class="absolute-center">
+			<h1>Diego Palmerín</h1>
+			<div class="black text-center col-margin-top">
+				<a class="three columns" href="#about">About</a>
+				<a class="three columns" href="#projects">Projects</a>
+				<a class="three columns" href="#webapps">WebApps</a>
+				<a class="three columns" href="#cv">CV</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="container col-margin-top">
+		<div>
+			<a name="about"></a>
+			<h3 class="half-gutter-margin-bottom">About</h3>
+			<p class="gutter-margin-bottom">I'm 20 years old and I'm currently enrolled in Instituto Tecnológico de Monterrey
+				Campus Estado de México studying Computer Science and focusing on web development.<br>I'm interested in
+				combining art and technology to create intuitive user experiences and important content.</p>
+			<h4 class="half-gutter-margin-bottom">Skills</h4>
+			<div class="text-center">
+				<div class="two columns body">Python</div>
+				<div class="two columns body">HTML/CSS/Js</div>
+				<div class="two columns body">Java</div>
+				<div class="two columns body">Unity</div>
+				<div class="two columns body">SCRUM</div>
+			</div>
+		</div>
+
+		<div class="half-screen-margin-top twelve columns">
+			<a name="projects"></a>
+			<h3 class="gutter-margin-bottom">Projects</h3>
+			<div class="col-margin-vertical block full column">
+				<div class="eight columns">
+					<h2>Refugio San Gregorio</h2>
+					<h6 class="inline">2019</h6>
+					<h5>HTML, CSS</h5>
+					<p class="twelve columns">A website for a dog refuge located in Mexico City.</p>
+				</div>
+				<div class="four columns text-center">
+					<a href="https://github.com/DpalmeITESM/dpalmeitesm.github.io" class="half column"
+						target="_blank">Source</a>
+					<a href="https://refugiosangregorio.com" class="half column" target="_blank">View</a>
+				</div>
+			</div>
+			<div class="col-margin-vertical block">
+				<div class="eight columns">
+					<h2>Assembly 8086 Compiler</h2>
+					<h6 class="two column">2019</h6>
+					<h5 class="five column">Python</h5>
+					<p>It runs Asembly 8086 code using python.</p>
+				</div>
+				<div class="four columns text-center">
+					<a href="https://github.com/Dpalme/Assembly-8086" class="full column"
+						target="_blank">Source</a>
+				</div>
+			</div>
+			<div class="col-margin-vertical block">
+				<div class="eight columns">
+					<h2>Caesar Cypher</h2>
+					<h6>2019</h6>
+					<h5>HTML, CSS, JS, Python</h5>
+					<p>Using statistical analysis, this program decodes encoded messages that use the Caesar Cypher.</p>
+				</div>
+				<div class="four columns text-center full-height">
+					<a href="https://github.com/Dpalme/CaesarCypher" target="_blank" class="half column">Source</a>
+					<a href="https://dpalme.github.io/CaesarCypher/" target="_blank" class="half column">View</a>
+				</div>
+			</div>
+			<div class="col-margin-vertical block">
+				<div class="eight columns">
+					<h2>Compra Local</h2>
+					<h6>2019</h6><span>
+						<h5>HTML, CSS, JS</h5>
+						<p>Created a simple UI mockup using native js that replicates React behaviour.</p>
+					</span>
+				</div>
+				<div class="four columns text-center full-height">
+					<a href="https://github.com/Dpalme/Compra-Local" class="half column" target="_blank">Source</a><a
+						href="https://dpalme.github.io/Compra-Local/" class="half column" target="_blank">View</a></div>
+			</div>
+			<div class="col-margin-vertical block">
+				<div class="eight columns">
+					<h2>Brawlout Overlay</h2>
+					<h6>2018</h6><span>
+						<h5>Lua, Rainmeter</h5>
+						<p>Created a simple UI overlay to be used when streaming competitive Brawlout.</p>
+					</span>
+				</div>
+				<div class="four columns text-center">
+					<a href="https://github.com/Dpalme/Brawlout-Overlay" class="half column" target="_blank">Source</a>
+					<a href="https://refugiosangregorio.com" class="half column" target="_blank">View</a>
+				</div>
+			</div>
+			<div class="col-margin-vertical block">
+				<div class="eight columns">
+					<h2>Sisyphus</h2>
+					<h6>2017</h6><span>
+						<h5>Unity, C#</h5>
+						<p>A game about pushing a boulder up a mountain.</p>
+					</span>
+				</div>
+				<div class="four columns text-center">
+					<a href="https://drive.google.com/open?id=0B5xSt2wAJGz3Qk1xZGlrR2xOa0E" class="full column"
+						target="_blank">Download</a>
+				</div>
+			</div>
+			<div class="col-margin-vertical block">
+				<div class="eight columns">
+					<h2>The Getter</h2>
+					<h6>2017</h6><span>
+						<h5>Unity, C#</h5>
+						<p>A game about catching as many cubes before the timer runs out.</p>
+					</span>
+				</div>
+				<div class="four columns text-center">
+					<a href="https://drive.google.com/open?id=0B5xSt2wAJGz3VFBJemxVMWFvMlk" class="full column"
+						target="_blank">Download</a>
+				</div>
+			</div>
+			<div class="col-margin-vertical block">
+				<div class="eight columns">
+					<h2>Running in the eighties</h2>
+					<h6>2017</h6>
+					<h5>Unity, C#</h5>
+					<p>A proceduraly generated game where you have to drive to the finish line.</p>
+				</div>
+				<div class="four columns text-center">
+					<a href="https://drive.google.com/open?id=0B5xSt2wAJGz3SDlkZjRCNkRCUWs" class="full column" target="_blank">Download</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="half-screen-margin-top">
+			<a name="webapps"></a>
+			<h3 class="gutter-margin-bottom">WebApps</h3>
+			<div>
+				<a href="https://dpalme.github.io/Random-Poem/" target="_blank" class="web_app six columns">
+					<h2>Random Poem</h2>
+					<span>
+						<p>Collection of poems from different authors on different languages.</p>
+					</span>
+				</a>
+				<a href="WebApps/DecisionMaker.html" target="_blank" class="web_app six columns">
+					<h2>Decision Maker</h2>
+					<span>
+						<p>Chooses a random option.</p>
+					</span>
+				</a>
+				<a href="WebApps/VectorCalc.html" target="_blank" class="web_app six columns">
+					<h2>Vector Calculator</h2>
+					<span>
+						<p>Calculates the resulting vector from the sum of n vectors.</p>
+					</span>
+				</a>
+				<a href="WebApps/M.html" target="_blank" class="web_app six columns">
+					<h2>Slope Calculator</h2>
+					<span>
+						<p>Calculates the slope given 2 coordinates.</p>
+					</span>
+				</a>
+				<a href="WebApps/cillisi.html" target="_blank" class="web_app six columns">
+					<h2>Cillisi</h2>
+					<span>
+						<p>Replaces all vowels on a text with i.</p>
+					</span>
+				</a>
+				<a href="WebApps/F=G.html" target="_blank" class="web_app six columns">
+					<h2>Gravitational Attraction</h2>
+					<span>
+						<p>Calculates the Gravitational Attraction given the mass of 2 objects and their distance.</p>
+					</span>
+				</a>
+				<a href="WebApps/TDC.html" target="_blank" class="web_app six columns">
+					<h2>Time Dilation Calculator</h2>
+					<span>
+						<p>Calculates the time dilation for a given speed according to a static point of reference.</p>
+					</span>
+				</a>
+				<a href="WebApps/LengthContraction.html" target="_blank" class="web_app six columns">
+					<h2>Length Contraction</h2>
+					<span>
+						<p>Calculates the apparent lenght contraction of an object given the relative speed to it.</p>
+					</span>
+				</a>
+				<a href="https://dpalme.github.io/CaesarCypher/" target="_blank" class="web_app six columns">
+					<h2>Caesar Cypher</h2>
+					<span>
+						<p>Decodes messages encrypted using the Caesar Cypher method. Spanish only</p>
+					</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</body>
+
 </html>
