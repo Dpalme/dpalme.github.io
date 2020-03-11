@@ -7,10 +7,10 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>Dpalme</title>
 	<link rel="stylesheet" href="css/main.css" />
-	<link rel="stylesheet" href="css/peoria.css">
+	<link rel="stylesheet" href="https://dpalme.github.io/Peoria/normalize.css">
+	<link rel="stylesheet" href="https://dpalme.github.io/Peoria/peoria.css">
 	<link rel="SHORTCUT ICON" href="images/Dicon.png" />
-	<!script src="js/main.js">
-		</script>
+	<!script src="js/main.js"><!/script>
 </head>
 
 <body>
@@ -28,10 +28,12 @@
 		</div>
 
 		<ul class="nav-links">
-			<li><a class="header-link" href="#about">About</a></li>
-			<li><a class="header-link" href="#projects">Projects</a></li>
-			<li><a class="header-link" href="#webapps">WebApps</a></li>
-			<li><a class="header-link cv" href="#cv">CV</a></li>
+			<div class="absolute-center">
+				<li><a class="header-link main-title" onclick="document.querySelector('ul').classList.toggle('open');" href="#about">About</a></li>
+				<li><a class="header-link main-title" onclick="document.querySelector('ul').classList.toggle('open');" href="#projects">Projects</a></li>
+				<li><a class="header-link main-title" onclick="document.querySelector('ul').classList.toggle('open');" href="#webapps">WebApps</a></li>
+				<li><a class="header-link main-title" onclick="document.querySelector('ul').classList.toggle('open');" href="#cv">CV</a></li>
+			</div>
 		</ul>
 	</header>
 
@@ -67,103 +69,105 @@
 		<div class="half-screen-margin-top twelve columns">
 			<a name="projects"></a>
 			<h3 class="gutter-margin-bottom">Projects</h3>
-			<div class="col-margin-vertical block full column">
-				<div class="eight columns">
+			<div class="col-margin-bottom block u-full-width">
+				<div class="ten columns">
 					<h2>Refugio San Gregorio</h2>
-					<h6 class="inline">2019</h6>
+					<h6>2019</h6>
 					<h5>HTML, CSS</h5>
 					<p class="twelve columns">A website for a dog refuge located in Mexico City.</p>
 				</div>
-				<div class="four columns text-center">
-					<a href="https://github.com/DpalmeITESM/dpalmeitesm.github.io" class="half column"
+				<div class="two columns">
+					<div class="u-full-width">
+						<a href="https://github.com/DpalmeITESM/dpalmeitesm.github.io" class="block margin-auto text-center"
 						target="_blank">Source</a>
-					<a href="https://refugiosangregorio.com" class="half column" target="_blank">View</a>
+						<a href="https://refugiosangregorio.com" class="block col-margin-top text-center" target="_blank">View</a>
+					</div>
 				</div>
 			</div>
-			<div class="col-margin-vertical block">
-				<div class="eight columns">
+			<div class="col-margin-bottom block u-full-width">
+				<div class="ten columns">
 					<h2>Assembly 8086 Compiler</h2>
-					<h6 class="two column">2019</h6>
-					<h5 class="five column">Python</h5>
+					<h6>2019</h6>
+					<h5>Python</h5>
 					<p>It runs Asembly 8086 code using python.</p>
 				</div>
-				<div class="four columns text-center">
-					<a href="https://github.com/Dpalme/Assembly-8086" class="full column"
-						target="_blank">Source</a>
+				<div class="two columns text-center">
+					<div class="u-full-width">
+						<a href="https://github.com/Dpalme/Assembly-8086" class="full column" target="_blank">Source</a>
+					</div>
 				</div>
 			</div>
-			<div class="col-margin-vertical block">
-				<div class="eight columns">
+			<div class="col-margin-bottom block u-full-width">
+				<div class="ten columns">
 					<h2>Caesar Cypher</h2>
 					<h6>2019</h6>
 					<h5>HTML, CSS, JS, Python</h5>
 					<p>Using statistical analysis, this program decodes encoded messages that use the Caesar Cypher.</p>
 				</div>
-				<div class="four columns text-center full-height">
+				<div class="two columns text-center full-height">
 					<a href="https://github.com/Dpalme/CaesarCypher" target="_blank" class="half column">Source</a>
 					<a href="https://dpalme.github.io/CaesarCypher/" target="_blank" class="half column">View</a>
 				</div>
 			</div>
-			<div class="col-margin-vertical block">
-				<div class="eight columns">
+			<div class="col-margin-bottom block u-full-width">
+				<div class="ten columns">
 					<h2>Compra Local</h2>
-					<h6>2019</h6><span>
-						<h5>HTML, CSS, JS</h5>
-						<p>Created a simple UI mockup using native js that replicates React behaviour.</p>
-					</span>
+					<h6>2019</h6>
+					<h5>HTML, CSS, JS</h5>
+					<p>Created a simple UI mockup using native js that replicates React behaviour.</p>
 				</div>
-				<div class="four columns text-center full-height">
+				<div class="two columns text-center full-height">
 					<a href="https://github.com/Dpalme/Compra-Local" class="half column" target="_blank">Source</a><a
 						href="https://dpalme.github.io/Compra-Local/" class="half column" target="_blank">View</a></div>
 			</div>
-			<div class="col-margin-vertical block">
-				<div class="eight columns">
+			<div class="col-margin-bottom block u-full-width">
+				<div class="ten columns">
 					<h2>Brawlout Overlay</h2>
 					<h6>2018</h6><span>
 						<h5>Lua, Rainmeter</h5>
 						<p>Created a simple UI overlay to be used when streaming competitive Brawlout.</p>
 					</span>
 				</div>
-				<div class="four columns text-center">
+				<div class="two columns text-center">
 					<a href="https://github.com/Dpalme/Brawlout-Overlay" class="half column" target="_blank">Source</a>
 					<a href="https://refugiosangregorio.com" class="half column" target="_blank">View</a>
 				</div>
 			</div>
-			<div class="col-margin-vertical block">
-				<div class="eight columns">
+			<div class="col-margin-bottom block u-full-width">
+				<div class="ten columns">
 					<h2>Sisyphus</h2>
 					<h6>2017</h6><span>
 						<h5>Unity, C#</h5>
 						<p>A game about pushing a boulder up a mountain.</p>
 					</span>
 				</div>
-				<div class="four columns text-center">
+				<div class="two columns text-center">
 					<a href="https://drive.google.com/open?id=0B5xSt2wAJGz3Qk1xZGlrR2xOa0E" class="full column"
 						target="_blank">Download</a>
 				</div>
 			</div>
-			<div class="col-margin-vertical block">
-				<div class="eight columns">
+			<div class="col-margin-bottom block u-full-width">
+				<div class="ten columns">
 					<h2>The Getter</h2>
-					<h6>2017</h6><span>
-						<h5>Unity, C#</h5>
-						<p>A game about catching as many cubes before the timer runs out.</p>
-					</span>
+					<h6>2017</h6>
+					<h5>Unity, C#</h5>
+					<p>A game about catching as many cubes before the timer runs out.</p>
 				</div>
-				<div class="four columns text-center">
+				<div class="two columns text-center">
 					<a href="https://drive.google.com/open?id=0B5xSt2wAJGz3VFBJemxVMWFvMlk" class="full column"
 						target="_blank">Download</a>
 				</div>
 			</div>
-			<div class="col-margin-vertical block">
-				<div class="eight columns">
+			<div class="col-margin-bottom block u-full-width">
+				<div class="ten columns">
 					<h2>Running in the eighties</h2>
 					<h6>2017</h6>
 					<h5>Unity, C#</h5>
 					<p>A proceduraly generated game where you have to drive to the finish line.</p>
 				</div>
-				<div class="four columns text-center">
-					<a href="https://drive.google.com/open?id=0B5xSt2wAJGz3SDlkZjRCNkRCUWs" class="full column" target="_blank">Download</a>
+				<div class="two columns text-center">
+					<a href="https://drive.google.com/open?id=0B5xSt2wAJGz3SDlkZjRCNkRCUWs" class="full column"
+						target="_blank">Download</a>
 				</div>
 			</div>
 		</div>
