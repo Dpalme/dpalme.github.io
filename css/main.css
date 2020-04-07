@@ -1,36 +1,7 @@
-/* Classes */
+.header-link {
+	color: var(--mid-gray) !important;
+}
 
-.bottom_project {
-	margin: auto;
-	width: 30%;
-	height: 8rem; }
-
-.web_app {
-	padding: 1.5rem 1rem;
-	text-align: center; }
-
-/* Mobile */
-
-@media screen and (max-width: 1100px) {
-	.Logo {
-		font-size: 2rem;
-	}
-
-	.topDiv h3{
-		font-size: .7rem;
-	}
-
-	.project {
-		flex-direction: column;
-	}
-
-	.project_title {
-		width: 100%;
-	}
-
-	.bottom_project {
-		flex-direction: row;
-		height: 4rem;
-		width: 100%;
-	}
+.header-link:hover {
+	color: var(--white) !important;
 }
