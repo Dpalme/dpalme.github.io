@@ -1,3 +1,15 @@
+:root {
+	--blue: #3875B7;
+	--yellow: #FECA52;
+	--orange: #DF643A;
+	--red: #FF4E4C;
+	--red-secondary: #FF7372;
+	--dark-blue: #35314C;
+	--black: #231F20;
+	--white: #F0F0F0;
+}
+
+
 .header-link {
 	color: var(--mid-gray) !important;
 }

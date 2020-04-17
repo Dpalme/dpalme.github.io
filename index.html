@@ -26,19 +26,19 @@
 </head>
 
 <body>
-	<header class="green-secondary-bg fixed half-gutter-padding-vertical front full column display-none">
+	<header class="black-bg fixed half-gutter-padding-vertical front full column display-none">
 		<div class="container relative">
 			<div class="ten columns white">
-				<h2>Diego<span class="black">Palmerín</span></h2>
-				<p>Front-End Developer | Student | Mexico City</p>
+				<h4>Diego<span class="orange">Palmerín</span></h4>
+			</div>
+			<div class="one columns one-offset">
+				<div class="hamburger vertical-center" onclick="document.querySelector('ul').classList.toggle('open');">
+					<div class="line white-bg"></div>
+					<div class="line white-bg"></div>
+					<div class="line white-bg"></div>
+				</div>
 			</div>
 
-			<div class="hamburger one columns one-offset gutter-padding-top"
-				onclick="document.querySelector('ul').classList.toggle('open');">
-				<div class="line white-bg"></div>
-				<div class="line white-bg"></div>
-				<div class="line white-bg"></div>
-			</div>
 		</div>
 
 		<ul class="nav-links">
@@ -55,14 +55,17 @@
 		</ul>
 	</header>
 
-	<div class="fullscreen">
-		<div class="absolute-center">
-			<h1>Diego Palmerín</h1>
-			<div class="black text-center col-margin-top">
-				<a class="three columns" href="#about">About</a>
-				<a class="three columns" href="#projects">Projects</a>
-				<a class="three columns" href="#webapps">WebApps</a>
-				<a class="three columns" href="#cv">CV</a>
+	<div class="fullscreen blue-bg" style="background: linear-gradient(var(--orange) 50%, var(--blue) 50%)">
+		<div class="container absolute-center full column text-center margin-none black white-bg gutter-padding">
+			<div class="full column">
+				<h1>Diego Palmerin</h1>
+			</div>
+			<div class="full column gutter-margin-top">
+				<a href="#about" class="block body-text two columns one-offset">About</a>
+				<a href="#projects" class="block body-text two columns">Projects</a>
+				<a href="#webapps" class="block body-text two columns">WebApps</a>
+				<a href="#about" class="block body-text two columns">CV</a>
+				<a href="#about" class="block body-text two columns">Contact</a>
 			</div>
 		</div>
 	</div>
@@ -91,87 +94,81 @@
 	<a name="projects"></a>
 	<div class="container top-margin">
 		<h3 class="gutter-margin-bottom">Projects</h3>
+		<div>
+			<div class="half column gutter-margin-bottom">
+				<div class="card">
+					<div class="twelve columns">
+						<h4 class="text-center">Peoria</h4>
+						<p class="text-center">2020</P>
+						<p class="text-right orange">CSS</P>
+						<p>A lightweight CSS library that derives from skeleton for faster, cleaner css.</p>
+					</div>
+					<div class="twelve columns">
+						<a href="https://dpalme.github.io/Peoria" class="block button twelve columns half-gutter-margin-vertical"
+							target="_blank">View</a>
+					</div>
+				</div>
+			</div>
 
-		<div class="half column margin-none">
-			<h2>Refugio San Gregorio</h2>
-			<h6>2019</h6>
-			<h5>HTML, CSS</h5>
-			<p>A website for a dog refuge located in Mexico City.</p>
-			<a href="https://github.com/DpalmeITESM/dpalmeitesm.github.io"
-				class="block button four columns margin-none half-gutter-margin-vertical" target="_blank">Source</a>
-			<a href="https://refugiosangregorio.com" class="block button four columns half-gutter-margin-vertical"
-				target="_blank">View</a>
-		</div>
+			<div class="half column gutter-margin-bottom">
+				<div class="card">
+					<div class="twelve columns">
+						<h4 class="text-center">Tecmun Website</h4>
+						<p class="text-center">2020</P>
+						<p class="text-right orange">Django, HTML, CSS, Ajax</P>
+						<p>Django website made for the model united nations of ITESM CEM.</p>
+					</div>
+					<div class="twelve columns">
+						<a href="http://tecmun.org/" class="block button twelve columns half-gutter-margin-vertical"
+							target="_blank">View</a>
+					</div>
+				</div>
+			</div>
 
-		<div class="half column">
-			<h2>Assembly 8086 Compiler</h2>
-			<h6>2019</h6>
-			<h5>Python</h5>
-			<p>It runs Asembly 8086 code using python.</p>
-			<a href="https://github.com/Dpalme/Assembly-8086"
-				class="block button four columns margin-none half-gutter-margin-vertical" target="_blank">Source</a>
-			<a href="https://dpalme.github.io/Assembly-8086" class="block button four columns half-gutter-margin-vertical"
-				target="_blank">View</a>
-		</div>
+			<div class="half column margin-none gutter-margin-bottom">
+				<div class="card">
+					<div class="twelve columns">
+						<h4 class="text-center">Refugio San Gregorio</h4>
+						<p class="text-center">2019</P>
+						<p class="text-right orange">HTML, CSS</P>
+						<p>A website for a dog refuge located in Mexico City.</p>
+					</div>
+					<div class="twelve columns">
+						<a href="https://refugiosangregorio.com/" class="block button twelve columns half-gutter-margin-vertical"
+							target="_blank">View</a>
+					</div>
+				</div>
+			</div>
 
-		<div class="half column margin-none">
-			<h2>Caesar Cypher</h2>
-			<h6>2019</h6>
-			<h5>HTML, CSS, JS, Python</h5>
-			<p>Using statistical analysis, this program decodes encoded messages that use the Caesar Cypher.</p>
-			<a href="https://github.com/Dpalme/CaesarCypher" target="_blank"
-				class="block button four columns margin-none half-gutter-margin-vertical">Source</a>
-			<a href="https://dpalme.github.io/CaesarCypher/" target="_blank"
-				class="block button four columns half-gutter-margin-vertical">View</a>
-		</div>
+			<div class="half column gutter-margin-bottom">
+				<div class="card">
+					<div class="twelve columns">
+						<h4 class="text-center">The Getter</h4>
+						<p class="text-center">2017</P>
+						<p class="text-right orange">Unity, C#</P>
+						<p>A game about catching cubes before the timer runs out.</p>
+					</div>
+					<div class="twelve columns">
+						<a href="https://drive.google.com/open?id=0B5xSt2wAJGz3VFBJemxVMWFvMlk"
+							class="block button twelve columns half-gutter-margin-vertical" target="_blank">View</a>
+					</div>
+				</div>
+			</div>
 
-		<div class="half column">
-			<h2>Compra Local</h2>
-			<h6>2019</h6>
-			<h5>HTML, CSS, JS</h5>
-			<p>Created a simple UI mockup using native js that replicates React behaviour.</p>
-			<a href="https://github.com/Dpalme/Compra-Local"
-				class="block button four columns margin-none half-gutter-margin-vertical" target="_blank">Source</a>
-			<a href="https://dpalme.github.io/Compra-Local/" class="block button four columns half-gutter-margin-vertical"
-				target="_blank">View</a>
-		</div>
-
-		<div class="half column margin-none">
-			<h2>Brawlout Overlay</h2>
-			<h6>2018</h6>
-			<h5>Lua, Rainmeter</h5>
-			<p>LUA overlay to be used when streaming competitive Brawlout.</p>
-			<a href="https://github.com/Dpalme/Brawlout-Overlay"
-				class="block button four columns margin-none half-gutter-margin-vertical" target="_blank">Source</a>
-			<a href="https://refugiosangregorio.com" class="block button four columns half-gutter-margin-vertical"
-				target="_blank">View</a>
-		</div>
-
-		<div class="half column">
-			<h2>Sisyphus</h2>
-			<h6>2017</h6>
-			<h5>Unity, C#</h5>
-			<p>A game about pushing a boulder up a mountain.</p>
-			<a href="https://drive.google.com/open?id=0B5xSt2wAJGz3Qk1xZGlrR2xOa0E"
-				class="block button four columns margin-none half-gutter-margin-vertical" target="_blank">Download</a>
-		</div>
-
-		<div class="half column margin-none">
-			<h2>The Getter</h2>
-			<h6>2017</h6>
-			<h5>Unity, C#</h5>
-			<p>A game about catching as many cubes before the timer runs out.</p>
-			<a href="https://drive.google.com/open?id=0B5xSt2wAJGz3VFBJemxVMWFvMlk"
-				class="block button four columns margin-none half-gutter-margin-vertical" target="_blank">Download</a>
-		</div>
-
-		<div class="half column">
-			<h2>Running in the eighties</h2>
-			<h6>2017</h6>
-			<h5>Unity, C#</h5>
-			<p>Drive on a procedural road.</p>
-			<a href="https://drive.google.com/open?id=0B5xSt2wAJGz3SDlkZjRCNkRCUWs"
-				class="block button four columns margin-none half-gutter-margin-vertical" target="_blank">Download</a>
+			<div class="half column margin-none gutter-margin-bottom">
+				<div class="card">
+					<div class="twelve columns">
+						<h4 class="text-center">Running in the 80's</h4>
+						<p class="text-center">2017</P>
+						<p class="text-right orange">Unity, C#</P>
+						<p>Small game where you drive on a finite procedural road.</p>
+					</div>
+					<div class="twelve columns">
+						<a href="https://drive.google.com/open?id=0B5xSt2wAJGz3SDlkZjRCNkRCUWs"
+							class="block button twelve columns half-gutter-margin-vertical" target="_blank">View</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -179,52 +176,39 @@
 	<div class="container top-margin">
 		<h3 class="gutter-margin-bottom full column margin-none">WebApps</h3>
 		<div>
-			<a href="https://dpalme.github.io/Random-Poem/" target="_blank"
-				class="button six columns half-gutter-margin-bottom">
-				<h2>Random Poem</h2>
-				<p>Get a random poem from a collection.</p>
+			<a class="block half column gutter-margin-bottom" href="https://dpalme.github.io/Random-Poem/">
+				<div class="green-bg card">
+					<h4 class="text-center">Random Poem/Song</h4>
+					<p>Get a random poem or song lyrics from a growing collection</p>
+				</div>
 			</a>
 
-			<a href="WebApps/DecisionMaker.html" target="_blank" class="button six columns half-gutter-margin-bottom">
-				<h2>Decision Maker</h2>
-				<p>Chooses a random option.</p>
+			<a class="block half column gutter-margin-bottom" href="https://dpalme.github.io/CaesarCypher/">
+				<div class="yellow-bg card">
+					<h4 class="text-center">Caesar Cypher</h4>
+					<p>Decodes messages encrypted using the Caesar cyphering method</p>
+				</div>
 			</a>
 
-			<a href="WebApps/VectorCalc.html" target="_blank"
-				class="button six columns margin-none half-gutter-margin-bottom">
-				<h2>Vector Calculator</h2>
-				<p>Calculates the resulting vector from the sum of n vectors.</p>
+			<a class="block half column margin-none gutter-margin-bottom" href="https://dpalme.github.io/Random-Question/">
+				<div class="blue-bg card">
+					<h4 class="text-center">Random Question</h4>
+					<p>Get a random question</p>
+				</div>
 			</a>
 
-			<a href="WebApps/M.html" target="_blank" class="button six columns half-gutter-margin-bottom">
-				<h2>Slope Calculator</h2>
-				<p>Calculates the slope given 2 coordinates.</p>
+			<a class="block half column gutter-margin-bottom" href="https://dpalme.github.io/WebApps/DecisionMaker.html">
+				<div class="orange-bg card">
+					<h4 class="text-center">Decision Maker</h4>
+					<p>Chooses a random option</p>
+				</div>
 			</a>
 
-			<a href="WebApps/cillisi.html" target="_blank" class="button six columns margin-none half-gutter-margin-bottom">
-				<h2>Cillisi</h2>
-				<p>Replaces all vowels on a text with i.</p>
-			</a>
-
-			<a href="WebApps/F=G.html" target="_blank" class="button six columns half-gutter-margin-bottom">
-				<h2>Gravitational Attraction</h2>
-				<p>Calculates the Gravitational Attraction of 2 objects.</p>
-			</a>
-
-			<a href="WebApps/TDC.html" target="_blank" class="button six columns margin-none half-gutter-margin-bottom">
-				<h2>Time Dilation Calculator</h2>
-				<p>Calculates the time dilation for a given speed.</p>
-			</a>
-
-			<a href="WebApps/LengthContraction.html" target="_blank" class="button six columns half-gutter-margin-bottom">
-				<h2>Length Contraction</h2>
-				<p>Calculates the apparent lenght contraction of an object.</p>
-			</a>
-
-			<a href="https://dpalme.github.io/CaesarCypher/" target="_blank"
-				class="button six columns margin-none half-gutter-margin-bottom">
-				<h2>Caesar Cypher</h2>
-				<p>Decodes messages encrypted using the Caesar Cypher method.</p>
+			<a class="block half column margin-none gutter-margin-bottom" href="https://dpalme.github.io/WebApps/cillisi.html">
+				<div class="yellow-bg card">
+					<h4 class="text-center">Cillisi</h4>
+					<p>Replaces all vowels on a text with i</p>
+				</div>
 			</a>
 		</div>
 	</div>
