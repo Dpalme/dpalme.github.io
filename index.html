@@ -25,11 +25,13 @@
 	</script>
 </head>
 
-<body class="green-secondary-bg">
+<body>
 	<header class="black-bg fixed half-gutter-padding-vertical front full column display-none">
 		<div class="container relative">
 			<div class="ten columns white">
-				<h4>Diego<span class="orange">Palmerín</span></h4>
+				<a href="#top">
+					<h4>Diego<span class="orange">Palmerín</span></h4>
+				</a>
 			</div>
 			<div class="one columns one-offset">
 				<div class="hamburger vertical-center" onclick="document.querySelector('ul').classList.toggle('open');">
@@ -55,17 +57,18 @@
 		</ul>
 	</header>
 
+	<a name="top"></a>
 	<div class="fullscreen green-bg">
 		<div class="container absolute-center full column text-center margin-none card rounded gutter-padding">
 			<div class="full column col-margin-bottom">
 				<h1>Diego Palmerin</h1>
 			</div>
 			<div class="full column">
-				<a href="#about" class="block body-text two columns one-offset">About</a>
-				<a href="#projects" class="block body-text two columns">Projects</a>
-				<a href="#webapps" class="block body-text two columns">WebApps</a>
-				<a href="#cv" class="block body-text two columns">CV</a>
-				<a href="#contact" class="block body-text two columns">Contact</a>
+				<a href="#about" class="block two columns one-offset">About</a>
+				<a href="#projects" class="block two columns">Projects</a>
+				<a href="#webapps" class="block two columns">WebApps</a>
+				<a href="#cv" class="block two columns">CV</a>
+				<a href="#contact" class="block two columns">Contact</a>
 			</div>
 		</div>
 	</div>
@@ -77,7 +80,8 @@
 			<p class="gutter-margin-bottom">
 				I'm 20 years old and I'm currently studying Computer Science at Tecnológico de Monterrey Campus Estado
 				de México
-				and focusing on web development.<br><br>I'm interested in combining art and technology to create intuitive
+				and focusing on web development.<br><br>I'm interested in combining art and technology to create
+				intuitive
 				user
 				experiences and important content.
 			</p>
@@ -88,9 +92,10 @@
 	<div class="container top-margin">
 		<h3 class="gutter-margin-bottom white">Projects</h3>
 		<div class="text-center">
+
 			<div class="full column gutter-margin-bottom">
 				<div class="half column gutter-margin-bottom">
-					<div class="card">
+					<div class="card rounded">
 						<div class="twelve columns">
 							<h4 class="text-center">Peoria</h4>
 							<div class="full column text-center">
@@ -108,7 +113,7 @@
 				</div>
 
 				<div class="half column gutter-margin-bottom">
-					<div class="card">
+					<div class="card rounded">
 						<div class="twelve columns">
 							<h4 class="text-center">Tecmun Website</h4>
 							<div class="full column text-center">
@@ -128,7 +133,7 @@
 
 			<div class="full column gutter-margin-bottom">
 				<div class="half column margin-none gutter-margin-bottom">
-					<div class="card">
+					<div class="card rounded">
 						<div class="twelve columns">
 							<h4 class="text-center">Refugio San Gregorio</h4>
 							<div class="full column text-center">
@@ -146,7 +151,7 @@
 				</div>
 
 				<div class="half column gutter-margin-bottom">
-					<div class="card">
+					<div class="card rounded">
 						<div class="twelve columns">
 							<h4 class="text-center">The Getter</h4>
 							<div class="full column text-center">
@@ -166,7 +171,7 @@
 
 			<div class="full column gutter-margin-bottom">
 				<div class="half column margin-none gutter-margin-bottom">
-					<div class="card">
+					<div class="card rounded">
 						<div class="twelve columns">
 							<h4 class="text-center">Running in the 80's</h4>
 							<div class="full column text-center">
@@ -231,7 +236,6 @@
 
 	<a name="cv"></a>
 	<div class="container top-margin">
-		
 		<div class="card">
 			<h3 class="gutter-margin-bottom full column margin-none">CV</h3>
 
@@ -336,8 +340,7 @@
 			</div>
 
 			<div class="full column col-margin-vertical">
-				<a class="button four columns two-offset">Download English</a>
-				<a class="button four columns">Download Spanish</a>
+				<a class="button two columns five-offset" href="CV.pdf">PDF</a>
 			</div>
 		</div>
 	</div>
@@ -346,19 +349,21 @@
 	<div class="container top-margin">
 		<div class="card">
 			<h3 class="gutter-margin-bottom full column margin-none">Contact</h3>
-			<form>
-				<div class="half column">
+			<form action="mailto:dpalme@me.com" method="post" enctype="text/plain">
+				<div class="half column gutter-margin-bottom">
 					<label for="email">Email</label>
 					<input type="email" id="email" class="mid-white-bg">
 				</div>
-				<div class="half column">
-					<label for="subject">Subject</label>
+				<div class="half column  gutter-margin-bottom">
+					<label for="subject">Name</label>
 					<input type="text" id="subject" class="mid-white-bg">
 				</div>
-				<div class="full column">
+				<div class="full column gutter-margin-bottom">
 					<label for="message">Message</label>
 					<textarea id="message" class="mid-white-bg"></textarea>
 				</div>
+				<input type="submit" value="Send">
+				<input type="reset" value="Reset">
 			</form>
 		</div>
 	</div>
