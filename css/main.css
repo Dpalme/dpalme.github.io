@@ -11,9 +11,17 @@
 
 
 .header-link {
-	color: var(--mid-gray) !important;
+	color: var(--white) !important;
 }
 
 .header-link:hover {
-	color: var(--white) !important;
+	color: var(--black) !important;
+}
+
+.nav-links {
+	background-color: var(--orange) !important;
+}
+
+input {
+	border: 1px var(--black) solid
 }
