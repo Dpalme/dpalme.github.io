@@ -1,6 +1,3 @@
-import random
-
-
 class WebApp(object):
     def __init__(self, name, description, link):
         self.name = name
@@ -21,12 +18,12 @@ final_string = ""
 for wa in webapps:
     final_string += """
     <a class="block half column gutter-margin-bottom" href="%s">
-        <div class="%s-bg card">
-          <h4 class="text-center">%s</h4>
+        <div class="card text-center rounded">
+          <h4>%s</h4>
           <p>%s</p>
         </div>
     </a>
-    """ % (wa.link, random.choice(colors), wa.name, wa.description)
+    """ % (wa.link, wa.name, wa.description)
 
 
 print(final_string)
