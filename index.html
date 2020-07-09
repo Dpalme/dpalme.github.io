@@ -11,378 +11,105 @@
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="SHORTCUT ICON" href="images/Dicon.png" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script>
-		$(document).ready(function () {
-			navBarScroll();
-		});
-
-		function navBarScroll() {
-			$(document).scroll(function () {
-				var $nav = $("header");
-				$nav.toggleClass('display-none', $(this).scrollTop() < $nav.height());
-			});
-		}
-	</script>
 </head>
 
-<body>
-	<header class="black-bg fixed half-gutter-padding-vertical front full column display-none">
-		<div class="container relative">
-			<div class="ten columns white">
-				<a href="#top">
-					<h4>Diego<span class="orange">Palmerín</span></h4>
-				</a>
-			</div>
-			<div class="one columns one-offset">
-				<div class="hamburger vertical-center" onclick="document.querySelector('ul').classList.toggle('open');">
-					<div class="line white-bg"></div>
-					<div class="line white-bg"></div>
-					<div class="line white-bg"></div>
-				</div>
-			</div>
-
+<body class="night">
+	<img src="images/background.jpg" alt="" class="full column half-height absolute back image-cover">
+	
+	<header class="fixed front full column">
+		<div class="gutter-margin-left text-left" id="logo">
+			<a href="#top">
+				<h3 class="w-200 small-body inline">D<span class="mobile-hide">iego Palmerín</span>
+				</h3>
+			</a>
 		</div>
-
-		<ul class="nav-links orange-bg">
-			<div class="absolute-center">
-				<li><a class="header-link main-title" onclick="document.querySelector('ul').classList.toggle('open');"
-						href="#about">About</a></li>
-				<li><a class="header-link main-title" onclick="document.querySelector('ul').classList.toggle('open');"
-						href="#projects">Projects</a></li>
-				<li><a class="header-link main-title" onclick="document.querySelector('ul').classList.toggle('open');"
-						href="#webapps">WebApps</a></li>
-				<li><a class="header-link main-title" onclick="document.querySelector('ul').classList.toggle('open');"
-						href="#cv">CV</a></li>
-			</div>
-		</ul>
+		<nav class="gutter-margin-right w-200 text-right right vertical-center" id="nav-links">
+			<a class="gutter-margin-right w-200" href="#projects">Projects</a>
+			<a class="gutter-margin-right w-200" href="#webapps">WebApps</a>
+			<a class="w-200" href="#about">About</a>
+		</nav>
 	</header>
 
-	<a name="top"></a>
-	<div class="fullscreen green-bg">
-		<div class="container absolute-center full column text-center margin-none card rounded gutter-padding">
-			<div class="full column col-margin-bottom">
-				<h1>Diego Palmerin</h1>
-			</div>
-			<div class="full column">
-				<a href="#about" class="block two columns one-offset">About</a>
-				<a href="#projects" class="block two columns">Projects</a>
-				<a href="#webapps" class="block two columns">WebApps</a>
-				<a href="#cv" class="block two columns">CV</a>
-				<a href="#contact" class="block two columns">Contact</a>
-			</div>
-		</div>
+	<a name="top" class="full column"></a>
+	<div class="fullscreen">
+		<h1 class="gutter-margin-left vertical-center">Web Design</h1>
+		<p class="gutter-margin w-200 text-right right vertical-center mobile-hide">Deeply Functional
+			Minimalism</p>
 	</div>
 
-	<a name="about" class="block"></a>
-	<div class="fullscreen relative white">
-		<div class="absolute-center">
-			<h3 class="half-gutter-margin-bottom">About</h3>
-			<p class="gutter-margin-bottom">
-				I'm 20 years old and I'm currently studying Computer Science at Tecnológico de Monterrey Campus Estado
-				de México
-				and focusing on web development.<br><br>I'm interested in combining art and technology to create
-				intuitive
-				user
-				experiences and important content.
-			</p>
-		</div>
+
+	<a name="projects" class="full column"></a>
+	<h1 class="gutter-margin-bottom two-offset columns">Projects</h1>
+	<div class="five columns six-offset half-gutter-padding-sides">
+		<a class="block col-margin-bottom" href="https://dpalme.github.io/Peoria" target="_blank">    
+			<h3 class="w-200 justify">Peoria</h3>
+			<p class="text-left one-third column margin-none small-body w-200">2020</p>
+			<p class="text-right two-thirds column text-right orange">CSS</p>
+			<p class="justify">A lightweight CSS library that derives from skeleton for faster, cleaner css.</p>
+		</a>
+	
+		<a class="block col-margin-bottom" href="http://tecmun.org/" target="_blank">
+			<h3 class="w-200 justify">Tecmun Website</h3>
+			<p class="text-left one-third column margin-none small-body w-200">2020</p>
+			<p class="text-right two-thirds column text-right orange">Django, HTML, CSS, Ajax</p>
+			<p class="justify">Django website made for the model united nations of ITESM CEM.</p>
+		</a>
+	
+		<a class="block col-margin-bottom" href="https://refugiosangregorio.com/" target="_blank">
+			<h3 class="w-200 justify">Refugio San Gregorio</h3>
+			<p class="text-left one-third column margin-none small-body w-200">2019</p>
+			<p class="text-right two-thirds column text-right orange">HTML, CSS</p>
+			<p class="justify">A website for a dog refuge located in Mexico City.</p>
+		</a>
 	</div>
 
-	<a name="projects"></a>
-	<div class="container top-margin">
-		<h3 class="gutter-margin-bottom white">Projects</h3>
-		<div class="text-center">
+	<a name="webapps" class="full column col-margin-bottom"></a>
+	<h1 class="gutter-margin-bottom eleven columns margin-none text-right">Webapps</h1>
+	<div class="four two-offset columns">
+		<a class="block full column col-margin-bottom justify" href="https://dpalme.github.io/Random-Poem/">
+			<h4>Random Poem/Song</h4>
+			<p class="small-body w-200">Get a random poem or song lyrics from a growing collection</p>
+		</a>
 
-			<div class="full column gutter-margin-bottom">
-				<div class="half column gutter-margin-bottom">
-					<div class="card rounded">
-						<div class="twelve columns">
-							<h4 class="text-center">Peoria</h4>
-							<div class="full column text-center">
-								<p class="inline text-center">2020</P>
-								<p class="inline text-center orange">CSS</P>
-							</div>
-							<p>A lightweight CSS library that derives from skeleton.</p>
-						</div>
-						<div class="twelve columns">
-							<a href="https://dpalme.github.io/Peoria"
-								class="block button four columns four-offset half-gutter-margin-vertical"
-								target="_blank">View</a>
-						</div>
-					</div>
-				</div>
+		<a class="block full column col-margin-bottom justify" href="https://dpalme.github.io/CaesarCypher/">
+			<h4>Caesar Cypher</h4>
+			<p class="small-body w-200">Decodes messages encrypted using the Caesar cyphering method</p>
+		</a>
 
-				<div class="half column gutter-margin-bottom">
-					<div class="card rounded">
-						<div class="twelve columns">
-							<h4 class="text-center">Tecmun Website</h4>
-							<div class="full column text-center">
-								<p class="inline text-center">2020</P>
-								<p class="inline text-center orange">Django, HTML, CSS, Ajax</P>
-							</div>
-							<p>Django website made for the model united nations of ITESM CEM.</p>
-						</div>
-						<div class="twelve columns">
-							<a href="http://tecmun.org/"
-								class="block button four columns four-offset half-gutter-margin-vertical"
-								target="_blank">View</a>
-						</div>
-					</div>
-				</div>
-			</div>
+		<a class="block full column col-margin-bottom justify" href="https://dpalme.github.io/Random-Question/">
+			<h4>Random Question</h4>
+			<p class="small-body w-200">Get a random question</p>
+		</a>
 
-			<div class="full column gutter-margin-bottom">
-				<div class="half column margin-none gutter-margin-bottom">
-					<div class="card rounded">
-						<div class="twelve columns">
-							<h4 class="text-center">Refugio San Gregorio</h4>
-							<div class="full column text-center">
-								<p class="inline text-center">2019</P>
-								<p class="inline text-center orange">HTML, CSS</P>
-							</div>
-							<p>A website for a dog refuge located in Mexico City.</p>
-						</div>
-						<div class="twelve columns">
-							<a href="https://refugiosangregorio.com/"
-								class="block button four columns four-offset half-gutter-margin-vertical"
-								target="_blank">View</a>
-						</div>
-					</div>
-				</div>
+		<a class="block full column col-margin-bottom justify"
+			href="https://dpalme.github.io/WebApps/DecisionMaker.html">
+			<h4>Decision Maker</h4>
+			<p class="small-body w-200">Chooses a random option</p>
+		</a>
 
-				<div class="half column gutter-margin-bottom">
-					<div class="card rounded">
-						<div class="twelve columns">
-							<h4 class="text-center">The Getter</h4>
-							<div class="full column text-center">
-								<p class="inline text-center">2017</P>
-								<p class="inline text-center orange">Unity, C#</P>
-							</div>
-							<p>A game about catching cubes before the timer runs out.</p>
-						</div>
-						<div class="twelve columns">
-							<a href="https://drive.google.com/open?id=0B5xSt2wAJGz3VFBJemxVMWFvMlk"
-								class="block button four columns four-offset half-gutter-margin-vertical"
-								target="_blank">View</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="full column gutter-margin-bottom">
-				<div class="half column margin-none gutter-margin-bottom">
-					<div class="card rounded">
-						<div class="twelve columns">
-							<h4 class="text-center">Running in the 80's</h4>
-							<div class="full column text-center">
-								<p class="inline text-center">2017</P>
-								<p class="inline text-center orange">Unity, C#</P>
-							</div>
-							<p>Small game where you drive on a finite procedural road.</p>
-						</div>
-						<div class="twelve columns">
-							<a href="https://drive.google.com/open?id=0B5xSt2wAJGz3SDlkZjRCNkRCUWs"
-								class="block button four columns four-offset half-gutter-margin-vertical"
-								target="_blank">View</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
+		<a class="block full column col-margin-bottom justify" href="http://127.0.0.1:5500/WebApps/cillisi.html">
+			<h4>Cillisi</h4>
+			<p class="small-body w-200">Replaces all vowels on a text with i</p>
+		</a>
 	</div>
 
-	<a name="webapps"></a>
-	<div class="container top-margin">
-		<h3 class="gutter-margin-bottom full column margin-none white">WebApps</h3>
-		<div>
-			<a class="block half column gutter-margin-bottom" href="https://dpalme.github.io/Random-Poem/">
-				<div class="card text-center rounded">
-					<h4>Random Poem/Song</h4>
-					<p>Get a random poem or song lyrics from a growing collection</p>
-				</div>
-			</a>
+	<a name="about" class="full column"></a>
+	<h1 class="four columns two-offset bottom text-left">About</h1>
+	<p class="five columns w-200 double-col-margin-top text-left justify">
+		I'm 21 years old, studying a B.S. in Computer Science with a focus on web development while doing freelance
+		work.<br>
+		<br>
+		I'm interested in combining art and technology to create intuitive user experiences that enrich peoples
+		lives.
+	</p>
 
-			<a class="block half column gutter-margin-bottom" href="https://dpalme.github.io/CaesarCypher/">
-				<div class="card text-center rounded">
-					<h4>Caesar Cypher</h4>
-					<p>Decodes messages encrypted using the Caesar cyphering method</p>
-				</div>
-			</a>
 
-			<a class="block half column margin-none gutter-margin-bottom"
-				href="https://dpalme.github.io/Random-Question/">
-				<div class="card text-center rounded">
-					<h4>Random Question</h4>
-					<p>Get a random question</p>
-				</div>
-			</a>
-
-			<a class="block half column gutter-margin-bottom" href="/WebApps/DecisionMaker.html">
-				<div class="card text-center rounded">
-					<h4>Decision Maker</h4>
-					<p>Chooses a random option</p>
-				</div>
-			</a>
-
-			<a class="block half column margin-none gutter-margin-bottom" href="/WebApps/cillisi.html">
-				<div class="card text-center rounded">
-					<h4>Cillisi</h4>
-					<p>Replaces all vowels on a text with i</p>
-				</div>
-			</a>
-		</div>
+	<a name="contact" class="full column"></a>
+	<div class="quarter-screen-padding full column">
+		<p class="four columns four-offset text-left small-body w-200">Contact
+		</p>
+		<h3 class="six columns four-offset margin-none text-left">dpalme@me.com</h3>
 	</div>
-
-	<a name="cv"></a>
-	<div class="container top-margin">
-		<div class="card">
-			<h3 class="gutter-margin-bottom full column margin-none">CV</h3>
-
-			<div class="full column gutter-margin-bottom">
-				<div class="half column blue">
-					<h3>Diego Palmerin Bonada</h3>
-					<h4>Web Developer</h4>
-				</div>
-				<div class="half column text-right blue">
-					<p>Mexico, Atizapán de Zaragoza, 52998</p>
-					<p>dpalme@me.com</p>
-				</div>
-			</div>
-
-			<div class="full column gutter-margin-bottom">
-				<div class="one-third column">
-					<hr class="two columns black-bg">
-					<h4 class="twelve columns">Areas of interest</h4>
-				</div>
-				<div class="two-thirds column">
-					<hr>
-					<p>Web Development, Illustration, Software Development</p>
-				</div>
-			</div>
-
-			<div class="full column gutter-margin-bottom">
-				<div class="one-third column">
-					<hr class="two columns black-bg">
-					<h4 class="twelve columns">Professional goal</h4>
-				</div>
-				<div class="two-thirds column">
-					<hr>
-					<p>To create things which have a positive impact on society and the industry as a whole.</p>
-				</div>
-			</div>
-
-			<div class="full column gutter-margin-bottom">
-				<div class="one-third column">
-					<hr class="two columns black-bg">
-					<h4 class="twelve columns">Experience</h4>
-				</div>
-				<div class="two-thirds column">
-					<hr>
-					<bold>GGD Bandas S.A. de C.V.</bold> / Internship
-					<p class="small-body">JUNE 2015 - AUGUST 2015, TLALNEPANTLA<br>
-						Prepare the documents of a bankrupt subsidiary. It helped me refine my Office skills and social
-						abilities on a professional setting.<br>
-						<br>
-						JUNE 2017 - AUGUST 2017, TLALNEPANTLA<br>
-						Recovered physical records of clients and created the system used to physically store them. I
-						learnt about the importance of documentation and record keeping.
-					</p>
-				</div>
-			</div>
-
-			<div class="full column gutter-margin-bottom">
-				<div class="one-third column">
-					<hr class="two columns black-bg">
-					<h4 class="twelve columns">Education</h4>
-				</div>
-				<div class="two-thirds column">
-					<hr>
-					<bold>Instituto Tecnológico de Monterrey</bold> / B.S. Computer Science</p>
-					<p class="small-body">AUGUST 2018 - PRESENT DAY, LAGO DE GUADALUPE</p>
-					<br>
-					<bold>Instituto Bilingüe Rudyard Kipling</bold> / International Baccalaureate
-					<p class="small-body">AUGUSTO 2016 - JUNE 2018, NAUCALPAN DE JUÁREZ</p>
-				</div>
-			</div>
-
-			<div class="full column gutter-margin-bottom">
-				<div class="one-third column">
-					<hr class="two columns black-bg">
-					<h4 class="twelve columns">Languages</h4>
-				</div>
-				<div class="two-thirds column">
-					<hr>
-					<p>Basic French, Advanced English</p>
-				</div>
-			</div>
-
-			<div class="full column gutter-margin-bottom">
-				<div class="one-third column">
-					<hr class="two columns black-bg">
-					<h4 class="twelve columns">Hobbies</h4>
-				</div>
-				<div class="two-thirds column">
-					<hr>
-					<p>Drums, Piano, Digital Illustration, Computer Science student group</p>
-				</div>
-			</div>
-
-			<div class="full column">
-				<div class="one-third column">
-					<hr class="two columns black-bg">
-					<h4 class="twelve columns">Skills</h4>
-				</div>
-				<div class="two-thirds column">
-					<hr>
-					<p>Python, HTML, CSS, JavaScript, Java, C#, GIT, Scrum</p>
-				</div>
-			</div>
-
-			<div class="full column col-margin-vertical">
-				<a class="button two columns five-offset" href="CV.pdf">PDF</a>
-			</div>
-		</div>
-	</div>
-
-	<a name="contact"></a>
-	<div class="container top-margin">
-		<div class="card">
-			<h3 class="gutter-margin-bottom full column margin-none">Contact</h3>
-			<form action="mailto:dpalme@me.com" method="post" enctype="text/plain">
-				<div class="half column gutter-margin-bottom">
-					<label for="email">Email</label>
-					<input type="email" id="email" class="mid-white-bg">
-				</div>
-				<div class="half column  gutter-margin-bottom">
-					<label for="subject">Name</label>
-					<input type="text" id="subject" class="mid-white-bg">
-				</div>
-				<div class="full column gutter-margin-bottom">
-					<label for="message">Message</label>
-					<textarea id="message" class="mid-white-bg"></textarea>
-				</div>
-				<input type="submit" value="Send">
-				<input type="reset" value="Reset">
-			</form>
-		</div>
-	</div>
-
-	<footer class="black-bg col-margin-top gutter-padding-vertical">
-		<div class="container white text-center">
-			<div class="full column">
-				<h3>Diego Palmerin</h3>
-			</div>
-			<hr>
-			<div class="full column">
-				<a href="#about" class="block body-text two columns one-offset">About</a>
-				<a href="#projects" class="block body-text two columns">Projects</a>
-				<a href="#webapps" class="block body-text two columns">WebApps</a>
-				<a href="#cv" class="block body-text two columns">CV</a>
-				<a href="#contact" class="block body-text two columns">Contact</a>
-			</div>
-		</div>
-	</footer>
 </body>
 
 </html>

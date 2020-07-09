@@ -16,14 +16,10 @@ colors = ["red", "orange", "green", "yellow", "blue"]
 final_string = ""
 
 for wa in webapps:
-    final_string += """
-    <a class="block half column gutter-margin-bottom" href="%s">
-        <div class="card text-center rounded">
-          <h4>%s</h4>
-          <p>%s</p>
-        </div>
+    final_string += """<a class="block full column gutter-margin-bottom justify" href="%s">
+        <h4>%s</h4>
+        <p class="small-body w-200">%s</p>
     </a>
     """ % (wa.link, wa.name, wa.description)
-
 
 print(final_string)

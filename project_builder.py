@@ -11,30 +11,19 @@ projects = [Project("Peoria", "2020", "CSS", "A lightweight CSS library that der
             Project("Tecmun Website", "2020", "Django, HTML, CSS, Ajax",
                     "Django website made for the model united nations of ITESM CEM.", "http://tecmun.org/"),
             Project("Refugio San Gregorio", "2019", "HTML, CSS",
-                    "A website for a dog refuge located in Mexico City.", "https://refugiosangregorio.com/"),
-            Project("The Getter", "2017", "Unity, C#", "A game about catching cubes before the timer runs out.",
-                    "https://drive.google.com/open?id=0B5xSt2wAJGz3VFBJemxVMWFvMlk"),
-            Project("Running in the 80's", "2017", "Unity, C#", "Small game where you drive on a finite procedural road.", "https://drive.google.com/open?id=0B5xSt2wAJGz3SDlkZjRCNkRCUWs")]
+                    "A website for a dog refuge located in Mexico City.", "https://refugiosangregorio.com/")]
 
 final_string = ""
 
 for pr in projects:
     final_string += """
-    <div class="half column gutter-margin-bottom">
-        <div class="card">
-            <div class="twelve columns">
-                <h4 class="text-center">%s</h4>
-                <p class="text-center">%s</P>
-                <p class="text-right orange">%s</P>
-                <p>%s</p>
-            </div>
-            <div class="twelve columns">
-                <a href="%s"
-                    class="block button twelve columns half-gutter-margin-vertical" target="_blank">View</a>
-            </div>
-        </div>
-    </div>
-    """ % (pr.name, pr.year, pr.skills, pr.description, pr.view)
+    <a class="block col-margin-bottom" href="%s" target="_blank">
+        <h3 class="w-200 justify">%s</h3>
+        <p class="text-left one-third column margin-none small-body w-200">%s</p>
+        <p class="text-right two-thirds column text-right orange">%s</p>
+        <p class="justify">%s</p>
+    </a>
+    """ % (pr.view, pr.name, pr.year, pr.skills, pr.description)
 
 
 print(final_string)

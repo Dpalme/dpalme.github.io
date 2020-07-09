@@ -1,12 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap');
+
 :root {
-	--blue: #3875B7;
-	--yellow: #FECA52;
-	--orange: #DF643A;
-	--red: #FF4E4C;
-	--red-secondary: #FF7372;
-	--dark-blue: #35314C;
-	--black: #231F20;
-	--white: #F0F0F0;
+	--black: #000;
+	--font-face: 'Poppins', Helvetica, Arial, sans-serif;
+	font-size: 1em;
 }
 
 html {
@@ -14,16 +11,31 @@ html {
 	text-rendering: optimizeLegibility;
 }
 
-body {
-	background-size: 100%;
-	margin: 0;
-	background-repeat: no-repeat !important;
-    background-attachment: fixed !important;
-	background: rgb(49, 74, 67);
-	background: -moz-linear-gradient(180deg, var(--green), var(--green-third) 100%);
-	background: -webkit-linear-gradient(180deg, var(--green) 0%, var(--green-third) 100%);
-	background: linear-gradient(180deg, var(--green) 0%, var(--green-third) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#314a43", endColorstr="#004f3a", GradientType=1);
+.night {
+	background-color: #000;
+	color: #fff;
+	--white: #000;
+	--black: #fff;
+	--mid-white: #666;
+	--mid-gray: #aaa;
+}
+
+#nav-links a {
+	font-size: .5em;
+}
+
+#nav-links a:active {
+	font-size: .5em !important;
+}
+
+a:hover {
+	color: inherit;
+	text-decoration: underline;
+}
+
+a:active {
+	font-size: .75rem !important;
+	font-weight: 200;
 }
 
 
@@ -37,4 +49,78 @@ body {
 
 .nav-links {
 	background-color: var(--orange) !important;
+}
+
+h1, h3 {
+	font-weight: 400;
+}
+
+h2, h4 {
+	font-weight: 300;
+}
+
+p {
+	font-weight: 200;
+}
+
+.w-400 {
+	font-weight: 400;
+}
+
+.w-300 {
+	font-weight: 300;
+}
+
+.w-200 {
+	font-weight: 200;
+}
+
+.column .two-thirds {
+	width: 33.33% !important;
+}
+
+.mobile-hide {
+	display: none;
+}
+
+.h-75 {
+	height: 75%;
+}
+
+.justify {
+	text-align: justify;
+	text-justify: auto;
+}
+
+@media (max-width: 600px) {
+	#logo {
+		width: 20.6666666667% !important;
+	}
+
+	#logo a h3 {
+		font-size: 1.25em !important;
+		font-weight: 400;
+	}
+
+	#nav-links {
+		width: 75.3333333333% !important;
+	}
+}
+
+@media (min-width: 400px) {
+	.tablet-hide { display: initial; }
+
+	.mobile-hide { display: initial; }
+}
+
+@media (min-width: 700px) {
+	:root {
+		font-size: 1.5em;
+	}
+}
+
+@media (min-width: 1000px) {
+	:root {
+		font-size: 2em;
+	}
 }
