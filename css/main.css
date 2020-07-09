@@ -102,6 +102,11 @@ p {
 		font-weight: 400;
 	}
 
+	#nav-links a {
+		font-size: .8em !important;
+		font-weight: 400;
+	}
+
 	#nav-links {
 		width: 75.3333333333% !important;
 	}
@@ -122,5 +127,11 @@ p {
 @media (min-width: 1000px) {
 	:root {
 		font-size: 2em;
+	}
+}
+
+@media (min-width: 2000px) {
+	:root {
+		font-size: 3em;
 	}
 }
