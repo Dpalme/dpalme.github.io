@@ -16,7 +16,7 @@ colors = ["red", "orange", "green", "yellow", "blue"]
 final_string = ""
 
 for wa in webapps:
-    final_string += """<a class="block full column gutter-margin-bottom justify" href="%s">
+    final_string += """<a class="block full column half-gutter-margin-bottom justify" href="%s">
         <h4>%s</h4>
         <p class="small-body w-200">%s</p>
     </a>

@@ -21,11 +21,7 @@ html {
 }
 
 #nav-links a {
-	font-size: .5em;
-}
-
-#nav-links a:active {
-	font-size: .5em !important;
+	font-size: .75em;
 }
 
 a:hover {
@@ -33,50 +29,20 @@ a:hover {
 	text-decoration: underline;
 }
 
-a:active {
-	font-size: .75rem !important;
-	font-weight: 200;
-}
-
-
-.header-link {
-	color: var(--white) !important;
-}
-
-.header-link:hover {
-	color: var(--black) !important;
-}
-
 .nav-links {
 	background-color: var(--orange) !important;
 }
 
-h1, h3 {
+h1, h3, .w-400 {
 	font-weight: 400;
 }
 
-h2, h4 {
+h2, h4, .w-300 {
 	font-weight: 300;
 }
 
-p {
+p, .w-200 {
 	font-weight: 200;
-}
-
-.w-400 {
-	font-weight: 400;
-}
-
-.w-300 {
-	font-weight: 300;
-}
-
-.w-200 {
-	font-weight: 200;
-}
-
-.column .two-thirds {
-	width: 33.33% !important;
 }
 
 .mobile-hide {
@@ -98,7 +64,7 @@ p {
 	}
 
 	#logo a h3 {
-		font-size: 1.25em !important;
+		font-size: 1.5em !important;
 		font-weight: 400;
 	}
 

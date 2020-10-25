@@ -18,8 +18,8 @@ final_string = ""
 for pr in projects:
     final_string += """
     <a class="block col-margin-bottom" href="%s" target="_blank">
-        <h3 class="w-200 justify">%s</h3>
-        <p class="text-left one-third column margin-none small-body w-200">%s</p>
+        <h3 class="w-200">%s</h3>
+        <p class="text-left one-third column margin-none small-body">%s</p>
         <p class="text-right two-thirds column text-right orange">%s</p>
         <p class="justify">%s</p>
     </a>
