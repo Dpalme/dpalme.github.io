@@ -1,103 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap');
+:root{
+    font-size: .72vw;
 
-:root {
-	--black: #000;
-	--font-face: 'Poppins', Helvetica, Arial, sans-serif;
-	font-size: 1em;
+    --red: #c8102e;
 }
 
-html {
-	height: 100%;
-	text-rendering: optimizeLegibility;
+.nav-button, .nav-button:hover, .nav-button:active {
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    align-items: center;
+    line-height: calc(var(--grid)*5);
+    font-weight: 200;
+    background: linear-gradient(to right, var(--red) 65%, #000 65%);
+    background-size: 300% 100%;
+    background-position:right bottom;
+	transition:all .5s ease;
 }
 
-.night {
-	background-color: #000;
-	color: #fff;
-	--white: #000;
-	--black: #fff;
-	--mid-white: #666;
-	--mid-gray: #aaa;
+.nav-button:hover, .nav-button:active, .nav-button.active {
+    background-position: bottom left;
+    text-decoration: none;
 }
 
-#nav-links a {
-	font-size: .75em;
+.vertical-center-text, .vertical-center-text:hover {
+    line-height: calc(var(--grid)*5);
 }
 
-a:hover {
-	color: inherit;
-	text-decoration: underline;
+.fade {
+    animation: fade ease-in .2s 1;
 }
 
-.nav-links {
-	background-color: var(--orange) !important;
+.hover-to-show {
+    opacity: 0;
 }
 
-h1, h3, .w-400 {
-	font-weight: 400;
+.hover-to-show:hover {
+    opacity: 60%;
 }
 
-h2, h4, .w-300 {
-	font-weight: 300;
+#content {
+    margin-bottom: calc(5 * var(--grid));
 }
 
-p, .w-200 {
-	font-weight: 200;
-}
+@keyframes fade {
+    from    { opacity: 0%;  }
+    to      { opacity: 100%;}}
 
-.mobile-hide {
-	display: none;
-}
+@media (orientation: portrait) {
 
-.h-75 {
-	height: 75%;
-}
+    :root{
+        font-size: 3vw;
 
-.justify {
-	text-align: justify;
-	text-justify: auto;
-}
-
-@media (max-width: 600px) {
-	#logo {
-		width: 20.6666666667% !important;
-	}
-
-	#logo a h3 {
-		font-size: 1.5em !important;
-		font-weight: 400;
-	}
-
-	#nav-links a {
-		font-size: .8em !important;
-		font-weight: 400;
-	}
-
-	#nav-links {
-		width: 75.3333333333% !important;
-	}
-}
-
-@media (min-width: 400px) {
-	.tablet-hide { display: initial; }
-
-	.mobile-hide { display: initial; }
-}
-
-@media (min-width: 700px) {
-	:root {
-		font-size: 1.5em;
-	}
-}
-
-@media (min-width: 1000px) {
-	:root {
-		font-size: 2em;
-	}
-}
-
-@media (min-width: 2000px) {
-	:root {
-		font-size: 3em;
-	}
+        --grid: 4vw;
+    }
 }

@@ -1,122 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<meta name="twitter:card" content="summary"></meta>
-    <meta name="twitter:site" content="@dpalme" />
-    <meta name="twitter:title" content="Dpalme" />
-    <meta name="twitter:description" content="Web Design Portafolio." />
-    <meta name="twitter:image" content="images/Dicon.png" />
-	<title>Dpalme</title>
-	<link rel="stylesheet" href="https://dpalme.github.io/Peoria/css/normalize.css">
-	<link rel="stylesheet" href="https://dpalme.github.io/Peoria/css/peoria-0-3-1.css">
-	<link rel="stylesheet" href="css/main.css" />
-	<link rel="SHORTCUT ICON" href="images/Dicon.png" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+
+    <!-- Primary Meta Tags -->
+    <title>Diego Palmerín</title>
+    <meta name='title' content='Diego Palmerín - Portfolio'>
+    <meta name='description' content='Web Developer and designer'>
+
+    <!-- Open Graph / Facebook -->
+    <meta property='og:type' content='website'>
+    <meta property='og:url' content='dpalme.github.io'>
+    <meta property='og:title' content='Diego Palmerín - Portfolio'>
+    <meta property='og:description' content='Web Developer and designer'>
+    <meta property='og:image' content='./img/Dicon.png'>
+
+    <!-- Twitter -->
+    <meta property='twitter:card' content='summary_large_image'>
+    <meta property='og:url' content='dpalme.github.io'>
+    <meta property='twitter:title' content='Diego Palmerín - Portfolio'>
+    <meta property='twitter:description' content='Web Developer and designer'>
+    <meta property='twitter:image' content='./img/Dicon.png'>
+
+    <!-- CSS -->
+    <link rel='stylesheet' href='https://dpalme.github.io/Peoria/css/peoria-0-4-0.css'>
+    <link rel='stylesheet' href='https://dpalme.github.io/Peoria/css/normalize.css'>
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- JS -->
+    <script src="https://dpalme.github.io/Peoria/peoria.js"></script>
+    <script src="./js/setup.js"></script>
+    <script src="./js/my_work.js"></script>
+    <script src="./js/about.js"></script>
+    <script src="./js/contact.js"></script>
 </head>
 
-<body class="night">
-	<img src="images/background.jpg" alt="" class="full column half-height absolute back image-cover">
-	
-	<header class="fixed front full column half-gutter-margin-top">
-		<div class="gutter-margin-left text-left" id="logo">
-			<a href="#top">
-				<h3 class="w-200 small-body inline">D<span class="mobile-hide">iego Palmerín</span>
-				</h3>
-			</a>
-		</div>
-		<nav class="gutter-margin-right w-200 text-right right vertical-center" id="nav-links">
-			<a class="gutter-margin-right w-200" href="#projects">Projects</a>
-			<a class="gutter-margin-right w-200" href="#webapps">WebApps</a>
-			<a class="w-200" href="#about">About</a>
-		</nav>
-	</header>
+<body class="night" onload="setup()">
+    <div class="fullscreen fixed white-bg"></div>
+    <div class="background-cover fullscreen fixed" style="background-image: url('./img/Fondo@2x.png'); opacity: 30%;"></div>
 
-	<a name="top" class="full column"></a>
-	<div class="fullscreen">
-		<div class="container half-screen-padding">
-			<h2 class="half column">Web Design</h2>
-			<p class="half-column w-200 text-right right mobile-hide">Deeply Functional
-				Minimalism</p>
-		</div>
-	</div>
+    <div class="container">
+        <div class="six columns fixed one-top-margin mobile-hide">
+            <h1 class="title-1 one-height margin-none vertical-center-text">Diego Palmerin</h1>
+            <h3 class="vertical-center-text">Web Developer</h3>
+            <div class="four columns">
+                <a id="work" onclick="my_work_start()" class="nav-button four columns one-height one-top-margin rounded">My Work</a>
+                <a id="about" onclick="about_start()" class="nav-button four columns one-height one-top-margin rounded">About</a>
+                <a id="contact" onclick="contact_start()" class="nav-button four columns one-height one-top-margin rounded">Contact</a>
+            </div>
+        </div>
 
+        <div class="six columns one-top-margin mobile-show">
+            <h1 class="title-1 one-height margin-none vertical-center-text">Diego Palmerin</h1>
+            <h3 class="vertical-center-text">Web Developer</h3>
+            <div class="four columns">
+                <a class="nav-button four columns one-height one-top-margin rounded"> My Work</a>
+                <a class="nav-button four columns one-height one-top-margin rounded"> About</a>
+                <a class="nav-button four columns one-height one-top-margin rounded"> Contact</a>
+            </div>
+        </div>
 
-	<a name="projects" class="full column"></a>
-	<h1 class="gutter-margin-bottom two-offset columns gutter-padding-sides">Projects</h1>
-	<div class="five columns six-offset gutter-padding-sides">
-		<a class="block col-margin-bottom" href="https://dpalme.github.io/Peoria" target="_blank">
-			<h3 class="w-200">Peoria</h3>
-			<p class="text-left one-third column margin-none small-body">2020</p>
-			<p class="text-right two-thirds column text-right orange">CSS</p>
-			<p class="justify">A lightweight CSS library that derives from skeleton for faster, cleaner css.</p>
-		</a>
-	
-		<a class="block col-margin-bottom" href="http://tecmun.org/" target="_blank">
-			<h3 class="w-200">Tecmun Website</h3>
-			<p class="text-left one-third column margin-none small-body">2020</p>
-			<p class="text-right two-thirds column text-right orange">Django, HTML, CSS, Ajax</p>
-			<p class="justify">Django website made for the model united nations of ITESM CEM.</p>
-		</a>
-	
-		<a class="block col-margin-bottom" href="https://refugiosangregorio.com/" target="_blank">
-			<h3 class="w-200">Refugio San Gregorio</h3>
-			<p class="text-left one-third column margin-none small-body">2019</p>
-			<p class="text-right two-thirds column text-right orange">HTML, CSS</p>
-			<p class="justify">A website for a dog refuge located in Mexico City.</p>
-		</a>
-	</div>
-
-	<a name="webapps" class="full column col-margin-bottom"></a>
-	<h1 class="gutter-margin-bottom eleven columns margin-none text-right gutter-padding-sides">Webapps</h1>
-	<div class="four two-offset columns gutter-padding-sides">
-		<a class="block full column col-margin-bottom justify" href="https://dpalme.github.io/Random-Poem/">
-			<h4>Random Poem/Song</h4>
-			<p class="small-body w-200">Get a random poem or song lyrics from a growing collection</p>
-		</a>
-
-		<a class="block full column col-margin-bottom justify" href="https://dpalme.github.io/CaesarCypher/">
-			<h4>Caesar Cypher</h4>
-			<p class="small-body w-200">Decodes messages encrypted using the Caesar cyphering method</p>
-		</a>
-
-		<a class="block full column col-margin-bottom justify" href="https://dpalme.github.io/Random-Question/">
-			<h4>Random Question</h4>
-			<p class="small-body w-200">Get a random question</p>
-		</a>
-
-		<a class="block full column col-margin-bottom justify"
-			href="https://dpalme.github.io/WebApps/DecisionMaker.html">
-			<h4>Decision Maker</h4>
-			<p class="small-body w-200">Chooses a random option</p>
-		</a>
-
-		<a class="block full column col-margin-bottom justify" href="http://127.0.0.1:5500/WebApps/cillisi.html">
-			<h4>Cillisi</h4>
-			<p class="small-body w-200">Replaces all vowels on a text with i</p>
-		</a>
-	</div>
-
-	<a name="about" class="full column"></a>
-	<h1 class="four columns two-offset bottom text-left gutter-padding-sides">About</h1>
-	<p class="five columns w-200 double-col-margin-top text-left justify gutter-padding-sides">
-		I'm 21 years old, studying a B.S. in Computer Science with a focus on web development while doing freelance
-		work.<br>
-		<br>
-		I'm interested in combining art and technology to create intuitive user experiences that enrich peoples
-		lives.
-	</p>
-
-
-	<a name="contact" class="full column"></a>
-	<div class="quarter-screen-padding full column gutter-padding-sides">
-		<p class="four columns four-offset text-left small-body w-200">Contact
-		</p>
-		<h3 class="six columns four-offset margin-none text-left">dpalme@me.com</h3>
-	</div>
+        <main class="eight-offset nine column one-top-margin" id="content"></main>
+    </div>
 </body>
 
 </html>
