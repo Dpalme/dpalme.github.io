@@ -4,6 +4,11 @@
     --red: #c8102e;
 }
 
+html {
+    scroll-behavior: auto;
+    overflow-x: hidden;
+}
+
 .nav-button, .nav-button:hover, .nav-button:active {
     border: none;
     color: white;
@@ -31,14 +36,6 @@
     animation: fade ease-in .2s 1;
 }
 
-.hover-to-show {
-    opacity: 0;
-}
-
-.hover-to-show:hover {
-    opacity: 60%;
-}
-
 #content {
     margin-bottom: calc(5 * var(--grid));
 }
@@ -53,5 +50,9 @@
         font-size: 3vw;
 
         --grid: 4vw;
+    }
+
+    .seven-offset {
+        margin-left: 0 !important;
     }
 }

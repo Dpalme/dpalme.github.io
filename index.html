@@ -9,6 +9,7 @@
     <title>Diego Palmerín</title>
     <meta name='title' content='Diego Palmerín - Portfolio'>
     <meta name='description' content='Web Developer and designer'>
+    <link rel="icon" type="image/png" href="./img/Dicon.png">
 
     <!-- Open Graph / Facebook -->
     <meta property='og:type' content='website'>
@@ -39,7 +40,7 @@
 
 <body class="night" onload="setup()">
     <div class="fullscreen fixed white-bg"></div>
-    <div class="background-cover fullscreen fixed" style="background-image: url('./img/Fondo@2x.png'); opacity: 30%;"></div>
+    <div class="fullscreen fixed background-cover" style="background-image: url('./img/Fondo@2x.png'); opacity: 30%;"></div>
 
     <div class="container">
         <div class="six columns fixed one-top-margin mobile-hide">
@@ -52,17 +53,17 @@
             </div>
         </div>
 
-        <div class="six columns one-top-margin mobile-show">
+        <div class="five columns one-top-margin mobile-show">
             <h1 class="title-1 one-height margin-none vertical-center-text">Diego Palmerin</h1>
             <h3 class="vertical-center-text">Web Developer</h3>
-            <div class="four columns">
-                <a class="nav-button four columns one-height one-top-margin rounded"> My Work</a>
-                <a class="nav-button four columns one-height one-top-margin rounded"> About</a>
-                <a class="nav-button four columns one-height one-top-margin rounded"> Contact</a>
+            <div class="five columns white-bg" style="position: sticky; top: 0; position: -webkit-sticky;">
+                <a onclick="my_work_start()" class="header-link gutter-padding text-center one-height one-top-margin"> My Work</a>
+                <a onclick="about_start()" class="header-link gutter-padding text-center one-height one-top-margin"> About</a>
+                <a onclick="contact_start()" class="header-link gutter-padding text-center one-height one-top-margin"> Contact</a>
             </div>
         </div>
 
-        <main class="eight-offset nine column one-top-margin" id="content"></main>
+        <main class="seven-offset nine column one-top-margin" id="content"></main>
     </div>
 </body>
 

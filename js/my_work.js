@@ -34,10 +34,11 @@ function my_work_gcp() {
     addToContent(paragraph_with_image("Landing", "The landing page is the most important part of any webpage. It's simple, yet elegant, the title text fills the space naturally and the sizing accentuates the client's defining characteristics", "../img/GCP/Landing.png"));
 
     objectToContent({
-        type: "div",
-        classList: "eight columns",
-        children: [main_title, client, context, font, landing]
-    });
+        type: "a",
+        innerText: "< BACK",
+        onclick: "my_work_start()",
+        classList: "header-link vertical-center-text six columns"
+    })
 }
 
 function my_work_tecmun() {
@@ -53,4 +54,11 @@ function my_work_tecmun() {
     addToContent(paragraph_with_image("Visual Identity", "The client needed an intuitive UI/UX that needed no explanation because the users for the page are mostly teachers and elementary school students. With this in mind, I created a color pallete and assigned a different color to each type of committe with variations that depended on the context the color was shown.", "../img/tecmun/Colors.png"));
     addToContent(paragraph_with_image("Font", "For TECMUN I chose Montserrat because it's availability with google font's and ubiquity allowed for a mixture between a serious look and a fun one.", "../img/tecmun/Type.png"));
     addToContent(paragraph_with_image("Landing", "It's simple, important information about the event and a clear call to action.", "../img/tecmun/Landing.png"));
+
+    objectToContent({
+        type: "a",
+        innerText: "< BACK",
+        onclick: "my_work_start()",
+        classList: "header-link vertical-center-text six columns"
+    })
 }
