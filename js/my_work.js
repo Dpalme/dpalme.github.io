@@ -37,7 +37,7 @@ function my_work_gcp() {
         type: "a",
         innerText: "< BACK",
         onclick: "my_work_start()",
-        classList: "header-link vertical-center-text six columns"
+        classList: "header-link vertical-center-text eight columns one-offset"
     })
 }
 
@@ -59,6 +59,6 @@ function my_work_tecmun() {
         type: "a",
         innerText: "< BACK",
         onclick: "my_work_start()",
-        classList: "header-link vertical-center-text six columns"
+        classList: "header-link vertical-center-text eight columns one-offset"
     })
 }
