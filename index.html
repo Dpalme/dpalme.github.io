@@ -33,21 +33,18 @@
 </head>
 
 <body class="night">
-    <div class="fullscreen fixed back-2 white-bg"></div>
-    <div class="fullscreen fixed back-2 background-cover" style="background-image: url('./img/Fondo@2x.png'); opacity: 30%;"></div>
+    <div class="fullscreen d-fixed back background-cover" style="background-image: url('./img/Fondo@2x.png'); opacity: 30%;"></div>
 
-    <div class="container">
-        <div class="col-12 d-fixed py-sm">
-            <h4 class="col-4 m-n lh-lg">Diego Palmerin</h4>
-            <div class="col-8 py-sm">
-                <a onclick="my_work_start()" class="col-4 text-c lh-1">My Work</a>
-                <a onclick="about_start()" class="col-4 text-c lh-1">About</a>
-                <a onclick="contact_start()" class="col-4 text-c lh-1">Contact</a>
-            </div>
+    <div class="container d-fixed">
+        <h4 class="col-4 lh-lg">Diego Palmerin</h4>
+        <div class="col-8 py-sm">
+            <a id="work" href="javascript:my_work_start()" class="col-4 text-r lh-1">My Work</a>
+            <a id="about" href="javascript:about_start()" class="col-4 text-r lh-1">About</a>
+            <a id="contact"href="javascript:contact_start()" class="col-4 text-r lh-1">Contact</a>
         </div>
-
-        <main class="col-7 mt-1" id="content"></main>
     </div>
+
+    <main class="container" id="content"></main>
 
     <!-- JS -->
     <script src="https://dpalmer.in/Peoria/peoria_2.js"></script>
