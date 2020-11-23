@@ -26,45 +26,35 @@
     <meta property='twitter:image' content='./img/Dicon.png'>
 
     <!-- CSS -->
-    <link rel='stylesheet' href='https://dpalmer.in/Peoria/css/peoria-0-4-0.css'>
     <link rel='stylesheet' href='https://dpalmer.in/Peoria/css/normalize.css'>
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel='stylesheet' href='https://dpalmer.in/Peoria/css/peoria-0-4-4.css'>
+    <link rel='stylesheet' href='./css/main.css'>
+
+</head>
+
+<body class="night">
+    <div class="fullscreen fixed back-2 white-bg"></div>
+    <div class="fullscreen fixed back-2 background-cover" style="background-image: url('./img/Fondo@2x.png'); opacity: 30%;"></div>
+
+    <div class="container">
+        <div class="col-12 d-fixed py-sm">
+            <h4 class="col-4 m-n lh-lg">Diego Palmerin</h4>
+            <div class="col-8 py-sm">
+                <a onclick="my_work_start()" class="col-4 text-c lh-1">My Work</a>
+                <a onclick="about_start()" class="col-4 text-c lh-1">About</a>
+                <a onclick="contact_start()" class="col-4 text-c lh-1">Contact</a>
+            </div>
+        </div>
+
+        <main class="col-7 mt-1" id="content"></main>
+    </div>
 
     <!-- JS -->
-    <script src="https://dpalmer.in/Peoria/peoria.js"></script>
+    <script src="https://dpalmer.in/Peoria/peoria_2.js"></script>
     <script src="./js/setup.js"></script>
     <script src="./js/my_work.js"></script>
     <script src="./js/about.js"></script>
     <script src="./js/contact.js"></script>
-</head>
-
-<body class="night" onload="setup()">
-    <div class="fullscreen fixed white-bg"></div>
-    <div class="fullscreen fixed background-cover" style="background-image: url('./img/Fondo@2x.png'); opacity: 30%;"></div>
-
-    <div class="container">
-        <div class="six columns fixed one-top-margin mobile-hide">
-            <h1 class="title-1 one-height margin-none vertical-center-text">Diego Palmerin</h1>
-            <h3 class="vertical-center-text">Web Developer</h3>
-            <div class="four columns">
-                <a id="work" onclick="my_work_start()" class="nav-button four columns one-height one-top-margin rounded">My Work</a>
-                <a id="about" onclick="about_start()" class="nav-button four columns one-height one-top-margin rounded">About</a>
-                <a id="contact" onclick="contact_start()" class="nav-button four columns one-height one-top-margin rounded">Contact</a>
-            </div>
-        </div>
-
-        <div class="five columns one-top-margin mobile-show">
-            <h1 class="title-1 one-height margin-none vertical-center-text">Diego Palmerin</h1>
-            <h3 class="vertical-center-text">Web Developer</h3>
-            <div class="five columns white-bg" style="position: sticky; top: 0; position: -webkit-sticky;">
-                <a onclick="my_work_start()" class="header-link gutter-padding text-center one-height one-top-margin"> My Work</a>
-                <a onclick="about_start()" class="header-link gutter-padding text-center one-height one-top-margin"> About</a>
-                <a onclick="contact_start()" class="header-link gutter-padding text-center one-height one-top-margin"> Contact</a>
-            </div>
-        </div>
-
-        <main class="seven-offset nine column one-top-margin" id="content"></main>
-    </div>
 </body>
 
 </html>

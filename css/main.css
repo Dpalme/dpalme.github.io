@@ -1,6 +1,4 @@
 :root{
-    font-size: .72vw;
-
     --red: #c8102e;
 }
 
@@ -9,50 +7,10 @@ html {
     overflow-x: hidden;
 }
 
-.nav-button, .nav-button:hover, .nav-button:active {
-    border: none;
-    color: white;
-    text-transform: uppercase;
-    text-align: center;
-    align-items: center;
-    line-height: calc(var(--grid)*5);
-    font-weight: 200;
-    background: linear-gradient(to right, var(--red) 65%, #000 65%);
-    background-size: 300% 100%;
-    background-position:right bottom;
-	transition:all .5s ease;
-}
-
-.nav-button:hover, .nav-button:active, .nav-button.active {
-    background-position: bottom left;
-    text-decoration: none;
-}
-
-.vertical-center-text, .vertical-center-text:hover {
-    line-height: calc(var(--grid)*5);
-}
-
 .fade {
     animation: fade ease-in .2s 1;
-}
-
-#content {
-    margin-bottom: calc(5 * var(--grid));
 }
 
 @keyframes fade {
     from    { opacity: 0%;  }
     to      { opacity: 100%;}}
-
-@media (orientation: portrait) {
-
-    :root{
-        font-size: 3vw;
-
-        --grid: 4vw;
-    }
-
-    .seven-offset {
-        margin-left: 0 !important;
-    }
-}

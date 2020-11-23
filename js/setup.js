@@ -1,19 +1,20 @@
 function create_proyect(image_url, proyect_name, function_name) {
     return object({
         type: "a",
-        classList: "fade four columns one-top-margin one-offset",
+        class: "fade col-6 my-sm",
         onclick: function_name,
-        children: [object({
+        children: [
+            object({
             type: "div",
-            classList: "hover-to-show four columns three-height absolute front white-bg",
+            class: "hover-to-show col-12 d-absolute front white-bg",
             child: object({
                 type: "p",
                 innerText: proyect_name,
-                classList: "absolute-center small-body"
+                class: "center-a small-body"
             })
         }), object({
             type: "img",
-            classList: "image-cover four columns three-height",
+            class: "image-cover col-12",
             src: image_url
         })]
     });
@@ -22,15 +23,15 @@ function create_proyect(image_url, proyect_name, function_name) {
 function paragraph(title, body) {
     return object({
         type: "div",
-        classList: "fade four columns half-top-margin one-offset",
+        class: "fade col-12 mt-sm",
         children: [object({
             type: "h3",
             innerText: title,
-            classList: "vertical-center-text"
+            class: "lh-lg col-12"
         }), object({
             type: "p",
             innerText: body,
-            classList: "justify"
+            class: "justify col-12"
         })]
     });
 }
@@ -40,7 +41,7 @@ function paragraph_with_image(title, body, img_src) {
     paragraph_obj.appendChild(object({
         type: "img",
         src: img_src,
-        classList: "four columns small-top-margin half-top-margin"
+        class: "col-12 mt-sm"
     }))
     return paragraph_obj;
 }

@@ -1,7 +1,3 @@
-const {
-    clear
-} = require("console");
-
 function my_work_start() {
     clearContent()
 
@@ -12,7 +8,7 @@ function my_work_start() {
     objectToContent({
         type: "h2",
         innerText: "My Work",
-        classList: "fade vertical-center-text"
+        class: "fade lh-lg col-12"
     });
 
     addToContent(create_proyect("../img/GCP/Landing.png", "GCP", "my_work_gcp()"));
@@ -25,8 +21,15 @@ function my_work_gcp() {
     objectToContent({
         type: "h2",
         innerText: "GCP",
-        classList: "fade vertical-center-text"
+        class: "fade lh-lg"
     });
+
+    objectToContent({
+        type: "a",
+        class: "blue col-12 text-c",
+        href: "https://dpalme.github.io/GCP",
+        innerText: "LIVE VERSION"
+    })
 
     addToContent(paragraph_with_image("The Client", "GCP is a mexican company with over 40 years of experience in construction and asphalt.", "../img/GCP/Logo_GCP.png"));
     addToContent(paragraph_with_image("Context", "GCP was looking for a redesign that more closely spoke to their vision as a company. Taking this into account, I decided to go for a minimalist layout with a focus on an intuitive and dynamic grid system based on percentages.", "../img/GCP/grid.jpg"));
@@ -35,17 +38,12 @@ function my_work_gcp() {
 
     objectToContent({
         type: "a",
-        classList: "block button four columns gutter-padding three-offset col-margin-top",
-        href: "https://dpalme.github.io/GCP",
-        innerText: "LIVE VERSION"
-    })
-
-    objectToContent({
-        type: "a",
         innerText: "< BACK",
         onclick: "my_work_start()",
-        classList: "header-link vertical-center-text eight columns one-offset"
+        class: "lh-lg col-6"
     })
+
+    
 }
 
 function my_work_tecmun() {
@@ -54,7 +52,7 @@ function my_work_tecmun() {
     objectToContent({
         type: "h2",
         innerText: "TECMUN",
-        classList: "fade vertical-center-text"
+        class: "fade vertical-center-text"
     });
 
     addToContent(paragraph_with_image("The Client", "TECMUN is a student association from the mexican university Tecnológico de Monterrey CEM. They needed a webpage with an intuitive interface and CMS to manage student registrations. We built the webpage with Django and while working on the proyect I created my own CSS library which I later named Peoria. You're seeing Peoria right now in this webpage.", "../img/tecmun/Logo.png"));
@@ -64,7 +62,7 @@ function my_work_tecmun() {
 
     objectToContent({
         type: "a",
-        classList: "block button four columns gutter-padding three-offset col-margin-top",
+        class: "block button four columns gutter-padding three-offset col-margin-top",
         href: "https://dpalme.github.io/TecMun20",
         innerText: "LIVE VERSION"
     })
@@ -73,6 +71,6 @@ function my_work_tecmun() {
         type: "a",
         innerText: "< BACK",
         onclick: "my_work_start()",
-        classList: "header-link vertical-center-text eight columns one-offset"
+        class: "header-link vertical-center-text eight columns one-offset"
     })
 }
