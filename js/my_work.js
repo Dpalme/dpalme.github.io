@@ -23,7 +23,7 @@ function my_work_start() {
 
     objectToContent({
         type: "a",
-        class: "col-4 h4 blue text-c fade",
+        class: "col-4 h4 blue text-c fade mb-sm",
         href: "https://dpalmer.in/Peoria",
         target: "_blank",
         innerText: "Peoria",
@@ -35,7 +35,7 @@ function my_work_start() {
 
     objectToContent({
         type: "a",
-        class: "col-4 h4 blue text-c fade",
+        class: "col-4 h4 blue text-c fade mb-sm",
         href: "https://dpalmer.in/Random",
         target: "_blank",
         innerText: "Random",
@@ -47,7 +47,7 @@ function my_work_start() {
 
     objectToContent({
         type: "a",
-        class: "col-4 h4 blue text-c fade",
+        class: "col-4 h4 blue text-c fade mb-sm",
         href: "https://dpalmer.in/QuizDb",
         target: "_blank",
         innerText: "QuizDb",
@@ -59,7 +59,7 @@ function my_work_start() {
 
     objectToContent({
         type: "a",
-        class: "col-4 h4 blue text-c fade",
+        class: "col-4 h4 blue text-c fade mb-sm",
         href: "https://carlosmtz98.github.io/EerieSpace/",
         target: "_blank",
         innerText: "Eerie Space",
@@ -71,7 +71,7 @@ function my_work_start() {
 
     objectToContent({
         type: "a",
-        class: "col-4 h4 blue text-c fade",
+        class: "col-4 h4 blue text-c fade mb-sm",
         href: "https://carlosmtz98.github.io/EerieSpace/",
         target: "_blank",
         innerText: "Eerie Space",
