@@ -1,6 +1,5 @@
 function my_work_start() {
     clearContent()
-
     document.getElementById("work").classList.add("selected");
     document.getElementById("about").classList.remove("selected");
     document.getElementById("contact").classList.remove("selected");
@@ -23,7 +22,7 @@ function my_work_start() {
 
     objectToContent({
         type: "a",
-        class: "col-4 h4 blue text-c fade mb-sm",
+        class: "col-q h4 blue text-c fade mb-sm",
         href: "https://dpalmer.in/Peoria",
         target: "_blank",
         innerText: "Peoria",
@@ -35,7 +34,7 @@ function my_work_start() {
 
     objectToContent({
         type: "a",
-        class: "col-4 h4 blue text-c fade mb-sm",
+        class: "col-q h4 blue text-c fade mb-sm",
         href: "https://dpalmer.in/Random",
         target: "_blank",
         innerText: "Random",
@@ -47,7 +46,7 @@ function my_work_start() {
 
     objectToContent({
         type: "a",
-        class: "col-4 h4 blue text-c fade mb-sm",
+        class: "col-q h4 blue text-c fade mb-sm",
         href: "https://dpalmer.in/QuizDb",
         target: "_blank",
         innerText: "QuizDb",
@@ -59,7 +58,7 @@ function my_work_start() {
 
     objectToContent({
         type: "a",
-        class: "col-4 h4 blue text-c fade mb-sm",
+        class: "col-q h4 blue text-c fade mb-sm",
         href: "https://carlosmtz98.github.io/EerieSpace/",
         target: "_blank",
         innerText: "Eerie Space",
@@ -71,7 +70,7 @@ function my_work_start() {
 
     objectToContent({
         type: "a",
-        class: "col-4 h4 blue text-c fade mb-sm",
+        class: "col-q h4 blue text-c fade mb-sm",
         href: "https://carlosmtz98.github.io/EerieSpace/",
         target: "_blank",
         innerText: "Eerie Space",
@@ -140,7 +139,6 @@ function my_work_gcp() {
 
 function my_work_tecmun() {
     clearContent();
-
     objectToContent({
         type: "div",
         class: "col-12 fade",
