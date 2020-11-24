@@ -23,18 +23,26 @@ function my_work_start() {
 
     objectToContent({
         type: "a",
-        class: "col-4 h4 orange text-c fade",
+        class: "col-4 h4 blue text-c fade",
         href: "https://dpalmer.in/Peoria",
         target: "_blank",
         innerText: "Peoria",
+        child: object({
+            type: "p",
+            innerText: "A custom CSS library."
+        })
     });
 
     objectToContent({
         type: "a",
-        class: "col-4 h4 purple text-c fade",
+        class: "col-4 h4 blue text-c fade",
         href: "https://dpalmer.in/Random",
         target: "_blank",
         innerText: "Random",
+        child: object({
+            type: "p",
+            innerText: "A collection of my favorite things."
+        })
     });
 
     objectToContent({
@@ -43,6 +51,34 @@ function my_work_start() {
         href: "https://dpalmer.in/QuizDb",
         target: "_blank",
         innerText: "QuizDb",
+        child: object({
+            type: "p",
+            innerText: "A study app built with IndexedDB."
+        })
+    });
+
+    objectToContent({
+        type: "a",
+        class: "col-4 h4 blue text-c fade",
+        href: "https://carlosmtz98.github.io/EerieSpace/",
+        target: "_blank",
+        innerText: "Eerie Space",
+        child: object({
+            type: "p",
+            innerText: "A twin stick shooter mobile game."
+        })
+    });
+
+    objectToContent({
+        type: "a",
+        class: "col-4 h4 blue text-c fade",
+        href: "https://carlosmtz98.github.io/EerieSpace/",
+        target: "_blank",
+        innerText: "Eerie Space",
+        child: object({
+            type: "p",
+            innerText: "A twin stick shooter mobile game."
+        })
     });
 }
 
