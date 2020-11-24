@@ -8,11 +8,11 @@ function contact_start() {
     objectToContent({
         type: "h2",
         innerText: "Contact",
-        class: "col-12 my-sm"
+        class: "col-12 my-sm fade"
     })
     objectToContent({
         type: "div",
-        class: "col-12 mt-1",
+        class: "col-12 mt-1 fade",
         children: [
             object({
                 type: "h4",
@@ -32,7 +32,7 @@ function contact_start() {
     });
     objectToContent({
         type: "div",
-        class: "col-12 mt-sm",
+        class: "col-12 mt-sm fade",
         children: [
             object({
                 type: "h4",

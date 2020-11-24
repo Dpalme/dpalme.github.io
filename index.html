@@ -35,21 +35,28 @@
 </head>
 
 <body>
-    <div class="container front py-sm d-fixed">
-        <a id="work" href="javascript:my_work_start()" class="col-4 lh-1 blue">My Work</a>
-        <a id="about" href="javascript:about_start()" class="col-4 lh-1 text-c purple">About</a>
-        <a id="contact" href="javascript:contact_start()" class="col-4 lh-1 text-r orange">Contact</a>
-    </div>
+    <header class="container front top py-sm fixed center-x">
+        <a id="work" href="javascript:my_work_start()" class="col-4 lh-1 blue mob-hide">My Work</a>
+        <a id="about" href="javascript:about_start()" class="col-4 lh-1 text-c purple mob-hide">About</a>
+        <a id="contact" href="javascript:contact_start()" class="col-4 lh-1 text-r orange mob-hide">Contact</a>
+        <a id="work" href="javascript:my_work_start()" class="col-2 lh-1 text-c blue mob-show">Work</a>
+        <a id="about" href="javascript:about_start()" class="col-2 lh-1 text-c purple mob-show">About</a>
+        <a id="contact" href="javascript:contact_start()" class="col-2 lh-1 text-c orange mob-show">Contact</a>
+    </header>
 
-    <main class="container" id="content">
+    <main class="container mt-lg" id="content">
         <div class="relative">
-            <div class="text-c mt-lg col-12">
+            <div class="text-c mt-lg col-12 mob-hide">
                 <h1 class="lh-lg" style="letter-spacing: 6rem; margin-right: -6rem;">DIEGO</h1>
                 <h2 class="lh-lg" style="letter-spacing: 6rem; margin-right: -6rem;">PALMERIN</h2>
                 <h6 class="lh-1" style="letter-spacing: 1.2rem; margin-right: -1.2rem;">Web Developer/Designer</h6>
             </div>
+            <div class="mt-lg col-12 mob-show">
+                <h1 class="lh-lg">DIEGO</h1>
+                <h2 class="lh-lg">PALMERIN</h2>
+                <h6 class="lh-1">Web Developer/Designer</h6>
+            </div>
         </div>
-        
     </main>
 
     <script src="./js/main.js" type="module"></script>
