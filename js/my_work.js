@@ -8,11 +8,11 @@ function my_work_start() {
     objectToContent({
         type: "h2",
         innerText: "My Work",
-        class: "fade my-sm lh-lg col-12"
+        class: "fade my-sm mt-1 lh-lg col-12"
     });
 
-    addToContent(create_proyect("./img/GCP/Landing.png", "GCP", "my_work_gcp()"));
-    addToContent(create_proyect("./img/tecmun/Landing.png", "TECMUN", "my_work_tecmun()"));
+    addToContent(create_proyect("./img/GCP/Landing.png", "my_work_gcp()"));
+    addToContent(create_proyect("./img/tecmun/Landing.png", "my_work_tecmun()"));
 }
 
 function my_work_gcp() {
@@ -40,10 +40,6 @@ function my_work_gcp() {
         ]
     })
 
-    addToContent(paragraph("The Client", "GCP is a mexican company with over 40 years of experience in construction and asphalt."));
-    addToContent(paragraph("Context", "GCP was looking for a redesign that more closely spoke to their vision as a company. Taking this into account, I decided to go for a minimalist layout with a focus on an intuitive and dynamic grid system based on percentages."));
-    addToContent(paragraph("Font", "GCP represents a tradition of inovation. Thus, a grotesque font with modern characteristics best suited the new identity for the brands webiste and worked well with the text from the logo."));
-    addToContent(paragraph("Landing", "The landing page is the most important part of any webpage. It's simple, yet elegant, the title text fills the space naturally and the sizing accentuates the client's defining characteristics"));
     objectToContent({
         type: "div",
         class: "col-12 mt-1",
@@ -67,7 +63,10 @@ function my_work_gcp() {
         ]
     })
 
-    
+    addToContent(paragraph("The Client", "GCP is a mexican company with over 40 years of experience in construction and asphalt."));
+    addToContent(paragraph("Context", "GCP was looking for a redesign that more closely spoke to their vision as a company. Taking this into account, I decided to go for a minimalist layout with a focus on an intuitive and dynamic grid system based on percentages."));
+    addToContent(paragraph("Font", "GCP represents a tradition of inovation. Thus, a grotesque font with modern characteristics best suited the new identity for the brands webiste and worked well with the text from the logo."));
+    addToContent(paragraph("Landing", "The landing page is the most important part of any webpage. It's simple, yet elegant, the title text fills the space naturally and the sizing accentuates the client's defining characteristics"));
 }
 
 function my_work_tecmun() {

@@ -1,4 +1,4 @@
-function create_proyect(image_url, proyect_name, function_name) {
+function create_proyect(image_url, function_name) {
     return object({
         type: "a",
         class: "fade col-4 my-sm",

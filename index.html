@@ -30,24 +30,29 @@
     <link rel='stylesheet' href='https://dpalmer.in/Peoria/css/peoria-0-4-4.css'>
     <link rel='stylesheet' href='./css/main.css'>
 
-</head>
-
-<body class="night">
-    <div class="fullscreen d-fixed back background-cover" style="background-image: url('./img/Fondo@2x.png'); opacity: 30%;"></div>
-
-    <div class="container d-fixed">
-        <h4 class="col-4 lh-lg">Diego Palmerin</h4>
-        <div class="col-8 py-sm">
-            <a id="work" href="javascript:my_work_start()" class="col-4 text-r lh-1">My Work</a>
-            <a id="about" href="javascript:about_start()" class="col-4 text-r lh-1">About</a>
-            <a id="contact"href="javascript:contact_start()" class="col-4 text-r lh-1">Contact</a>
-        </div>
-    </div>
-
-    <main class="container" id="content"></main>
-
     <!-- JS -->
     <script src="https://dpalmer.in/Peoria/peoria_2.js"></script>
+</head>
+
+<body>
+    <div class="container front py-sm d-fixed">
+        <a id="work" href="javascript:my_work_start()" class="col-4 lh-1 blue">My Work</a>
+        <a id="about" href="javascript:about_start()" class="col-4 lh-1 text-c purple">About</a>
+        <a id="contact" href="javascript:contact_start()" class="col-4 lh-1 text-r orange">Contact</a>
+    </div>
+
+    <main class="container" id="content">
+        <div class="relative">
+            <div class="text-c mt-lg col-12">
+                <h1 class="lh-lg" style="letter-spacing: 6rem; margin-right: -6rem;">DIEGO</h1>
+                <h2 class="lh-lg" style="letter-spacing: 6rem; margin-right: -6rem;">PALMERIN</h2>
+                <h6 class="lh-1" style="letter-spacing: 1.2rem; margin-right: -1.2rem;">Web Developer/Designer</h6>
+            </div>
+        </div>
+        
+    </main>
+
+    <script src="./js/main.js" type="module"></script>
     <script src="./js/setup.js"></script>
     <script src="./js/my_work.js"></script>
     <script src="./js/about.js"></script>
