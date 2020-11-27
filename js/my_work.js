@@ -59,6 +59,18 @@ function my_work_start() {
     objectToContent({
         type: "a",
         class: "col-h h4 blue text-c fade mb-sm",
+        href: "https://dpalmer.in/Art-Project",
+        target: "_blank",
+        innerText: "Art Project",
+        child: object({
+            type: "p",
+            innerText: "An art gallery with pieces made of code."
+        })
+    });
+
+    objectToContent({
+        type: "a",
+        class: "col-h h4 blue text-c fade mb-sm",
         href: "https://carlosmtz98.github.io/EerieSpace/",
         target: "_blank",
         innerText: "Eerie Space",
