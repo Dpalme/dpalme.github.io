@@ -1,4 +1,4 @@
-import * as THREE from 'https://dpalmer.in/Art-Project/three.module.js';
+import * as THREE from './three.module.js';
 
 let camera, scene, renderer, container;
 let theta = 0;
@@ -14,7 +14,7 @@ init();
 animate();
 
 function init() {
-    container = object({type: "div", class: "fixed overflow-h center-a back"});
+    container = object({type: "div", class: "overflow-h center-a back"});
     document.body.appendChild(container);
 
     const aspect = window.innerWidth / window.innerHeight;
@@ -60,13 +60,13 @@ function init() {
     window.addEventListener('wheel', onMouseWheel, false);
 }
 
-function onMouseMove(event) {
-    scene.position.x =  0.05 * (event.clientX - windowHalf.x);
-    scene.position.y = -0.05 * (event.clientY - windowHalf.x);
+function onMouseMove( event ) {
+    mouse.x = ( event.clientX - windowHalf.x );
+    mouse.y = ( event.clientY - windowHalf.x );
 }
 
-function onMouseWheel(event) {
-    scene.position.z += event.deltaY * 0.05; // move camera along z-axis
+function onMouseWheel( event ) {
+    camera.position.z += event.deltaY * 0.1; // move camera along z-axis
 }
 
 function onWindowResize() {
@@ -91,9 +91,9 @@ function render() {
     
     theta += 0.01;
     var angle = THREE.MathUtils.degToRad(theta);
-    camera.position.x = radius * Math.sin(angle) + 0.1 * (target.x - camera.position.x);
-    camera.position.y = radius * Math.sin(angle) + 0.1 * (target.y - camera.position.y);
-    camera.position.z = radius * Math.cos(angle);
+    camera.position.x = 2 * Math.sin(angle) + 0.1 * (target.x - camera.position.x);
+    camera.position.y = 2 * Math.sin(angle) + 0.1 * (target.y - camera.position.y);
+    camera.position.z = 2 * Math.cos(angle);
     camera.lookAt(scene.position);
     camera.updateMatrixWorld();
 
