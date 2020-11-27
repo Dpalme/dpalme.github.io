@@ -1,4 +1,4 @@
-import * as THREE from './three.module.js';
+import * as THREE from 'https://dpalmer.in/Art-Project/three.module.js';
 
 let camera, scene, renderer, container;
 let theta = 0;
