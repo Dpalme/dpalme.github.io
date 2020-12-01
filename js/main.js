@@ -14,7 +14,7 @@ init();
 animate();
 
 function init() {
-    container = object({type: "div", class: "overflow-h center-a back"});
+    container = object({type: "div", class: "overflow-h fixed center-a back"});
     document.body.appendChild(container);
 
     const aspect = window.innerWidth / window.innerHeight;
@@ -66,7 +66,7 @@ function onMouseMove( event ) {
 }
 
 function onMouseWheel( event ) {
-    camera.position.z += event.deltaY * 0.1; // move camera along z-axis
+    camera.position.z += event.deltaY * 3; // move camera along z-axis
 }
 
 function onWindowResize() {
