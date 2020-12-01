@@ -66,7 +66,7 @@ function onMouseMove(event) {
 }
 
 function onMouseWheel(event) {
-    mouse.y -= event.deltaY * 0.5;
+    mouse.y -= event.deltaY;
 }
 
 function onWindowResize() {
