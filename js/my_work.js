@@ -220,18 +220,18 @@ function my_work_refugio() {
             object({
                 type: "img",
                 class: "col-4 mb-sm",
-                src: "./img/refugio/colores.png",
-                alt: "GCP grid"
+                src: "./img/refugio/Colores.png",
+                alt: "Refugio San Gregorio Colors"
             }), object({
                 type: "img",
                 class: "col-4 mb-sm",
                 src: "./img/refugio/Iconografía.png",
-                alt: "GCP Typography"
+                alt: "Refugio San Gregorio Iconografía"
             }), object({
                 type: "img",
                 class: "col-4 mb-sm",
                 src: "./img/refugio/Tipografía.png",
-                alt: "GCP Landing"
+                alt: "Refugio San Gregorio Tipografía"
             })
         ]
     })
