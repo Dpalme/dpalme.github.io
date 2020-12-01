@@ -60,13 +60,13 @@ function init() {
     window.addEventListener('wheel', onMouseWheel, false);
 }
 
-function onMouseMove( event ) {
-    mouse.x = ( event.clientX - windowHalf.x );
-    mouse.y = ( event.clientY - windowHalf.x );
+function onMouseMove(event) {
+    mouse.x = (event.clientX - windowHalf.x);
+    mouse.y = (event.clientY - windowHalf.x);
 }
 
-function onMouseWheel( event ) {
-    camera.position.z += event.deltaY * 3; // move camera along z-axis
+function onMouseWheel(event) {
+    mouse.y -= event.deltaY * 0.5;
 }
 
 function onWindowResize() {
