@@ -35,6 +35,18 @@ function my_work_start() {
     objectToContent({
         type: "a",
         class: "col-h h4 blue text-c fade mb-sm",
+        href: "https://github.com/Dpalme",
+        target: "_blank",
+        innerText: "Github",
+        child: object({
+            type: "p",
+            innerText: "Check out my github!"
+        })
+    });
+
+    objectToContent({
+        type: "a",
+        class: "col-h h4 blue text-c fade mb-sm",
         href: "https://dpalmer.in/Random",
         target: "_blank",
         innerText: "Random",
