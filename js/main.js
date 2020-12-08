@@ -7,6 +7,7 @@ const radius = 500;
 const frustumSize = 200;
 
 const mouse = new THREE.Vector2();
+let wheel = 0;
 const target = new THREE.Vector2();
 const windowHalf = new THREE.Vector2(window.innerWidth / 2, window.innerHeight / 2);
 
@@ -21,7 +22,7 @@ function init() {
     camera = new THREE.OrthographicCamera( frustumSize * aspect / - 2, frustumSize * aspect / 2, frustumSize / 2, frustumSize / - 2, .1, 3000);
 
     scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xD8D7D2);
+    scene.background = new THREE.Color(0x14171D);
 
     const light = new THREE.DirectionalLight(0xFFFFFF, 1);
     light.position.set(1, 1, 1).normalize();
@@ -66,7 +67,7 @@ function onMouseMove(event) {
 }
 
 function onMouseWheel(event) {
-    mouse.y -= event.deltaY;
+    wheel -= event.deltaY;
 }
 
 function onWindowResize() {
@@ -87,7 +88,7 @@ function animate() {
 
 function render() {
     target.x = (1 - mouse.x) * 0.002;
-    target.y = (1 - mouse.y) * 0.002;  
+    target.y = (1 - mouse.y + wheel) * -0.002;  
     
     theta += 0.01;
     var angle = THREE.MathUtils.degToRad(theta);
