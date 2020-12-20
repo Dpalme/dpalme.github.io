@@ -7,7 +7,7 @@ function my_work_start() {
     objectToContent({
         type: "h2",
         innerText: "Professional",
-        class: "fade mb-sm lh-lg col-12"
+        class: "fade mb-sm lh-lg col-12 title-4"
     });
 
     addToContent(create_proyect("./img/GCP/Landing.png", "my_work_gcp()"));
@@ -17,12 +17,12 @@ function my_work_start() {
     objectToContent({
         type: "h2",
         innerText: "Personal",
-        class: "fade my-sm mt-lg lh-lg col-12"
+        class: "fade my-sm mt-lg lh-lg col-12 title-4"
     });
 
     objectToContent({
         type: "a",
-        class: "col-h h4 blue text-c fade mb-sm",
+        class: "col-h h4 yellow text-c fade mb-sm",
         href: "https://dpalmer.in/Peoria",
         target: "_blank",
         innerText: "Peoria",
@@ -34,7 +34,7 @@ function my_work_start() {
 
     objectToContent({
         type: "a",
-        class: "col-h h4 blue text-c fade mb-sm",
+        class: "col-h h4 yellow text-c fade mb-sm",
         href: "https://github.com/Dpalme",
         target: "_blank",
         innerText: "Github",
@@ -46,7 +46,7 @@ function my_work_start() {
 
     objectToContent({
         type: "a",
-        class: "col-h h4 blue text-c fade mb-sm",
+        class: "col-h h4 yellow text-c fade mb-sm",
         href: "https://dpalmer.in/Random",
         target: "_blank",
         innerText: "Random",
@@ -58,7 +58,7 @@ function my_work_start() {
 
     objectToContent({
         type: "a",
-        class: "col-h h4 blue text-c fade mb-sm",
+        class: "col-h h4 yellow text-c fade mb-sm",
         href: "https://dpalmer.in/QuizDb",
         target: "_blank",
         innerText: "QuizDb",
@@ -70,7 +70,7 @@ function my_work_start() {
 
     objectToContent({
         type: "a",
-        class: "col-h h4 blue text-c fade mb-sm",
+        class: "col-h h4 yellow text-c fade mb-sm",
         href: "https://dpalmer.in/Art-Project",
         target: "_blank",
         innerText: "Art Project",
@@ -82,7 +82,7 @@ function my_work_start() {
 
     objectToContent({
         type: "a",
-        class: "col-h h4 blue text-c fade mb-sm",
+        class: "col-h h4 yellow text-c fade mb-sm",
         href: "https://carlosmtz98.github.io/EerieSpace/",
         target: "_blank",
         innerText: "Eerie Space",
@@ -100,17 +100,24 @@ function my_work_gcp() {
         class: "col-12 fade",
         children: [
             objectToContent({
-                type: "h2",
-                innerText: "GCP",
-                class: "mx-sm d-inline lh-lg"
-            }), objectToContent({
                 type: "a",
-                class: "blue lh-lg",
-                target: "_blank",
-                href: "https://dpalme.github.io/GCP",
-                innerText: "LIVE VERSION"
+                class: "red lh-lg mr-1 title-4",
+                href: "javascript:my_work_start()",
+                innerText: "<"
+            }),
+            objectToContent({
+                type: "h1",
+                innerText: "GCP",
+                class: "title-4 d-inline lh-lg"
             })
         ]
+    })
+    objectToContent({
+        type: "a",
+        class: "yellow lh-1 h4 col-12",
+        target: "_blank",
+        href: "https://dpalme.github.io/GCP",
+        innerText: "LIVE VERSION"
     })
 
     objectToContent({
@@ -145,7 +152,7 @@ function my_work_gcp() {
         type: "a",
         innerText: "< BACK",
         href: "javascript:my_work_start()",
-        class: "lh-lg orange"
+        class: "lh-lg red h3"
     })
 }
 
@@ -156,17 +163,25 @@ function my_work_tecmun() {
         class: "col-12 fade",
         children: [
             objectToContent({
-                type: "h2",
-                innerText: "Tecmun",
-                class: "mx-sm d-inline lh-lg"
-            }), objectToContent({
                 type: "a",
-                class: "blue lh-lg",
-                target: "_blank",
-                href: "https://dpalme.github.io/TecMun20",
-                innerText: "LIVE VERSION"
+                class: "red lh-lg mr-1 title-4",
+                href: "javascript:my_work_start()",
+                innerText: "<"
+            }),
+            objectToContent({
+                type: "h1",
+                innerText: "TECMUN",
+                class: "title-4 d-inline lh-lg"
             })
         ]
+    })
+
+    objectToContent({
+        type: "a",
+        class: "yellow lh-1 h4 col-12",
+        target: "_blank",
+        href: "https://dpalme.github.io/TecMun20",
+        innerText: "LIVE VERSION"
     })
 
     objectToContent({
@@ -201,7 +216,7 @@ function my_work_tecmun() {
         type: "a",
         innerText: "< BACK",
         href: "javascript:my_work_start()",
-        class: "lh-lg orange"
+        class: "lh-lg red h3"
     })
 }
 
@@ -212,17 +227,25 @@ function my_work_refugio() {
         class: "col-12 fade",
         children: [
             objectToContent({
-                type: "h2",
-                innerText: "Refugio San Gregorio",
-                class: "mx-sm d-inline lh-lg"
-            }), objectToContent({
                 type: "a",
-                class: "blue lh-lg",
-                target: "_blank",
-                href: "https://refugiosangregorio.com",
-                innerText: "LIVE VERSION"
+                class: "red lh-lg mr-1 title-4",
+                href: "javascript:my_work_start()",
+                innerText: "<"
+            }),
+            objectToContent({
+                type: "h1",
+                innerText: "Refugio San Gregorio",
+                class: "title-4 d-inline lh-lg"
             })
         ]
+    })
+
+    objectToContent({
+        type: "a",
+        class: "yellow lh-1 h4 col-12",
+        target: "_blank",
+        href: "https://refugiosangregorio.com",
+        innerText: "LIVE VERSION"
     })
 
     objectToContent({
@@ -256,6 +279,6 @@ function my_work_refugio() {
         type: "a",
         innerText: "< BACK",
         href: "javascript:my_work_start()",
-        class: "lh-lg orange"
+        class: "lh-lg red h3"
     })
 }

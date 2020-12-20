@@ -1,7 +1,7 @@
 function create_proyect(image_url, function_name) {
     return object({
         type: "a",
-        class: "fade col-6 my-sm",
+        class: "fade col-6",
         href: "javascript:" + function_name,
         child: object({
             type: "img",
@@ -17,9 +17,9 @@ function paragraph(title, body) {
         type: "div",
         class: "fade mt-sm",
         children: [object({
-            type: "h3",
+            type: "h2",
             innerText: title,
-            class: "lh-lg col-12"
+            class: "lh-lg"
         }), object({
             type: "p",
             innerText: body,

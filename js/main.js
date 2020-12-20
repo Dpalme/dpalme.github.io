@@ -22,20 +22,19 @@ function init() {
     camera = new THREE.OrthographicCamera( frustumSize * aspect / - 2, frustumSize * aspect / 2, frustumSize / 2, frustumSize / - 2, .1, 3000);
 
     scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x14171D);
+    scene.background = new THREE.Color(0x060B05);
 
     const light = new THREE.DirectionalLight(0xFFFFFF, 1);
     light.position.set(1, 1, 1).normalize();
     scene.add(light);
 
     const geometry = new THREE.CylinderBufferGeometry(.2, .4, 2);
-    var materials = [new THREE.MeshBasicMaterial({color: 0x1F5AFE}),
-                new THREE.MeshBasicMaterial({color: 0x4558D9}),
-                new THREE.MeshBasicMaterial({color: 0x6A57B3}),
-                new THREE.MeshBasicMaterial({color: 0x8F558F}),
-                new THREE.MeshBasicMaterial({color: 0xB45367}),
-                new THREE.MeshBasicMaterial({color: 0xDA5242}),
-                new THREE.MeshBasicMaterial({color: 0xFF501B})];
+    var materials = [new THREE.MeshBasicMaterial({color: 0x284394}),
+                new THREE.MeshBasicMaterial({color: 0xDB173B}),
+                new THREE.MeshBasicMaterial({color: 0x49475F}),
+                new THREE.MeshBasicMaterial({color: 0x41568b}),
+                new THREE.MeshBasicMaterial({color: 0x155240}),
+                new THREE.MeshBasicMaterial({color: 0xB08CC9})];
 
     for ( let i = 0; i < 2000; i ++ ) {
     const object = new THREE.Mesh(geometry, materials[Math.random() * materials.length << 0]);

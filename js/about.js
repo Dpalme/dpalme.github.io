@@ -8,7 +8,7 @@ function about_start() {
     objectToContent({
         type: "h2",
         innerText: "About Me",
-        class: "fade my-sm lh-lg col-12"
+        class: "fade lh-lg col-12 title-4"
     });
     objectToContent({
         type: "p",
@@ -26,13 +26,13 @@ function about_start() {
                 href: "https://soundcloud.com/diego_pb",
                 target: "_blank",
                 innerText: "SOUNDCLOUD",
-                class: "lh-1 col-6 text-c blue"
+                class: "lh-1 col-6 text-c blue h4"
             }), object({
                 type: "a",
                 href: "https://formasmenores.bandcamp.com/",
                 target: "_blank",
                 innerText: "FORMAS MENORES",
-                class: "lh-1 col-6 text-c blue"
+                class: "lh-1 col-6 text-c blue h4"
             })
         ]
     }))
@@ -48,13 +48,13 @@ function about_start() {
                 href: "https://www.instagram.com/diegoo_pb2/",
                 target: "_blank",
                 innerText: "INSTAGRAM",
-                class: "lh-1 col-6 text-c blue"
+                class: "lh-1 col-6 text-c blue h4"
             }), object({
                 type: "a",
                 href: "https://www.behance.net/dpalme",
                 target: "_blank",
                 innerText: "BEHANCE",
-                class: "lh-1 col-6 text-c blue"
+                class: "lh-1 col-6 text-c blue h4"
             })
         ]
     }))
