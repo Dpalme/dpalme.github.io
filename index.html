@@ -10,7 +10,7 @@
     <meta name='title' content='Diego Palmerín - Portfolio'>
     <meta name='description' content='Web Developer and designer.'>
     <link rel="icon" type="image/png" href="./img/Dicon.png">
-    
+
 
     <!-- Open Graph / Facebook -->
     <meta property='og:type' content='website'>
@@ -30,48 +30,60 @@
     <link rel='stylesheet' href='https://dpalmer.in/Peoria/css/normalize.css'>
     <link rel='stylesheet' href='https://dpalmer.in/Peoria/css/peoria-0-5-0.css'>
     <link rel='stylesheet' href='./css/main.css'>
-
-    <!-- JS -->
-    <script src="https://dpalmer.in/Peoria/peoria_2.js"></script>
     <style>
         :root {
-            --purple:#2FE491;
+            --purple: #2FE491;
             --blue: #509AF0;
             --purple: #F376A1;
         }
     </style>
+
+    <!-- JS -->
+    <script src="https://dpalmer.in/Peoria/peoria_2.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4SFJ138DWT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-4SFJ138DWT');
+    </script>
 </head>
 
 <body class="night"></body>
-    <header class="container front top py-sm fixed center-x">
-        <a id="work" href="javascript:my_work_start()" class="col-4 lh-1 h5 purple mob-hide">My Work</a>
-        <a id="about" href="javascript:about_start()" class="col-4 lh-1 h5 text-c purple mob-hide">About</a>
-        <a id="contact" href="javascript:contact_start()" class="col-4 lh-1 h5 text-r purple mob-hide">Contact</a>
-        <a id="work" href="javascript:my_work_start()" class="col-2 lh-1 h5 text-c purple mob-show">Work</a>
-        <a id="about" href="javascript:about_start()" class="col-2 lh-1 h5 text-c purple mob-show">About</a>
-        <a id="contact" href="javascript:contact_start()" class="col-2 lh-1 h5 text-c purple mob-show">Contact</a>
-    </header>
+<header class="container front top py-sm fixed center-x">
+    <a id="work" href="javascript:my_work_start()" class="col-4 lh-1 h5 purple mob-hide">My Work</a>
+    <a id="about" href="javascript:about_start()" class="col-4 lh-1 h5 text-c purple mob-hide">About</a>
+    <a id="contact" href="javascript:contact_start()" class="col-4 lh-1 h5 text-r purple mob-hide">Contact</a>
+    <a id="work" href="javascript:my_work_start()" class="col-2 lh-1 h5 text-c purple mob-show">Work</a>
+    <a id="about" href="javascript:about_start()" class="col-2 lh-1 h5 text-c purple mob-show">About</a>
+    <a id="contact" href="javascript:contact_start()" class="col-2 lh-1 h5 text-c purple mob-show">Contact</a>
+</header>
 
-    <main class="container mt-lg" id="content">
-        <div class="relative">
-            <div class="text-c mt-lg col-12 mob-hide">
-                <h1 class="lh-lg title-3" style="letter-spacing: 6rem; margin-right: -6rem;">DIEGO</h1>
-                <h1 class="lh-lg mb-1" style="letter-spacing: 6rem; margin-right: -6rem;">PALMERIN</h1>
-                <h5 class="lh-1" style="letter-spacing: 1.2rem; margin-right: -1.2rem;">Web Developer/Designer</h5>
-            </div>
-            <div class="mt-lg col-12 mob-show">
-                <h1 class="lh-lg">DIEGO</h1>
-                <h2 class="lh-lg">PALMERIN</h2>
-                <h6 class="lh-1">Web Developer/Designer</h6>
-            </div>
+<main class="container mt-lg" id="content">
+    <div class="relative">
+        <div class="text-c mt-lg col-12 mob-hide">
+            <h1 class="lh-lg title-3" style="letter-spacing: 6rem; margin-right: -6rem;">DIEGO</h1>
+            <h1 class="lh-lg mb-1" style="letter-spacing: 6rem; margin-right: -6rem;">PALMERIN</h1>
+            <h5 class="lh-1" style="letter-spacing: 1.2rem; margin-right: -1.2rem;">Web Developer/Designer</h5>
         </div>
-    </main>
+        <div class="mt-lg col-12 mob-show">
+            <h1 class="lh-lg">DIEGO</h1>
+            <h2 class="lh-lg">PALMERIN</h2>
+            <h6 class="lh-1">Web Developer/Designer</h6>
+        </div>
+    </div>
+</main>
 
-    <script src="./js/main.js" type="module"></script>
-    <script src="./js/setup.js"></script>
-    <script src="./js/my_work.js"></script>
-    <script src="./js/about.js"></script>
-    <script src="./js/contact.js"></script>
+<script src="./js/main.js" type="module"></script>
+<script src="./js/setup.js"></script>
+<script src="./js/my_work.js"></script>
+<script src="./js/about.js"></script>
+<script src="./js/contact.js"></script>
 </body>
 
 </html>
