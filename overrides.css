@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Rubik+Glitch&display=swap');
+
+:root {
+    --title: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    --default: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+}
+
+.body, p, a {
+    font-size: 1rem;
+}
+
+.grid {
+    gap: var(--col);
+}
+
+.small {
+    font-size: 0.8rem;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.grow {
+    flex-grow: 1;
+}
