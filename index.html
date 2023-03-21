@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diego Palmerín</title>
+    <style>
+      @keyframes spinner {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .spin {
+        animation: 1.5s linear infinite spinner;
+        animation-play-state: inherit;
+        border: solid 5px #fff;
+        border-bottom: dotted 5px #fff;
+        border-radius: 50%;
+        height: 24px;
+        width: 24px;
+        display: inline-block;
+        margin-left: 4px;
+        will-change: transform;
+      }
+      @font-face {
+        font-family: 'PPEiko';
+        src: url('./assets/PPEiko-Thin-529d6849.ttf');
+        font-weight: 100;
+      }
+      @font-face {
+        font-family: 'PPEiko';
+        src: url('./assets/PPEiko-LightItalic-3cc41a32.ttf');
+        font-weight: 300;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: 'PPRadioGrotesk';
+        src: url('./assets/PPRadioGrotesk-Ultralight-31236fe1.ttf');
+        font-weight: 200;
+      }
+      @font-face {
+        font-family: 'PPRadioGrotesk';
+        src: url('./assets/PPRadioGrotesk-BlackItalic-1b63a9f1.ttf');
+        font-weight: 900;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: 'PPTelegraf';
+        src: url('./assets/PPTelegraf-Ultrabold-980a2276.ttf');
+        font-weight: 800;
+      }
+      @font-face {
+        font-family: 'PPTelegraf';
+        src: url('./assets/PPTelegraf-RegularSlanted-40e84019.ttf');
+        font-weight: 400;
+        font-style: italic;
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/main-5ad074ad.js"></script>
+    <link rel="stylesheet" href="./assets/index-23339ab7.css">
+  </head>
+  <body style="background-color: rgb(39, 41, 49)">
+    <div id="root">
+      <div
+        style="
+          position: fixed;
+          z-index: 10;
+          width: 100%;
+          height: 100%;
+          color: #fff;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 12;
+        "
+      >
+        <p style="font-size: 3.75rem; padding-bottom: 0.5rem">
+          Dieg<span class="spin" />
+        </p>
+        <p style="font-size: 3.75rem; padding-bottom: 0.5rem">Palmerín</p>
+      </div>
+    </div>
+    
+  </body>
+</html>
