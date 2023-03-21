@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router-dom';
-import { ImageFocus } from './imageFocus';
 import WorkPage from './workPage';
 import AndreasPage from './workProjects/andreas';
 import BrujulaPage from './workProjects/brujula';
@@ -12,6 +11,10 @@ export const WorkRouter = () => {
       <Route path="mrp" element={<MRPPage />} />
       <Route path="andreas" element={<AndreasPage />} />
       {/* <Route path="brujula" element={<BrujulaPage />} /> */}
+      {/*
+      TODO GCP
+      TODO Refugio
+      */}
     </Routes>
   );
 };
