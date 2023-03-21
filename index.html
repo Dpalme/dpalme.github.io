@@ -2,17 +2,88 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/Dicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Diego Palmerín Portfolio</title>
-    <link rel="stylesheet" href="https://dpalmer.in/Peoria/css/peoria-0-6-2.min.css">
-    <link rel="stylesheet" href="/overrides.css" type="text/css">
-    <script type="module" crossorigin src="/assets/index.be11be57.js"></script>
-    <link rel="modulepreload" href="/assets/vendor.c07080e0.js">
-    <link rel="stylesheet" href="/assets/index.596fc756.css">
+    <title>Diego Palmerín</title>
+    <style>
+      @keyframes spinner {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .spin {
+        animation: 1.5s linear infinite spinner;
+        animation-play-state: inherit;
+        border: solid 5px #fff;
+        border-bottom: dotted 5px #fff;
+        border-radius: 50%;
+        height: 24px;
+        width: 24px;
+        display: inline-block;
+        margin-left: 4px;
+        will-change: transform;
+      }
+      @font-face {
+        font-family: 'PPEiko';
+        src: url('./src/assets/fonts/PPEiko-Thin.ttf');
+        font-weight: 100;
+      }
+      @font-face {
+        font-family: 'PPEiko';
+        src: url('./src/assets/fonts/PPEiko-LightItalic.ttf');
+        font-weight: 300;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: 'PPRadioGrotesk';
+        src: url('./src/assets/fonts/PPRadioGrotesk-Ultralight.ttf');
+        font-weight: 200;
+      }
+      @font-face {
+        font-family: 'PPRadioGrotesk';
+        src: url('./src/assets/fonts/PPRadioGrotesk-BlackItalic.ttf');
+        font-weight: 900;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: 'PPTelegraf';
+        src: url('./src/assets/fonts/PPTelegraf-Ultrabold.ttf');
+        font-weight: 800;
+      }
+      @font-face {
+        font-family: 'PPTelegraf';
+        src: url('./src/assets/fonts/PPTelegraf-RegularSlanted.ttf');
+        font-weight: 400;
+        font-style: italic;
+      }
+    </style>
   </head>
-  <body>
-    <div id="app"></div>
-    
+  <body style="background-color: rgb(39, 41, 49)">
+    <div id="root">
+      <div
+        style="
+          position: fixed;
+          z-index: 10;
+          width: 100%;
+          height: 100%;
+          color: #fff;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 12;
+        "
+      >
+        <p style="font-size: 3.75rem; padding-bottom: 0.5rem">
+          Dieg<span class="spin" />
+        </p>
+        <p style="font-size: 3.75rem; padding-bottom: 0.5rem">Palmerín</p>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
