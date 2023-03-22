@@ -12,7 +12,7 @@ export default defineConfig(({ command, mode }) => {
       open: true,
     },
     ssr: {
-      target: 'node'
+      target: 'node',
     },
     build: {
       rollupOptions: {
@@ -23,15 +23,23 @@ export default defineConfig(({ command, mode }) => {
           ),
           about: path.resolve(
             path.dirname(fileURLToPath(import.meta.url)),
-            './index.html'
+            './about/index.html'
           ),
           work: path.resolve(
             path.dirname(fileURLToPath(import.meta.url)),
-            './index.html'
+            './work/index.html'
           ),
           projects: path.resolve(
             path.dirname(fileURLToPath(import.meta.url)),
-            './index.html'
+            './projects/index.html'
+          ),
+          workAndreas: path.resolve(
+            path.dirname(fileURLToPath(import.meta.url)),
+            './work/andreas/index.html'
+          ),
+          workMRP: path.resolve(
+            path.dirname(fileURLToPath(import.meta.url)),
+            './work/mrp/index.html'
           ),
         },
       },
