@@ -8,7 +8,7 @@ const ProjectLink = (props: {
 }) => {
   return (
     <tr className="hover:-translate-y-2 hover:translate-x-1 transition-transform pr-2">
-      <td className=''>
+      <td className="">
         <a href={props.link} target="_blank">
           <PopInAnimation delay={0.5 + props.i / 10} className="py-2 pr-2">
             <h3 className="w-fit text-xl font-light italic">{props.name}</h3>
@@ -57,9 +57,15 @@ const AboutContent = () => {
             i={2}
           />
           <ProjectLink
+            link="https://dpalmer.in/palabr"
+            name="PALABR"
+            description="A wordle clone for spanish to play with my gf"
+            i={3}
+          />
+          <ProjectLink
             link="https://dpalmer.in/Peoria"
             name="PEORIA"
-            description="a lightweight css library and js client side rendering framework"
+            description="A lightweight css library and js client side rendering framework"
             i={3}
           />
           <ProjectLink
