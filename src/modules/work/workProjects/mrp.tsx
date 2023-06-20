@@ -22,7 +22,10 @@ export const MRPPage = () => {
   }, []);
 
   return (
-    <WorkPageTemplate className="items-start">
+    <WorkPageTemplate
+      className="items-start"
+      bgClass="after:backdrop-hue-rotate-0 after:bg-[#00000001]"
+    >
       <div className="grow flex flex-col gap-8 @lg:sticky top-0">
         <div className="flex flex-col gap-2">
           <PopInAnimation delay={1.5}>
@@ -105,7 +108,7 @@ export const MRPPage = () => {
               Design Philosophy
             </h2>
             <PopInAnimation delay={0.7}>
-              <p className='mb-4'>
+              <p className="mb-4">
                 The client didn't have any brand guidelines besides a logo and
                 the use of varying hues of blue. This gave us the freedom to
                 create a broader palette to enhance the UX of this new digital

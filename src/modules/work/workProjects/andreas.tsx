@@ -17,11 +17,17 @@ import { TableOfContents } from '../components/tableOfContents';
 
 export const AndreasPage = () => {
   useEffect(() => {
-    document.documentElement.style.setProperty('--project-hue', '#769F70a0');
+    document.documentElement.style.setProperty(
+      'backdrop-filter',
+      'hue-rotate(60deg)'
+    );
   }, []);
 
   return (
-    <WorkPageTemplate className="items-start">
+    <WorkPageTemplate
+      className="items-start"
+      bgClass="hue-rotate-60"
+    >
       <div className="grow flex flex-col gap-8 md:sticky top-0 md:row-span-2 lg:row-span-1">
         <div className="flex flex-col gap-2">
           <PopInAnimation delay={1}>

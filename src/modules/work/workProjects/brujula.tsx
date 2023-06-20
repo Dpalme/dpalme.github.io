@@ -22,7 +22,10 @@ export const BrujulaPage = () => {
   }, []);
 
   return (
-    <WorkPageTemplate className="items-start">
+    <WorkPageTemplate
+      className="items-start"
+      bgClass="after:backdrop-hue-rotate-180 after:bg-[#00000001]"
+    >
       <div className="grow flex flex-col gap-8 @lg:sticky top-0">
         <div className="flex flex-col gap-2">
           <PopInAnimation delay={2}>

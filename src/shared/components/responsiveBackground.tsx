@@ -7,7 +7,10 @@ export const ResponsiveBackground = (props: {
   return (
     <>
       <div
-        className="h-full w-full fixed top-0 left-0 -z-20 stylized-bg"
+        className={[
+          'h-full w-full fixed top-0 left-0 -z-20 stylized-bg',
+          props.className,
+        ].join(' ')}
         style={
           {
             '--sm-img': `url(${props.smSrc})`,

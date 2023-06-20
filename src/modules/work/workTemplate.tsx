@@ -8,6 +8,7 @@ import xlSrc from '@assets/backgrounds/case/casexl.jpeg';
 export const WorkPageTemplate = (props: {
   children?: ReactNode;
   className?: string;
+  bgClass?: string;
 }) => {
   useEffect(() => {
     document.documentElement.style.setProperty('--main', '241 241 241');
@@ -16,7 +17,7 @@ export const WorkPageTemplate = (props: {
   return (
     <Container
       backgroundImage={{ smSrc, mdSrc, xlSrc }}
-      className="detail-bg"
+      className={['detail-bg', props.bgClass].join(' ')}
       containerClass={[
         'gap-8 md:gap-16 md:grid-cols-[1fr_2fr] lg:grid-cols-[1fr_max-content_2fr] w-full',
         props.className,
