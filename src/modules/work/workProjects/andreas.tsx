@@ -249,10 +249,10 @@ export const AndreasPage = () => {
           <div>
             <OtherProjects
               links={[
-                // {
-                //   link: '../brujula',
-                //   label: 'Connecting The Mexican Audiovisual Industry',
-                // },
+                {
+                  link: '../brujula',
+                  label: 'Connecting The Mexican Audiovisual Industry',
+                },
                 { link: '../mrp', label: 'Digitalizing Test Taking' },
               ]}
             />

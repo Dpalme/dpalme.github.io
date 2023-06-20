@@ -221,10 +221,10 @@ export const MRPPage = () => {
                 link: '../andreas',
                 label: 'Promoting New Music',
               },
-              // {
-              //   link: '../brujula',
-              //   label: 'Connecting The Mexican Audiovisual Industry',
-              // },
+              {
+                link: '../brujula',
+                label: 'Connecting The Mexican Audiovisual Industry',
+              },
             ]}
           />
         </div>

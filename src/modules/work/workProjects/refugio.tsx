@@ -14,7 +14,7 @@ import { ProjectLinks } from '../components/ProjectLinks';
 import { useEffect } from 'react';
 import { TableOfContents } from '../components/tableOfContents';
 
-export const BrujulaPage = () => {
+export const RefugioPage = () => {
   useEffect(() => {
     document.documentElement.style.setProperty('--project-hue', '45 123 191');
   }, []);
@@ -61,21 +61,10 @@ export const BrujulaPage = () => {
       <TableOfContents />
       <div className="grow w-full flex flex-col gap-16 my-16">
         <PopInAnimation delay={0.7}>
-          <h2 className="text-sm font-alt font-extrabold"
-          id='overview'>Overview</h2>
-          <p>
-            <i>La Brújula</i> has connected the mexican audiovisual and
-            cinematographic industries for over 13 years by providing physical
-            specialized phonebooks by region. Now, they want to go{' '}
-            <i>digital</i>.
-            <br />
-            <br />
-            The old system meant someone on the inside had to add you, and to
-            use it, best you could hope for was CTRL + F.
-            <br />
-            <br />
-            <i>We can do better.</i>
-          </p>
+          <h2 className="text-sm font-alt font-extrabold" id="overview">
+            Overview
+          </h2>
+          <p></p>
         </PopInAnimation>
         <PopInAnimation delay={0.7}>
           <h2
@@ -84,19 +73,10 @@ export const BrujulaPage = () => {
           >
             Design Philosophy
           </h2>
-          <p>
-            The client didn't have any brand guidelines besides a logo and the
-            use of varying hues of blue.
-            <br />
-          </p>
+          <p></p>
         </PopInAnimation>
         <PopInAnimation delay={1.2}>
           <h2 className="text-sm font-alt font-extrabold">Gallery</h2>
-          <ImageWithCaption
-            imageUrl={MetabaseQThumb}
-            altText="Andreas Song Cover Art"
-            caption="The cover art for the single."
-          />
         </PopInAnimation>
         <div>
           <OtherProjects
@@ -114,4 +94,4 @@ export const BrujulaPage = () => {
   );
 };
 
-export default BrujulaPage;
+export default RefugioPage;
