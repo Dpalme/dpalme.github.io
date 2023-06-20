@@ -38,6 +38,10 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
     scroll-behavior: smooth !important;
+
+    --sm-img: url('/placeholder.jpeg');
+    --md-img: url('/placeholder.jpeg');
+    --xl-img: url('/placeholder.jpeg');
   }
 
   a {
@@ -54,6 +58,7 @@
   }
 
   body {
+    background-color: #1e1320;
     @apply font-sans overflow-x-hidden font-extralight text-lg md:text-base;
   }
 
@@ -102,45 +107,34 @@
 
 @layer components {
   .stylized-bg {
-    background-color: hsl(290, 25%, 10%);
-    @apply fixed bg-cover bg-center w-full h-screen min-h-screen
-    bg-fixed -z-20 bg-blend-color;
-  }
-
-  .home-bg,
-  .about-bg,
-  .work-bg,
-  .projects-bg,
-  .detail-bg {
-    @apply stylized-bg brightness-90 blur-sm md:blur-none
-    md:brightness-110;
+    @apply fixed w-full h-screen min-h-screen
+    bg-fixed brightness-90 md:blur-none bg-cover bg-center
+    md:brightness-110 object-cover object-center bg-blend-color
+    mix-blend-color;
+    background-color: #1e1320;
+    background-image: var(--sm-img);
     -webkit-animation: lumix 2s infinite;
     animation: lumix 2s infinite;
   }
 
-  .home-bg {
-    background-image: url('./assets/c0665453126ac5c151442cda0764b720.jpeg');
+  @screen md {
+    .stylized-bg {
+      background-image: var(--md-img), var(--sm-img);
+    }
   }
 
+  @screen lg {
+    .stylized-bg {
+      background-image: var(--xl-img), var(--md-img), var(--sm-img);
+    }
+  }
   .home-bg::after {
     content: '';
     @apply fixed w-screen h-screen top-0 left-0 backdrop-brightness-50;
   }
 
   .about-bg {
-    background-image: url('./assets/f57677a88dc9f3f66c57e23bbefbd306.jpeg');
     @apply brightness-200;
-  }
-
-  .work-bg {
-    background-image: url('./assets/8ec43bd46f66c80756c0cd518561f9a9.jpeg');
-  }
-
-  .projects-bg {
-    background-image: url('./assets/f076d068a5ddbaeccdf6dcce659cc28a.jpeg');
-  }
-  .detail-bg {
-    background-image: url('./assets/e65dd16e3d65f878c5c320246566f2ce.jpeg');
   }
 
   .detail-bg::after {
