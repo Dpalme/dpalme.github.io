@@ -1,11 +1,11 @@
 import { NavLink } from 'react-router-dom';
 import { WorkPageTemplate } from '../workTemplate';
-import BackArrow from '@/assets/thin_big_left.min.svg';
-import FirebaseIcon from '@/assets/Firebase_Logo_Logomark.min.svg';
-import ViteIcon from '@/assets/vite.min.svg';
-import ReactIcon from '@/assets/React-icon.min.svg';
-import TailwindIcon from '@/assets/Tailwind_CSS_Logo.min.svg';
-import MetabaseQThumb from '@/assets/mbq-thumb.jpg';
+import BackArrow from '@assets/icons/thin_big_left.min.svg';
+import FirebaseIcon from '@assets/logos/Firebase_Logo_Logomark.min.svg';
+import ViteIcon from '@assets/logos/vite.min.svg';
+import ReactIcon from '@assets/logos/React-icon.min.svg';
+import TailwindIcon from '@assets/logos/Tailwind_CSS_Logo.min.svg';
+// import MetabaseQThumb from '@assets/projects/labrujula/';
 import { PopInAnimation } from '@/shared/components/popIn';
 import { TechCard } from '@/modules/about/components/technologies';
 import { ImageWithCaption } from '../components/imageWithCaption';

@@ -1,10 +1,21 @@
-import gifGrain from './assets/noise.gif';
+import pngGrain from '@assets/noise.png';
+import gifGrain from '@assets/noise.gif';
 
 export default () => {
   return (
     <>
-      <div className="png-grain" />
-      <div className="gif-grain" />
+      <img
+        src={pngGrain}
+        alt=""
+        className="png-grain hidden"
+        onLoad={(ev) => ev.currentTarget.classList.remove('hidden')}
+      />
+      <img
+        src={gifGrain}
+        alt=""
+        className="gif-grain hidden"
+        onLoad={(ev) => ev.currentTarget.classList.remove('hidden')}
+      />
     </>
   );
 };

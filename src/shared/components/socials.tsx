@@ -1,9 +1,9 @@
-import githubIcon from '@/assets/github.min.svg';
-import instagramIcon from '@/assets/instagram.min.svg';
-import linkedinIcon from '@/assets/linkedin.min.svg';
-import emailIcon from '@/assets/mail.min.svg';
-import documentIcon from '@/assets/file_blank_outline.min.svg';
-import CVDocument from '@/assets/Diego_Palmerin_CV_EN_Q1_2023.pdf';
+import githubIcon from '@assets/logos/github.min.svg';
+import instagramIcon from '@assets/logos/instagram.min.svg';
+import linkedinIcon from '@assets/logos/linkedin.min.svg';
+import emailIcon from '@assets/icons/mail.min.svg';
+import documentIcon from '@assets/icons/file_blank_outline.min.svg';
+import CVDocument from '@assets/Diego_Palmerin_CV_EN_Q1_2023.pdf';
 import { m, useReducedMotion } from 'framer-motion';
 
 export const SocialIcons = () => {

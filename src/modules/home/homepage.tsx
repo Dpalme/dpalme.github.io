@@ -3,6 +3,9 @@ import { PopInAnimation } from '@/shared/components/popIn';
 import { NavLink } from 'react-router-dom';
 import { m } from 'framer-motion';
 import { useEffect } from 'react';
+import smSrc from '@assets/backgrounds/home/homesm.jpeg';
+import mdSrc from '@assets/backgrounds/home/homemd.jpeg';
+import xlSrc from '@assets/backgrounds/home/homexl.jpeg';
 
 export const HomePage = () => {
   useEffect(() => {
@@ -14,6 +17,7 @@ export const HomePage = () => {
       className="home-bg"
       containerClass="w-full h-full"
       nextPage="work"
+      backgroundImage={{ smSrc, mdSrc, xlSrc }}
     >
       <div className="max-w-sm">
         <h1 className="mb-2">
