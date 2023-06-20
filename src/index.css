@@ -107,14 +107,21 @@
 
 @layer components {
   .stylized-bg {
-    @apply fixed w-full h-screen min-h-screen
-    bg-fixed brightness-90 md:blur-none bg-cover bg-center
+    @apply fixed w-full h-screen min-h-screen blur-lg
+    bg-fixed brightness-150 md:blur-none bg-cover bg-center
     md:brightness-110 object-cover object-center bg-blend-color
     mix-blend-color;
     background-color: #1e1320;
     background-image: var(--sm-img);
-    -webkit-animation: lumix 2s infinite;
-    animation: lumix 2s infinite;
+    -webkit-animation: lumix 10s infinite;
+    animation: lumix 10s infinite;
+  }
+
+  .stylized-bg::after {
+    content: '';
+    @apply w-full h-full fixed top-0 left-0
+    from-white to-black bg-gradient-to-b
+    opacity-25 mix-blend-darken;
   }
 
   @screen md {
@@ -146,7 +153,7 @@
 
   .png-grain {
     background-image: url('./assets/noise.png');
-    @apply bg-left fixed -z-10 opacity-100 bg-repeat
+    @apply bg-left fixed z-40 bg-repeat
     pointer-events-none mix-blend-screen transform;
     -webkit-animation: grain 8s steps(10) infinite;
     animation: grain 8s steps(10) infinite;
@@ -158,8 +165,8 @@
   }
   .gif-grain {
     background-image: url('./assets/noise.gif');
-    @apply fixed top-0 w-full h-full bg-repeat opacity-100
-    left-0 pointer-events-none mix-blend-overlay -z-10;
+    @apply fixed top-0 w-full h-full bg-repeat
+    left-0 pointer-events-none mix-blend-overlay z-40;
     background-size: cover;
   }
 
@@ -248,28 +255,22 @@
 
 @-webkit-keyframes lumix {
   0%,
-  to,
-  49%,
-  50% {
+  100% {
     filter: brightness(100%) saturate(100%);
   }
 
-  51%,
-  100% {
-    filter: brightness(102%) saturate(105%);
+  50% {
+    filter: brightness(110%) saturate(150%);
   }
 }
 
 @keyframes lumix {
   0%,
-  to,
-  49%,
-  50% {
+  100% {
     filter: brightness(100%) saturate(100%);
   }
 
-  51%,
-  100% {
-    filter: brightness(102%) saturate(105%);
+  50% {
+    filter: brightness(110%) saturate(150%);
   }
 }

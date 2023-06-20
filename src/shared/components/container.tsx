@@ -41,7 +41,7 @@ export const Container = (props: {
       />
       <Grain />
       <div
-        className="pl-12 pt-32 pb-4 md:pt-16 pr-4 h-screen overflow-y-auto
+        className="pl-12 pt-8 pb-4 md:pt-16 pr-4 h-screen overflow-y-auto
       w-full max-w-full overflow-x-hidden min-h-full overscroll-contain @container"
       >
         <div

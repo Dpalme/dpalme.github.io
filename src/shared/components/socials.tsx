@@ -10,7 +10,7 @@ export const SocialIcons = () => {
   const shouldReduceMotion = useReducedMotion();
   return (
     <m.div
-      className="flex flex-col gap-4 fixed left-2 bottom-2"
+      className="flex flex-col gap-4 fixed left-2 bottom-2 z-20"
       initial={{ y: shouldReduceMotion ? 0 : '100%', opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, delay: 0.3 }}
