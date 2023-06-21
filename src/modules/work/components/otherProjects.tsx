@@ -1,6 +1,6 @@
 import { PopInAnimation } from '@/shared/components/popIn';
 import { NavLink } from 'react-router-dom';
-import BackArrow from '@/assets/thin_big_left.min.svg';
+import BackArrow from '@assets/icons/thin_big_left.min.svg';
 
 export const OtherProjects = (props: {
   links: { link: string; label: string }[];

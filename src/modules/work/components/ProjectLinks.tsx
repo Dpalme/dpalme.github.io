@@ -1,6 +1,6 @@
 import { PopInAnimation } from '@/shared/components/popIn';
-import LinkIcon from '@/assets/link.min.svg';
-import CodeIcon from '@/assets/code-alt.min.svg';
+import LinkIcon from '@assets/icons/link.min.svg';
+import CodeIcon from '@assets/icons/code-alt.min.svg';
 
 const AnimatedLinkWithIcon = (props: {
   iconUrl: string;

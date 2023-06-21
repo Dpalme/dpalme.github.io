@@ -1,12 +1,12 @@
 import { NavLink } from 'react-router-dom';
 import { WorkPageTemplate } from '../workTemplate';
-import BackArrow from '@/assets/thin_big_left.min.svg';
-import FigmaIcon from '@/assets/figma.min.svg';
-import VueIcon from '@/assets/VueLogo.min.svg';
-import AndreasScreens from '@/assets/andreas-screens.jpg';
-import AndreasRef1 from '@/assets/andreas-ref1.jpg';
-import AndreasRef2 from '@/assets/andreas-ref2.jpg';
-import AndreasLighthouse from '@/assets/andreas-lighthouse.png';
+import BackArrow from '@assets/icons/thin_big_left.min.svg';
+import FigmaIcon from '@assets/logos/figma.min.svg';
+import VueIcon from '@assets/logos/VueLogo.min.svg';
+import AndreasScreens from '@assets/projects/andreas/andreas-screens.jpg';
+import AndreasRef1 from '@assets/projects/andreas/andreas-ref1.jpg';
+import AndreasRef2 from '@assets/projects/andreas/andreas-ref2.jpg';
+import AndreasLighthouse from '@assets/projects/andreas/andreas-lighthouse.png';
 import { PopInAnimation } from '@/shared/components/popIn';
 import { TechCard } from '@/modules/about/components/technologies';
 import { OtherProjects } from '../components/otherProjects';
@@ -17,11 +17,17 @@ import { TableOfContents } from '../components/tableOfContents';
 
 export const AndreasPage = () => {
   useEffect(() => {
-    document.documentElement.style.setProperty('--project-hue', '#769F70a0');
+    document.documentElement.style.setProperty(
+      'backdrop-filter',
+      'hue-rotate(60deg)'
+    );
   }, []);
 
   return (
-    <WorkPageTemplate className="items-start">
+    <WorkPageTemplate
+      className="items-start"
+      bgClass="hue-rotate-60"
+    >
       <div className="grow flex flex-col gap-8 md:sticky top-0 md:row-span-2 lg:row-span-1">
         <div className="flex flex-col gap-2">
           <PopInAnimation delay={1}>
@@ -249,10 +255,10 @@ export const AndreasPage = () => {
           <div>
             <OtherProjects
               links={[
-                // {
-                //   link: '../brujula',
-                //   label: 'Connecting The Mexican Audiovisual Industry',
-                // },
+                {
+                  link: '../brujula',
+                  label: 'Connecting The Mexican Audiovisual Industry',
+                },
                 { link: '../mrp', label: 'Digitalizing Test Taking' },
               ]}
             />

@@ -3,7 +3,6 @@ import AboutRouter from './modules/about/aboutPage';
 import HomePage from './modules/home/homepage';
 import ProjectsPage from './modules/projects/projectsPage';
 import WorkRouter from './modules/work/router';
-import { PreloadedImages } from './preloaded_images';
 import Navbar from './shared/components/navbar';
 import { SocialIcons } from './shared/components/socials';
 import { ModalProvider } from './shared/hooks/useModal';
@@ -23,7 +22,6 @@ function App() {
       </ModalProvider>
       <Navbar />
       <SocialIcons />
-      <PreloadedImages />
     </>
   );
 }

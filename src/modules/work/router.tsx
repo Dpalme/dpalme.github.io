@@ -10,11 +10,9 @@ export const WorkRouter = () => {
       <Route path="" element={<WorkPage />}></Route>
       <Route path="mrp" element={<MRPPage />} />
       <Route path="andreas" element={<AndreasPage />} />
-      {/* <Route path="brujula" element={<BrujulaPage />} /> */}
-      {/*
-      TODO GCP
-      TODO Refugio
-      */}
+      <Route path="brujula" element={<BrujulaPage />} />
+      <Route path="gcp" element={<BrujulaPage />} />
+      <Route path="refugio" element={<BrujulaPage />} />
     </Routes>
   );
 };

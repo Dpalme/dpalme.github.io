@@ -33,6 +33,11 @@ module.exports = {
         main: 'rgb(var(--main) / <alpha-value>)',
         back: 'rgb(var(--back) / <alpha-value>)'
       },
+      backgroundImage: {
+        sm: 'url(--smImg)',
+        md: 'url(--mdImg)',
+        xl: 'url(--xlImg)',
+      },
       boxShadow: {
         sm: `-1px -1px 4px 1px var(--tw-shadow-color), 1px 1px 4px var(--tw-shadow-color)`,
         inset: 'inset -1px -1px 4px 1px var(--tw-shadow-color), inset 1px 1px 4px var(--tw-shadow-color)',

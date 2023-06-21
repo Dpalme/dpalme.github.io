@@ -4,6 +4,9 @@ import { PopInAnimation } from '@/shared/components/popIn';
 import { NavLink } from 'react-router-dom';
 import { LatestPage } from '../latest/latestPage';
 import { useEffect } from 'react';
+import smSrc from '@assets/backgrounds/about/aboutsm.jpeg';
+import mdSrc from '@assets/backgrounds/about/aboutmd.jpeg';
+import xlSrc from '@assets/backgrounds/about/aboutxl.jpeg';
 
 function AboutRouter() {
   useEffect(() => {
@@ -12,8 +15,10 @@ function AboutRouter() {
 
   return (
     <Container
+      backgroundImage={{ smSrc, mdSrc, xlSrc }}
       className="about-bg"
-      containerClass="min-h-full items-start lg:grid-cols-[2fr_3fr] gap-12 lg:gap-x-32 gap-y-8"
+      containerClass="min-h-full items-start lg:grid-cols-[2fr_3fr]
+      gap-12 lg:gap-x-32 gap-y-8"
     >
       <section className="flex flex-col gap-8 pt-8">
         <PopInAnimation delay={0.3}>

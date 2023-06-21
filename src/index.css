@@ -38,6 +38,10 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
     scroll-behavior: smooth !important;
+
+    --sm-img: url('/placeholder.jpeg');
+    --md-img: url('/placeholder.jpeg');
+    --xl-img: url('/placeholder.jpeg');
   }
 
   a {
@@ -54,6 +58,7 @@
   }
 
   body {
+    background-color: #1e1320;
     @apply font-sans overflow-x-hidden font-extralight text-lg md:text-base;
   }
 
@@ -102,69 +107,65 @@
 
 @layer components {
   .stylized-bg {
-    background-color: hsl(290, 25%, 10%);
-    @apply fixed bg-cover bg-center w-full h-screen min-h-screen
-    bg-fixed -z-20 bg-blend-color;
+    @apply fixed w-full h-screen min-h-screen blur-lg
+    bg-fixed brightness-150 md:blur-none bg-cover bg-center
+    md:brightness-110 object-cover object-center bg-blend-color
+    mix-blend-color -z-40;
+    background-color: #1e1320;
+    background-image: var(--sm-img);
+    -webkit-animation: lumix 10s infinite;
+    animation: lumix 10s infinite;
   }
 
-  .home-bg,
-  .about-bg,
-  .work-bg,
-  .projects-bg,
-  .detail-bg {
-    @apply stylized-bg brightness-90 blur-sm md:blur-none
-    md:brightness-110;
-    -webkit-animation: lumix 2s infinite;
-    animation: lumix 2s infinite;
+  .stylized-bg::after {
+    content: '';
+    @apply w-full h-full fixed top-0 left-0
+    from-slate-100 to-slate-800 bg-gradient-to-t
+    opacity-20 mix-blend-multiply;
   }
 
-  .home-bg {
-    background-image: url('./assets/c0665453126ac5c151442cda0764b720.jpeg');
+  @screen md {
+    .stylized-bg {
+      background-image: var(--md-img), var(--sm-img);
+    }
   }
 
+  @screen lg {
+    .stylized-bg {
+      background-image: var(--xl-img), var(--md-img), var(--sm-img);
+    }
+  }
   .home-bg::after {
     content: '';
     @apply fixed w-screen h-screen top-0 left-0 backdrop-brightness-50;
   }
 
   .about-bg {
-    background-image: url('./assets/f57677a88dc9f3f66c57e23bbefbd306.jpeg');
     @apply brightness-200;
   }
 
-  .work-bg {
-    background-image: url('./assets/8ec43bd46f66c80756c0cd518561f9a9.jpeg');
-  }
-
-  .projects-bg {
-    background-image: url('./assets/f076d068a5ddbaeccdf6dcce659cc28a.jpeg');
-  }
-  .detail-bg {
-    background-image: url('./assets/e65dd16e3d65f878c5c320246566f2ce.jpeg');
-  }
-
-  .detail-bg::after {
+  .detail-bg.stylized-bg::after {
     content: '';
-    background-color: var(--project-hue, #0008);
-    transition: all 2s;
-    @apply w-screen h-screen fixed top-0 left-0 mix-blend-hue;
+    @apply from-emerald-100 to-emerald-800 bg-gradient-to-t
   }
 
   .png-grain {
-    background-image: url('./assets/noise.png');
-    @apply bg-left fixed -z-10 opacity-100 bg-repeat
-    pointer-events-none mix-blend-screen transform;
+    @apply fixed -z-10 pointer-events-none
+    transform mix-blend-difference;
     -webkit-animation: grain 8s steps(10) infinite;
     animation: grain 8s steps(10) infinite;
+    background: url('./assets/noise.png') repeat center center;
     background-size: 256px;
-    height: 400%;
-    width: 400%;
-    left: -200%;
-    top: -200%;
+    height: 400vw;
+    width: 400vw;
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    left: -100%;
+    top: -100%;
   }
   .gif-grain {
     background-image: url('./assets/noise.gif');
-    @apply fixed top-0 w-full h-full bg-repeat opacity-100
+    @apply fixed top-0 w-full h-full bg-repeat
     left-0 pointer-events-none mix-blend-overlay -z-10;
     background-size: cover;
   }
@@ -211,7 +212,7 @@
     transform: translate(0%, 15%);
   }
   80% {
-    transform: translate(3%, 35%);
+    transform: translate(3%, -35%);
   }
   90% {
     transform: translate(-10%, 10%);
@@ -233,7 +234,7 @@
     transform: translate(7%, -25%);
   }
   40% {
-    transform: translate(-5%, 25%);
+    transform: translate(-5%, 5%);
   }
   50% {
     transform: translate(-15%, 10%);
@@ -245,7 +246,7 @@
     transform: translate(0%, 15%);
   }
   80% {
-    transform: translate(3%, 35%);
+    transform: translate(3%, -35%);
   }
   90% {
     transform: translate(-10%, 10%);
@@ -254,28 +255,22 @@
 
 @-webkit-keyframes lumix {
   0%,
-  to,
-  49%,
-  50% {
-    filter: brightness(100%) saturate(100%);
+  100% {
+    filter: brightness(100%) saturate(100%) contrast(100%);
   }
 
-  51%,
-  100% {
-    filter: brightness(102%) saturate(105%);
+  50% {
+    filter: brightness(110%) saturate(150%) contrast(120%);
   }
 }
 
 @keyframes lumix {
   0%,
-  to,
-  49%,
-  50% {
-    filter: brightness(100%) saturate(100%);
+  100% {
+    filter: brightness(100%) saturate(100%) contrast(100%) hue-rotate(180deg);
   }
 
-  51%,
-  100% {
-    filter: brightness(102%) saturate(105%);
+  50% {
+    filter: brightness(120%) saturate(150%) contrast(120%) hue-rotate(180deg);
   }
 }

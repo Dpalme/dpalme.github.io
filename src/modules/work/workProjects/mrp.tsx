@@ -1,12 +1,13 @@
 import { NavLink } from 'react-router-dom';
 import { WorkPageTemplate } from '../workTemplate';
-import BackArrow from '@/assets/thin_big_left.min.svg';
-import ViteIcon from '@/assets/vite.min.svg';
-import ReactIcon from '@/assets/React-icon.min.svg';
-import TailwindIcon from '@/assets/Tailwind_CSS_Logo.min.svg';
-import MRPRef1 from '@/assets/mrpRef1.jpg';
-import MRPLogo from '@/assets/mrp_logo.png';
-import MRPRef2 from '@/assets/mrpRef2.jpg';
+import BackArrow from '@assets/icons/thin_big_left.min.svg';
+import ViteIcon from '@assets/logos/vite.min.svg';
+import ReactIcon from '@assets/logos/React-icon.min.svg';
+import TailwindIcon from '@assets/logos/Tailwind_CSS_Logo.min.svg';
+import MRPRef1 from '@assets/projects/mrp/mrpRef1.jpg';
+import MRPLogo from '@assets/projects/mrp/mrp_logo.png';
+import MRPRef2 from '@assets/projects/mrp/mrpRef2.jpg';
+import MRPNav from '@assets/projects/mrp/mrpNavFlow.png';
 import { PopInAnimation } from '@/shared/components/popIn';
 import { TechCard } from '@/modules/about/components/technologies';
 import { ImageWithCaption } from '../components/imageWithCaption';
@@ -21,7 +22,10 @@ export const MRPPage = () => {
   }, []);
 
   return (
-    <WorkPageTemplate className="items-start">
+    <WorkPageTemplate
+      className="items-start"
+      bgClass="after:backdrop-hue-rotate-0 after:bg-[#00000001]"
+    >
       <div className="grow flex flex-col gap-8 @lg:sticky top-0">
         <div className="flex flex-col gap-2">
           <PopInAnimation delay={1.5}>
@@ -104,12 +108,19 @@ export const MRPPage = () => {
               Design Philosophy
             </h2>
             <PopInAnimation delay={0.7}>
-              <p>
+              <p className="mb-4">
                 The client didn't have any brand guidelines besides a logo and
                 the use of varying hues of blue. This gave us the freedom to
                 create a broader palette to enhance the UX of this new digital
                 platform.
               </p>
+            </PopInAnimation>
+            <PopInAnimation delay={0.7}>
+              <ImageWithCaption
+                imageUrl={MRPNav}
+                altText="Navigation flow"
+                caption="The navigation flow for the application"
+              />
             </PopInAnimation>
           </PopInAnimation>
         </div>
@@ -213,10 +224,10 @@ export const MRPPage = () => {
                 link: '../andreas',
                 label: 'Promoting New Music',
               },
-              // {
-              //   link: '../brujula',
-              //   label: 'Connecting The Mexican Audiovisual Industry',
-              // },
+              {
+                link: '../brujula',
+                label: 'Connecting The Mexican Audiovisual Industry',
+              },
             ]}
           />
         </div>

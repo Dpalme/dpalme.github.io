@@ -2,6 +2,9 @@ import { Container } from '@/shared/components/container';
 import { PopInAnimation } from '@/shared/components/popIn';
 import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import smSrc from '@assets/backgrounds/work/worksm.jpeg';
+import mdSrc from '@assets/backgrounds/work/workmd.jpeg';
+import xlSrc from '@assets/backgrounds/work/workxl.jpeg';
 
 export const WorkPage = () => {
   useEffect(() => {
@@ -10,6 +13,7 @@ export const WorkPage = () => {
 
   return (
     <Container
+      backgroundImage={{ smSrc, mdSrc, xlSrc }}
       className="work-bg"
       containerClass="lg:gap-16 lg:!gap-y-0 h-full items-start"
     >
@@ -25,14 +29,14 @@ export const WorkPage = () => {
             <PopInAnimation delay={0.5}>
               <NavLink to="andreas">PROMOTING NEW MUSIC</NavLink>
             </PopInAnimation>
-            {/* <PopInAnimation delay={0.7}>
+            <PopInAnimation delay={0.7}>
               <NavLink
                 to="brujula"
                 className="font-alt font-extrabold uppercase"
               >
                 Connecting The Mexican Audiovisual Industry
               </NavLink>
-            </PopInAnimation> */}
+            </PopInAnimation>
             <PopInAnimation delay={0.9}>
               <NavLink to="mrp">AUTOMATING TESTS AND GRADING</NavLink>
             </PopInAnimation>

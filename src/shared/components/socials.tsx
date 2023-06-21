@@ -1,16 +1,16 @@
-import githubIcon from '@/assets/github.min.svg';
-import instagramIcon from '@/assets/instagram.min.svg';
-import linkedinIcon from '@/assets/linkedin.min.svg';
-import emailIcon from '@/assets/mail.min.svg';
-import documentIcon from '@/assets/file_blank_outline.min.svg';
-import CVDocument from '@/assets/Diego_Palmerin_CV_EN_Q1_2023.pdf';
+import githubIcon from '@assets/logos/github.min.svg';
+import instagramIcon from '@assets/logos/instagram.min.svg';
+import linkedinIcon from '@assets/logos/linkedin.min.svg';
+import emailIcon from '@assets/icons/mail.min.svg';
+import documentIcon from '@assets/icons/file_blank_outline.min.svg';
+import CVDocument from '@assets/Diego_Palmerin_CV_EN_Q1_2023.pdf';
 import { m, useReducedMotion } from 'framer-motion';
 
 export const SocialIcons = () => {
   const shouldReduceMotion = useReducedMotion();
   return (
     <m.div
-      className="flex flex-col gap-4 fixed left-2 bottom-2"
+      className="flex flex-col gap-4 fixed left-2 bottom-2 z-20"
       initial={{ y: shouldReduceMotion ? 0 : '100%', opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, delay: 0.3 }}
