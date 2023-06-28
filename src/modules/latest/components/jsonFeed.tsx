@@ -12,14 +12,14 @@ function JSONFeedComponent(props: {
     <p className="bg-red-500 text-main rounded-md p-4">{error.toString()}</p>
   ) : (
     <>
-      {data?.items?.map((item, i) => (
-        <PopInAnimation delay={0.3 + i / 10} key={`${props.url}:${i}`}>
-          {createElement(props.cardComponent, {
+      {data?.items?.map(
+        (item, i) =>
+          i < 12 &&
+          createElement(props.cardComponent, {
             ...item,
             loading,
-          })}
-        </PopInAnimation>
-      ))}
+          })
+      )}
     </>
   );
 }

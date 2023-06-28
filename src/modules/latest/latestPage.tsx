@@ -2,14 +2,13 @@ import { PopInAnimation } from '@/shared/components/popIn';
 import { LastFmCard } from './components/lastFMCard';
 import { LetterboxdCard } from './components/letterboxdCard';
 import FeedComponent from './components/rssFeed';
-import { GithubCard } from './components/githubCard';
 import { VSCOCard } from './components/vscoCard';
 import JSONFeedComponent from './components/jsonFeed';
 
 export const LatestPage = () => {
   return (
     <section
-      className="grid grid-cols-1 @lg:grid-cols-[max-content_1fr] gap-8
+      className="grid grid-cols-1 @xl:grid-cols-[minmax(max-content,2fr)_1fr] gap-8
       items-start max-h-full overflow-y-auto overflow-x-hidden"
     >
       <div className="flex flex-col gap-4 shrink">
@@ -55,15 +54,15 @@ export const LatestPage = () => {
           />
         </div>
       </div>
-      <div className="@container flex flex-col gap-4">
+      <div className="@container flex flex-col gap-4 overflow-visible">
         <PopInAnimation delay={0.5}>
           <h2 className="font-title font-thin m-0 text-base">
             Taking <span className="font-alt font-extrabold">Photos</span>
           </h2>
         </PopInAnimation>
         <div
-          className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4
-        gap-2 items-stretch mb-4"
+          className="grid grid-cols-2 @md:grid-cols-3 @xl:grid-cols-4
+        items-stretch mb-4"
           role="list"
         >
           <JSONFeedComponent

@@ -1,16 +1,9 @@
 import { RSSResponseItem } from '@/shared/hooks/useRSS';
-import { timeDifference } from '../utils/timeDiffrence';
 
 export const VSCOCard = (props: RSSResponseItem) => {
-  const { daysDifference } = timeDifference(
-    new Date(),
-    new Date(parseInt(props.pubDate))
-  );
-  console.log(props);
-
   return (
     <a
-      className="rounded-md overflow-hidden shadow-md relative"
+      className="relative hover:scale-110 scale-100 block transition-transform hover:z-30"
       href={props.link}
       target="_blank"
       role="list-item"
@@ -23,7 +16,7 @@ export const VSCOCard = (props: RSSResponseItem) => {
           src={props.thumbnail + '?w=260'}
           alt={props.title}
           className="bg-neutral-700 w-full outline-none
-          border-transparent transition-all duration-700 z-10"
+          border-transparent"
           loading="lazy"
         ></img>
         {props.loading && (
@@ -32,11 +25,6 @@ export const VSCOCard = (props: RSSResponseItem) => {
           bg-neutral-700 w-full h-full"
           ></div>
         )}
-      </div>
-      <div className="backdrop-blur-lg bg-black bg-opacity-40 p-2">
-        <h3 className="tracking-tight text-xs m-0 truncate">
-          {daysDifference}d&nbsp;
-        </h3>
       </div>
     </a>
   );
