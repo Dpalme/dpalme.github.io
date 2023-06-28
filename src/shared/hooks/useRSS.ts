@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const apiURL = 'https://api.rss2json.com/v1/api.json';
 
@@ -30,16 +30,16 @@ export type RSSResponse = {
   };
 };
 
-const getData = async (url: string) =>
+const getData = async (url: string, limit: number) =>
   (
     await axios.get(
       `${apiURL}?rss_url=${encodeURIComponent(url)}&api_key=${
         import.meta.env.VITE_RSS_JSON_KEY
-      }&limit=6`
+      }&limit=${limit}`
     )
   ).data;
 
-export const useRSS = (url: string) => {
+export const useRSS = (url: string, limit = 6) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<unknown | null>(null);
   const [data, setData] = useState<null | RSSResponse>(null);
@@ -48,7 +48,7 @@ export const useRSS = (url: string) => {
     setError(null);
     (async () => {
       try {
-        const data = await getData(url);
+        const data = await getData(url, limit);
         setData(data);
       } catch (e) {
         setError(e);
