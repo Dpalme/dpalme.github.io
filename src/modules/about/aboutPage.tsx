@@ -100,7 +100,7 @@ function AboutRouter() {
         <Technologies />
       </section>
       <section className="col-span-full col-start-1 mt-32">
-        <h2>What I'm Up To</h2>
+        <h2>Monitoring my hobbies</h2>
         <LatestPage />
       </section>
     </Container>
