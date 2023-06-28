@@ -39,9 +39,9 @@
     scrollbar-width: none; /* Firefox */
     scroll-behavior: smooth !important;
 
-    --sm-img: url('/placeholder.jpeg');
-    --md-img: url('/placeholder.jpeg');
-    --xl-img: url('/placeholder.jpeg');
+    --sm-img: url('');
+    --md-img: url('');
+    --xl-img: url('');
   }
 
   a {
