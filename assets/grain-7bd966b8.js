@@ -1,1 +1,0 @@
-import{j as i,F as r,a}from"./index-ef10e58b.js";import"./definitions-0ea15b14.js";const g=()=>i(r,{children:[a("div",{className:"png-grain",id:"png-grain-item"}),a("div",{className:"gif-grain",id:"gif-grain-item"})]});export{g as default};
