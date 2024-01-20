@@ -1,0 +1,1 @@
+import{a as i,F as r,j as a}from"./main-f1974c99.js";const n=()=>i(r,{children:[a("div",{className:"png-grain",id:"png-grain-item"}),a("div",{className:"gif-grain",id:"gif-grain-item"})]});export{n as default};
