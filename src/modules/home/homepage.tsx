@@ -1,11 +1,11 @@
 import { Container } from '@/shared/components/container';
 import { PopInAnimation } from '@/shared/components/popIn';
-import { NavLink } from 'react-router-dom';
 import { m } from 'framer-motion';
 import { useEffect } from 'react';
 import smSrc from '@assets/backgrounds/home/homesm.jpeg';
 import mdSrc from '@assets/backgrounds/home/homemd.jpeg';
 import xlSrc from '@assets/backgrounds/home/homexl.jpeg';
+import { NavLink } from '@/shared/components/navlink';
 
 export const HomePage = () => {
   useEffect(() => {

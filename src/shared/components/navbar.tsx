@@ -1,5 +1,5 @@
-import { NavLink } from 'react-router-dom';
 import { m, useReducedMotion } from 'framer-motion';
+import { NavLink } from './navlink';
 
 export const Navbar = () => {
   const shouldReduceMotion = useReducedMotion();

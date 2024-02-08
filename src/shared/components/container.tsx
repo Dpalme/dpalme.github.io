@@ -1,8 +1,6 @@
-import { lazy, ReactNode, useRef } from 'react';
+import { ReactNode } from 'react';
 import { m } from 'framer-motion';
 import { ResponsiveBackground } from './responsiveBackground';
-
-const Grain = lazy(() => import('@/grain'));
 
 export const Container = (props: {
   children: ReactNode;
@@ -39,7 +37,6 @@ export const Container = (props: {
         xlSrc={props.backgroundImage?.xlSrc}
         className={props.className}
       />
-      <Grain />
       <div
         className="pl-12 pt-8 pb-16 md:pb-4 md:pt-16 pr-4 h-screen overflow-y-auto
       w-full max-w-full overflow-x-hidden min-h-full overscroll-contain @container"

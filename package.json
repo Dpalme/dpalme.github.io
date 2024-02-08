@@ -1,5 +1,5 @@
 {
-  "name": "portfolio",
+  "name": "@dpalme/portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,6 +14,7 @@
     "@emotion/styled": "^11.10.4",
     "@tailwindcss/container-queries": "^0.1.0",
     "@tanstack/react-query": "^4.7.1",
+    "@tanstack/react-router": "^1.15.22",
     "axios": "^0.27.2",
     "cssnano": "^5.1.13",
     "framer-motion": "^9.0.2",
@@ -23,9 +24,7 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.36.1",
     "react-loadable": "^5.5.0",
-    "react-markdown": "^8.0.3",
-    "react-router-dom": "^6.4.1",
-    "url": "^0.11.0"
+    "react-markdown": "^8.0.3"
   },
   "devDependencies": {
     "@types/node": "^18.13.0",
