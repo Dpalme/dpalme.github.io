@@ -44,20 +44,20 @@ const AboutContent = () => {
         </thead>
         <tbody>
           <ProjectLink
+            link="https://posterify.dpalmer.in/"
+            name="Posterify"
+            description="A PWA to browse and save poster art and stills from movies"
+            i={1}
+          />
+          <ProjectLink
             link="https://visualizer.dpalmer.in"
             name="VISUALIZER"
             description="A spotify connected 3d visualizer using three.js and custom
           shaders"
-            i={1}
-          />
-          <ProjectLink
-            link="https://dpalmer.in/best-of-2022"
-            name="BEST OF 2022"
-            description="An interactive end of year list for albums and songs"
             i={2}
           />
           <ProjectLink
-            link="https://dpalmer.in/palabr"
+            link="https://palabr.dpalmer.in/"
             name="PALABR"
             description="A wordle clone for spanish to play with my gf"
             i={3}

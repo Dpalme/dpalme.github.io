@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom';
 import { WorkPageTemplate } from '../workTemplate';
 import BackArrow from '@assets/icons/thin_big_left.min.svg';
 import ViteIcon from '@assets/logos/vite.min.svg';
@@ -15,6 +14,7 @@ import { OtherProjects } from '../components/otherProjects';
 import { ProjectLinks } from '../components/ProjectLinks';
 import { useEffect } from 'react';
 import { TableOfContents } from '../components/tableOfContents';
+import { NavLink } from '@/shared/components/navlink';
 
 export const MRPPage = () => {
   useEffect(() => {

@@ -1,14 +1,15 @@
 import { Container } from '@shared/components/container';
 import { Technologies } from './components/technologies';
 import { PopInAnimation } from '@/shared/components/popIn';
-import { NavLink } from 'react-router-dom';
-import { LatestPage } from '../latest/latestPage';
+import { LatestPage } from './latest/latestPage';
 import { useEffect } from 'react';
+import { NavLink } from '@/shared/components/navlink';
+
 import smSrc from '@assets/backgrounds/about/aboutsm.jpeg';
 import mdSrc from '@assets/backgrounds/about/aboutmd.jpeg';
 import xlSrc from '@assets/backgrounds/about/aboutxl.jpeg';
 
-function AboutRouter() {
+export function AboutPage() {
   useEffect(() => {
     document.documentElement.style.setProperty('--main', '241 241 241');
   }, []);
@@ -106,5 +107,4 @@ function AboutRouter() {
     </Container>
   );
 }
-
-export default AboutRouter;
+export default AboutPage;

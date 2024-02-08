@@ -1,9 +1,9 @@
 import { ReactNode, useEffect } from 'react';
 import { Container } from '@/shared/components/container';
-import { Outlet } from 'react-router-dom';
 import smSrc from '@assets/backgrounds/case/casesm.jpeg';
 import mdSrc from '@assets/backgrounds/case/casemd.jpeg';
 import xlSrc from '@assets/backgrounds/case/casexl.jpeg';
+import { Outlet } from '@tanstack/react-router';
 
 export const WorkPageTemplate = (props: {
   children?: ReactNode;

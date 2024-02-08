@@ -1,10 +1,10 @@
 import { Container } from '@/shared/components/container';
 import { PopInAnimation } from '@/shared/components/popIn';
 import { useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
 import smSrc from '@assets/backgrounds/work/worksm.jpeg';
 import mdSrc from '@assets/backgrounds/work/workmd.jpeg';
 import xlSrc from '@assets/backgrounds/work/workxl.jpeg';
+import { NavLink } from '@/shared/components/navlink';
 
 export const WorkPage = () => {
   useEffect(() => {
@@ -27,7 +27,8 @@ export const WorkPage = () => {
         >
           <div className="flex flex-col gap-8 lg:gap-12 ml-8">
             <PopInAnimation delay={0.5}>
-              <NavLink to="andreas">PROMOTING NEW MUSIC</NavLink>
+              <NavLink
+               to="andreas">PROMOTING NEW MUSIC</NavLink>
             </PopInAnimation>
             <PopInAnimation delay={0.7}>
               <NavLink
