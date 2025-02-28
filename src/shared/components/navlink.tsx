@@ -1,5 +1,5 @@
-import { Link, LinkProps } from '@tanstack/react-router';
+import { Link, LinkComponentProps } from '@tanstack/react-router';
 
-export function NavLink(props: LinkProps) {
+export function NavLink(props: LinkComponentProps) {
   return <Link {...props}>{props.children}</Link>;
 }

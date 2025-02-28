@@ -1,6 +1,7 @@
 import { Container } from '#/shared/components/container';
 import { PopInAnimation } from '#/shared/components/popIn';
 import { useEffect } from 'react';
+
 import { NavLink } from '#/shared/components/navlink';
 
 export const WorkPage = () => {
