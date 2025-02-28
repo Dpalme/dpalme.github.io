@@ -1,11 +1,9 @@
-import { Container } from '@/shared/components/container';
-import { PopInAnimation } from '@/shared/components/popIn';
+import { Container } from '#/shared/components/container';
+import { PopInAnimation } from '#/shared/components/popIn';
 import { m } from 'framer-motion';
 import { useEffect } from 'react';
-import smSrc from '@assets/backgrounds/home/homesm.jpeg';
-import mdSrc from '@assets/backgrounds/home/homemd.jpeg';
-import xlSrc from '@assets/backgrounds/home/homexl.jpeg';
-import { NavLink } from '@/shared/components/navlink';
+import { NavLink } from '#/shared/components/navlink';
+import { HomeAnimation } from './homeAnimation';
 
 export const HomePage = () => {
   useEffect(() => {
@@ -16,10 +14,8 @@ export const HomePage = () => {
     <Container
       className="home-bg"
       containerClass="w-full h-full"
-      nextPage="work"
-      backgroundImage={{ smSrc, mdSrc, xlSrc }}
     >
-      <div className="max-w-sm">
+      <div className="max-w-md">
         <h1 className="mb-2">
           <PopInAnimation delay={0.5}>
             <div className="text-lg">
@@ -28,12 +24,13 @@ export const HomePage = () => {
             </div>
           </PopInAnimation>
           <PopInAnimation delay={0.7}>
-            <span className="text-6xl">PRODUCT</span>
+            <span className="text-6xl">SOFTWARE</span>
           </PopInAnimation>
           <PopInAnimation delay={1}>
-            <span className="italic text-right text-xl block">DEVELOPER</span>
+            <span className="block text-right text-xl italic">ENGINEER</span>
           </PopInAnimation>
         </h1>
+        <HomeAnimation />
         <m.p
           initial={{ opacity: 0 }}
           transition={{ duration: 0.25, delay: 1.5 }}
@@ -41,27 +38,33 @@ export const HomePage = () => {
             opacity: 1,
           }}
           viewport={{ once: true }}
-          className="italic font-alt font-normal text-sm"
+          className="font-alt text-sm font-normal italic"
         >
           Merging Technical and Design Thinking
         </m.p>
       </div>
-      <div className="grow flex justify-end flex-wrap md:text-lg">
-        <div className="flex flex-col gap-16 lg:gap-32 text-right uppercase font-title max-w-md w-full">
+      <div className="flex grow flex-wrap justify-end md:text-lg">
+        <div className="flex w-full max-w-md flex-col gap-16 text-right font-title uppercase lg:gap-32">
           <PopInAnimation delay={1}>
-            <NavLink to="/about" className="text-base">
+            <NavLink
+              to="/about"
+              className="text-base"
+            >
               ABOUT <span className="font-alt font-extrabold">ME</span>
             </NavLink>
           </PopInAnimation>
           <PopInAnimation delay={0.5}>
             <div className="w-full text-center">
-              <NavLink to="/work" className="text-6xl">
+              <NavLink
+                to="/work"
+                className="text-6xl"
+              >
                 MY WORK
               </NavLink>
             </div>
           </PopInAnimation>
           <PopInAnimation delay={0.7}>
-            <div className="text-left w-full">
+            <div className="w-full text-left">
               <NavLink to="/projects">
                 SIDE <span className="font-alt font-extrabold">PROJECTS</span>
               </NavLink>

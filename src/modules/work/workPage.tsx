@@ -1,10 +1,8 @@
-import { Container } from '@/shared/components/container';
-import { PopInAnimation } from '@/shared/components/popIn';
+import { Container } from '#/shared/components/container';
+import { PopInAnimation } from '#/shared/components/popIn';
 import { useEffect } from 'react';
-import smSrc from '@assets/backgrounds/work/worksm.jpeg';
-import mdSrc from '@assets/backgrounds/work/workmd.jpeg';
-import xlSrc from '@assets/backgrounds/work/workxl.jpeg';
-import { NavLink } from '@/shared/components/navlink';
+
+import { NavLink } from '#/shared/components/navlink';
 
 export const WorkPage = () => {
   useEffect(() => {
@@ -13,22 +11,20 @@ export const WorkPage = () => {
 
   return (
     <Container
-      backgroundImage={{ smSrc, mdSrc, xlSrc }}
       className="work-bg"
       containerClass="lg:gap-16 lg:!gap-y-0 h-full items-start"
     >
-      <div className="grow w-full h-full flex flex-col justify-around">
+      <div className="flex h-full w-full grow flex-col justify-around">
         <PopInAnimation>
-          <h1 className="mt-8 mb-0">MY WORK</h1>
+          <h1 className="mb-0 mt-8">MY WORK</h1>
         </PopInAnimation>
         <div
-          className="flex flex-col gap-2 lg:gap-16 uppercase font-title
-        w-full text-xl overflow-hidden mt-12 @md:self-center"
+          className="mt-12 flex w-full flex-col gap-2 overflow-hidden
+        font-title text-xl uppercase @md:self-center lg:gap-16"
         >
-          <div className="flex flex-col gap-8 lg:gap-12 ml-8">
+          <div className="ml-8 flex flex-col gap-8 lg:gap-12">
             <PopInAnimation delay={0.5}>
-              <NavLink
-               to="andreas">PROMOTING NEW MUSIC</NavLink>
+              <NavLink to="andreas">PROMOTING NEW MUSIC</NavLink>
             </PopInAnimation>
             <PopInAnimation delay={0.7}>
               <NavLink

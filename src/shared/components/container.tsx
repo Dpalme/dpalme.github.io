@@ -1,13 +1,10 @@
 import { ReactNode } from 'react';
 import { m } from 'framer-motion';
-import { ResponsiveBackground } from './responsiveBackground';
 
 export const Container = (props: {
   children: ReactNode;
   className?: string;
-  backgroundImage: { smSrc: string; mdSrc: string; xlSrc: string };
   containerClass?: string;
-  nextPage?: string;
 }) => {
   return (
     <m.section
@@ -15,12 +12,10 @@ export const Container = (props: {
       layout
       initial={{
         opacity: 0,
-        x: '100%',
         zIndex: 1,
       }}
       whileInView={{
         opacity: 1,
-        x: 0,
         zIndex: 0,
       }}
       exit={{
@@ -29,21 +24,15 @@ export const Container = (props: {
       }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="w-screen h-screen overflow-hidden fixed"
+      className="main-container fixed h-screen w-screen overflow-hidden"
     >
-      <ResponsiveBackground
-        smSrc={props.backgroundImage?.smSrc}
-        mdSrc={props.backgroundImage?.mdSrc}
-        xlSrc={props.backgroundImage?.xlSrc}
-        className={props.className}
-      />
       <div
-        className="pl-12 pt-8 pb-16 md:pb-4 md:pt-16 pr-4 h-screen overflow-y-auto
-      w-full max-w-full overflow-x-hidden min-h-full overscroll-contain @container"
+        className="h-screen min-h-full w-full max-w-full overflow-y-auto overflow-x-hidden overscroll-contain pb-16
+      pl-12 pr-4 pt-8 @container md:pb-4 md:pt-16"
       >
         <div
           className={[
-            'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_2fr] gap-32 pb-16',
+            'grid grid-cols-1 gap-32 pb-16 md:grid-cols-2 lg:grid-cols-[1fr_2fr]',
             'drop-shadow-sm',
             props.containerClass?.includes('items-')
               ? props.containerClass

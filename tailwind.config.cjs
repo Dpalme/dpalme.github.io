@@ -1,16 +1,42 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./index.html",
-    "./src/index.css",
-    "./src/**/*.{tsx,css}",
-  ],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       fontFamily: {
-        title: ['PPEiko', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji'],
-        sans: ['PPRadioGrotesk', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji'],
-        alt: ['PPTelegraf', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji'],
+        title: [
+          'PPEiko',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Helvetica',
+          'Arial',
+          'sans-serif',
+          'Apple Color Emoji',
+          'Segoe UI Emoji',
+        ],
+        sans: [
+          'PPRadioGrotesk',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Helvetica',
+          'Arial',
+          'sans-serif',
+          'Apple Color Emoji',
+          'Segoe UI Emoji',
+        ],
+        alt: [
+          'PPTelegraf',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Helvetica',
+          'Arial',
+          'sans-serif',
+          'Apple Color Emoji',
+          'Segoe UI Emoji',
+        ],
       },
       colors: {
         primary: {
@@ -31,7 +57,7 @@ module.exports = {
         orange: 'rgb(var(--orange) / <alpha-value>)',
         blue: 'rgb(var(--blue) / <alpha-value>)',
         main: 'rgb(var(--main) / <alpha-value>)',
-        back: 'rgb(var(--back) / <alpha-value>)'
+        back: 'rgb(var(--back) / <alpha-value>)',
       },
       backgroundImage: {
         sm: 'url(--smImg)',
@@ -40,27 +66,28 @@ module.exports = {
       },
       boxShadow: {
         sm: `-1px -1px 4px 1px var(--tw-shadow-color), 1px 1px 4px var(--tw-shadow-color)`,
-        inset: 'inset -1px -1px 4px 1px var(--tw-shadow-color), inset 1px 1px 4px var(--tw-shadow-color)',
+        inset:
+          'inset -1px -1px 4px 1px var(--tw-shadow-color), inset 1px 1px 4px var(--tw-shadow-color)',
         glow: '0px 0px 16px var(--tw-shadow-color), 0px 0px 4px var(--tw-shadow-color), 0px 0px 8px var(--tw-shadow-color)',
       },
       animation: {
         'slide-left': 'slide-left .2s cubic-bezier(0, 0, 0.2, 1)',
-        'squeeze': 'squeeze 1.5s ease-in-out infinite',
+        squeeze: 'squeeze 1.5s ease-in-out infinite',
       },
       keyframes: {
         'slide-left': {
           '0%': { transform: 'translateX(100%)' },
-          '100%': { transform: 'translateX(0%)' }
+          '100%': { transform: 'translateX(0%)' },
         },
-        'squeeze': {
+        squeeze: {
           '0%,100%': { transform: 'scaleX(100%)' },
-          '50%': { transform: 'scaleX(20%)' }
-        }
+          '50%': { transform: 'scaleX(20%)' },
+        },
       },
       containers: {
         '2xs': '16rem',
-      }
+      },
     },
   },
-  plugins: [require("tailwindcss"), require("precss"), require("autoprefixer"), require('@tailwindcss/container-queries')],
-}
+  plugins: [require('@tailwindcss/container-queries')],
+};

@@ -13,7 +13,10 @@ const UsedAnimations = () =>
 
 function App() {
   return (
-    <LazyMotion features={UsedAnimations} strict>
+    <LazyMotion
+      features={UsedAnimations}
+      strict
+    >
       <ModalProvider>
         <Outlet />
       </ModalProvider>

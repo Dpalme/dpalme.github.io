@@ -1,5 +1,5 @@
-import { PopInAnimation } from '@/shared/components/popIn';
-import { useFetch } from '@/shared/hooks/useFetch';
+import { PopInAnimation } from '#/shared/components/popIn';
+import { useFetch } from '#/shared/hooks/useFetch';
 import { createElement, FunctionComponent } from 'react';
 
 function JSONFeedComponent(props: {
@@ -9,7 +9,7 @@ function JSONFeedComponent(props: {
   const { data, loading, error } = useFetch(props.url);
 
   return !!error ? (
-    <p className="bg-red-500 text-main rounded-md p-4">{error.toString()}</p>
+    <p className="rounded-md bg-red-500 p-4 text-main">{error.toString()}</p>
   ) : (
     <>
       {data?.items?.map(
@@ -18,7 +18,7 @@ function JSONFeedComponent(props: {
           createElement(props.cardComponent, {
             ...item,
             loading,
-          })
+          }),
       )}
     </>
   );

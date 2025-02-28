@@ -1,4 +1,4 @@
-import { PopInAnimation } from '@/shared/components/popIn';
+import { PopInAnimation } from '#/shared/components/popIn';
 import { LastFmCard } from './components/lastFMCard';
 import { LetterboxdCard } from './components/letterboxdCard';
 import FeedComponent from './components/rssFeed';
@@ -8,12 +8,12 @@ import JSONFeedComponent from './components/jsonFeed';
 export const LatestPage = () => {
   return (
     <section
-      className="grid grid-cols-1 @xl:grid-cols-[minmax(max-content,2fr)_1fr] gap-8
-      items-start max-h-full overflow-y-auto overflow-x-hidden"
+      className="grid max-h-full grid-cols-1 items-start
+      gap-8 overflow-y-auto overflow-x-hidden @xl:grid-cols-[minmax(max-content,2fr)_1fr]"
     >
-      <div className="flex flex-col gap-4 shrink">
+      <div className="flex shrink flex-col gap-4">
         <PopInAnimation delay={0.5}>
-          <h2 className="font-title font-thin m-0 text-base">
+          <h2 className="m-0 font-title text-base font-thin">
             Listening to <span className="font-alt font-extrabold">Music</span>
           </h2>
         </PopInAnimation>
@@ -24,15 +24,15 @@ export const LatestPage = () => {
           />
         </div>
       </div>
-      <div className="@container flex flex-col gap-4">
+      <div className="flex flex-col gap-4 @container">
         <PopInAnimation delay={0.5}>
-          <h2 className="font-title font-thin m-0 text-base">
+          <h2 className="m-0 font-title text-base font-thin">
             Watching <span className="font-alt font-extrabold">Movies</span>
           </h2>
         </PopInAnimation>
         <div
-          className="grid grid-cols-1 @2xs:grid-cols-2 @md:grid-cols-3
-            @xl:grid-cols-6 gap-4 items-stretch mb-4"
+          className="mb-4 grid grid-cols-1 items-stretch
+            gap-4 @2xs:grid-cols-2 @md:grid-cols-3 @xl:grid-cols-6"
           role="list"
         >
           <FeedComponent
@@ -41,28 +41,31 @@ export const LatestPage = () => {
           />
         </div>
       </div>
-      <div className="@container flex flex-col gap-4">
+      <div className="flex flex-col gap-4 @container">
         <PopInAnimation delay={0.5}>
-          <h2 className="font-title font-thin m-0 text-base">
+          <h2 className="m-0 font-title text-base font-thin">
             Building <span className="font-alt font-extrabold">Stuff</span>
           </h2>
         </PopInAnimation>
-        <div className="grid grid-cols-1 gap-2 items-stretch mb-4" role="list">
+        <div
+          className="mb-4 grid grid-cols-1 items-stretch gap-2"
+          role="list"
+        >
           <img
             src="http://ghchart.rshah.org/dpalme"
             alt="dpalme's Github chart"
           />
         </div>
       </div>
-      <div className="@container flex flex-col gap-4 overflow-visible">
+      <div className="flex flex-col gap-4 overflow-visible @container">
         <PopInAnimation delay={0.5}>
-          <h2 className="font-title font-thin m-0 text-base">
+          <h2 className="m-0 font-title text-base font-thin">
             Taking <span className="font-alt font-extrabold">Photos</span>
           </h2>
         </PopInAnimation>
         <div
-          className="grid grid-cols-2 @md:grid-cols-3 @xl:grid-cols-4
-        items-stretch mb-4"
+          className="mb-4 grid grid-cols-2 items-stretch
+        @md:grid-cols-3 @xl:grid-cols-4"
           role="list"
         >
           <JSONFeedComponent
