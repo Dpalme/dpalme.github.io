@@ -1,9 +1,11 @@
-import { Container } from '#shared/components/container';
-import { Technologies } from './components/technologies';
-import { PopInAnimation } from '#/shared/components/popIn';
-import { LatestPage } from './latest/latestPage';
 import { useEffect } from 'react';
+
+import { Container } from '#shared/components/container';
+import { PopInAnimation } from '#/shared/components/popIn';
 import { NavLink } from '#/shared/components/navlink';
+
+import { LatestPage } from './latest/latestPage';
+import { Technologies } from './components/technologies';
 
 export function AboutPage() {
   useEffect(() => {
