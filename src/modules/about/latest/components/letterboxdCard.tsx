@@ -1,4 +1,4 @@
-import { RSSResponseItem } from '@/shared/hooks/useRSS';
+import { RSSResponseItem } from '#/shared/hooks/useRSS';
 
 export const LetterboxdCard = (props: RSSResponseItem) => {
   let imageUrl, film, rating, filmTitle, r8, link;
@@ -11,7 +11,7 @@ export const LetterboxdCard = (props: RSSResponseItem) => {
   }
   return (
     <a
-      className="rounded-md overflow-hidden shadow-md relative"
+      className="relative overflow-hidden rounded-md shadow-md"
       href={link}
       target="_blank"
       role="list-item"
@@ -23,20 +23,20 @@ export const LetterboxdCard = (props: RSSResponseItem) => {
             'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
           }
           alt={props.title}
-          className="bg-neutral-700 aspect-[150/225] w-full outline-none border-transparent
-        lg:grayscale lg:hover:grayscale-0 transition-all duration-700 z-10"
+          className="z-10 aspect-[150/225] w-full border-transparent bg-neutral-700
+        outline-none transition-all duration-700 lg:grayscale lg:hover:grayscale-0"
           loading="lazy"
         ></img>
         {props.loading && (
           <div
-            className="absolute left-0 top-0 motion-safe:animate-pulse
-          bg-neutral-700 w-full h-full"
+            className="absolute left-0 top-0 h-full
+          w-full bg-neutral-700 motion-safe:animate-pulse"
           ></div>
         )}
       </div>
-      <div className="backdrop-blur-lg bg-black bg-opacity-40 p-2">
-        <span className="font-sans text-xs text-amber-500 m-0">{r8}&nbsp;</span>
-        <h3 className="font-alt font-extrabold tracking-tight text-xs m-0 truncate">
+      <div className="bg-black bg-opacity-40 p-2 backdrop-blur-lg">
+        <span className="m-0 font-sans text-xs text-amber-500">{r8}&nbsp;</span>
+        <h3 className="m-0 truncate font-alt text-xs font-extrabold tracking-tight">
           {filmTitle}&nbsp;
         </h3>
       </div>

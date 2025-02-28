@@ -1,5 +1,5 @@
-import { PopInAnimation } from '@/shared/components/popIn';
-import { useRSS } from '@shared/hooks/useRSS';
+import { PopInAnimation } from '#/shared/components/popIn';
+import { useRSS } from '#shared/hooks/useRSS';
 import { createElement, FunctionComponent } from 'react';
 
 function FeedComponent(props: {
@@ -9,11 +9,14 @@ function FeedComponent(props: {
   const { data, loading, error } = useRSS(props.url);
 
   return !!error ? (
-    <p className="bg-red-500 text-main rounded-md p-4">{error.toString()}</p>
+    <p className="rounded-md bg-red-500 p-4 text-main">{error.toString()}</p>
   ) : (
     <>
       {[0, 1, 2, 3, 4, 5].map((n, i) => (
-        <PopInAnimation delay={0.3 + i / 10} key={`${props.url}:${n}`}>
+        <PopInAnimation
+          delay={0.3 + i / 10}
+          key={`${props.url}:${n}`}
+        >
           {createElement(props.cardComponent, {
             ...data?.items[n],
             loading,

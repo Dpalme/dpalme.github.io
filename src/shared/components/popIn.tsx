@@ -10,13 +10,13 @@ export const PopInAnimation = (props: {
   const yDisplacement = shouldReduceMotion ? 0 : '100%';
 
   return (
-    <div className="overflow-hidden h-fit">
+    <div className="h-fit overflow-hidden">
       <m.div
         initial={{ y: yDisplacement, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         viewport={{ once: true, amount: 'some' }}
         transition={{ duration: 0.5, delay: props.delay || 0 }}
-        className={['h-fit box-border', props.className].join(' ')}
+        className={['box-border h-fit', props.className].join(' ')}
       >
         {props.children}
       </m.div>

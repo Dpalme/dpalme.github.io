@@ -1,6 +1,6 @@
-import { PopInAnimation } from '@/shared/components/popIn';
-import LinkIcon from '@assets/icons/link.min.svg';
-import CodeIcon from '@assets/icons/code-alt.min.svg';
+import { PopInAnimation } from '#/shared/components/popIn';
+import LinkIcon from '#assets/icons/link.min.svg';
+import CodeIcon from '#assets/icons/code-alt.min.svg';
 
 const AnimatedLinkWithIcon = (props: {
   iconUrl: string;
@@ -9,13 +9,16 @@ const AnimatedLinkWithIcon = (props: {
   className?: string;
 }) => {
   return (
-    <PopInAnimation delay={0.5} className="grow w-full">
+    <PopInAnimation
+      delay={0.5}
+      className="w-full grow"
+    >
       <a
         href={props.link}
-        className="font-alt italic font-normal uppercase shrink
-              text-transparent flex flex-col gap-2 items-start
-              justify-start w-auto
-              hover:text-inherit group"
+        className="group flex w-auto shrink flex-col
+              items-start justify-start gap-2 font-alt font-normal
+              uppercase italic
+              text-transparent hover:text-inherit"
         target="_blank"
       >
         <img
@@ -26,9 +29,9 @@ const AnimatedLinkWithIcon = (props: {
         />
         <span
           className={[
-            'truncate inline-block opacity-0 group-hover:opacity-100',
-            'origin-top w-0 group-hover:w-fit scale-0',
-            'group-hover:scale-100 transition-all',
+            'inline-block truncate opacity-0 group-hover:opacity-100',
+            'w-0 origin-top scale-0 group-hover:w-fit',
+            'transition-all group-hover:scale-100',
             props.className,
           ].join(' ')}
         >
@@ -44,7 +47,7 @@ export const ProjectLinks = (props: {
   sourceCode?: string;
 }) => {
   return (
-    <div className="flex flex-row gap-4 items-center">
+    <div className="flex flex-row items-center gap-4">
       {!!props.liveSite && (
         <AnimatedLinkWithIcon
           link={props.liveSite}

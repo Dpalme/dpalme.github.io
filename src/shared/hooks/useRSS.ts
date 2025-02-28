@@ -35,7 +35,7 @@ const getData = async (url: string, limit: number) =>
     await axios.get(
       `${apiURL}?rss_url=${encodeURIComponent(url)}&api_key=${
         import.meta.env.VITE_RSS_JSON_KEY
-      }&limit=${limit}`
+      }&limit=${limit}`,
     )
   ).data;
 

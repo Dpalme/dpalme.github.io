@@ -16,16 +16,19 @@ export const ModalProvider = (props: { children: ReactNode }) => {
   }, [setModal]);
   return (
     <ModalContext.Provider value={setModal as (modal: ReactNode) => {}}>
-      <AnimatePresence initial={true} mode="sync">
+      <AnimatePresence
+        initial={true}
+        mode="sync"
+      >
         {props.children}
         {!!modal && (
           <m.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed z-50 top-0 left-0 bg-black bg-opacity-25
-        backdrop-blur-sm cursor-pointer w-screen h-screen overflow-hidden
-        p-4 lg:p-16"
+            className="fixed left-0 top-0 z-50 h-screen w-screen
+        cursor-pointer overflow-hidden bg-black bg-opacity-25 p-4
+        backdrop-blur-sm lg:p-16"
             onClick={resetModal}
           >
             {modal}

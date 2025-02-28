@@ -1,3 +1,5 @@
+import Grain from '#/grain';
+
 export const ResponsiveBackground = (props: {
   xlSrc: string;
   mdSrc: string;
@@ -6,9 +8,10 @@ export const ResponsiveBackground = (props: {
 }) => {
   return (
     <>
+      <Grain />
       <div
         className={[
-          'h-full w-full fixed top-0 left-0 -z-20 stylized-bg',
+          'stylized-bg fixed left-0 top-0 -z-20 h-full w-full',
           props.className,
         ].join(' ')}
         style={

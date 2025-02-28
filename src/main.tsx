@@ -1,4 +1,3 @@
-import { LazyMotion } from 'framer-motion';
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -11,5 +10,5 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <Suspense fallback={<LoadingBackdrop />}>
       <RouterProvider router={router} />
     </Suspense>
-  </React.StrictMode>
+  </React.StrictMode>,
 );

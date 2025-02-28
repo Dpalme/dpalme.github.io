@@ -1,10 +1,10 @@
-import githubIcon from '@assets/logos/github.min.svg';
-import instagramIcon from '@assets/logos/instagram.min.svg';
-import linkedinIcon from '@assets/logos/linkedin.min.svg';
-import emailIcon from '@assets/icons/mail.min.svg';
-import documentIcon from '@assets/icons/file_blank_outline.min.svg';
-import CVDocument from '@assets/Diego_Palmerin_CV_EN_Q1_2023.pdf';
-import vscoIcon from '@assets/logos/vsco.min.svg';
+import githubIcon from '#assets/logos/github.min.svg';
+import instagramIcon from '#assets/logos/instagram.min.svg';
+import linkedinIcon from '#assets/logos/linkedin.min.svg';
+import emailIcon from '#assets/icons/mail.min.svg';
+import documentIcon from '#assets/icons/file_blank_outline.min.svg';
+import CVDocument from '#assets/Diego_Palmerin_CV_EN_2025_Q1.pdf';
+import vscoIcon from '#assets/logos/vsco.min.svg';
 import { m, useReducedMotion } from 'framer-motion';
 
 const SocialLink = (props: {
@@ -21,7 +21,7 @@ const SocialLink = (props: {
       download={!!props.download}
     >
       <img
-        className="w-6 aspect-square"
+        className="aspect-square w-6"
         loading="lazy"
         src={props.src}
         alt={props.alt}
@@ -34,7 +34,7 @@ export const SocialIcons = () => {
   const shouldReduceMotion = useReducedMotion();
   return (
     <m.div
-      className="flex flex-col gap-4 fixed left-2 bottom-2 z-20"
+      className="fixed bottom-2 left-2 z-20 flex flex-col gap-4"
       initial={{ y: shouldReduceMotion ? 0 : '100%', opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, delay: 0.3 }}
@@ -59,7 +59,11 @@ export const SocialIcons = () => {
         src={vscoIcon}
         alt="vsco"
       />
-      <SocialLink link="mailto:dpalme@me.com" src={emailIcon} alt="email" />
+      <SocialLink
+        link="mailto:dpalme@me.com"
+        src={emailIcon}
+        alt="email"
+      />
       <SocialLink
         link={CVDocument}
         download={true}

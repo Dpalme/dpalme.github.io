@@ -1,4 +1,4 @@
-import { PopInAnimation } from '@/shared/components/popIn';
+import { PopInAnimation } from '#/shared/components/popIn';
 
 const smoothScrollToElement = (elementId: string) => (ev: React.MouseEvent) => {
   ev.preventDefault();
@@ -14,8 +14,8 @@ const smoothScrollToElement = (elementId: string) => (ev: React.MouseEvent) => {
 export const TableOfContents = () => {
   return (
     <div
-      className="flex-col gap-4 grayscale brightness-100 items-start
-  lg:sticky lg:top-0 flex"
+      className="flex flex-col items-start gap-4 brightness-100
+  grayscale lg:sticky lg:top-0"
     >
       <PopInAnimation delay={0.55}>
         <a

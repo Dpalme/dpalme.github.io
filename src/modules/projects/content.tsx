@@ -1,4 +1,4 @@
-import { PopInAnimation } from '@/shared/components/popIn';
+import { PopInAnimation } from '#/shared/components/popIn';
 
 const ProjectLink = (props: {
   link: string;
@@ -7,18 +7,30 @@ const ProjectLink = (props: {
   i: number;
 }) => {
   return (
-    <tr className="hover:-translate-y-2 hover:translate-x-1 transition-transform pr-2">
+    <tr className="pr-2 transition-transform hover:translate-x-4">
       <td className="">
-        <a href={props.link} target="_blank">
-          <PopInAnimation delay={0.5 + props.i / 10} className="py-2 pr-2">
+        <a
+          href={props.link}
+          target="_blank"
+        >
+          <PopInAnimation
+            delay={0.5 + props.i / 10}
+            className="py-2 pr-2"
+          >
             <h3 className="w-fit text-xl font-light italic">{props.name}</h3>
           </PopInAnimation>
         </a>
       </td>
       <td>
-        <a href={props.link} target="_blank">
-          <PopInAnimation delay={0.6 + props.i / 10} className="py-2 pl-2">
-            <p className="font-sans text-sm pr-2">{props.description}</p>
+        <a
+          href={props.link}
+          target="_blank"
+        >
+          <PopInAnimation
+            delay={0.6 + props.i / 10}
+            className="py-2 pl-2"
+          >
+            <p className="pr-2 font-sans text-sm">{props.description}</p>
           </PopInAnimation>
         </a>
       </td>
@@ -29,12 +41,15 @@ const ProjectLink = (props: {
 const AboutContent = () => {
   return (
     <>
-      <PopInAnimation delay={0.3} className="mt-8">
+      <PopInAnimation
+        delay={0.3}
+        className="mt-8"
+      >
         <h1 className="overflow-visible pb-2">PROJECTS</h1>
       </PopInAnimation>
       <table
-        className="shrink justify-stretch text-xl text-left
-        uppercase font-title w-full md:items-end gap-x-12"
+        className="w-full shrink justify-stretch gap-x-12
+        text-left font-title text-xl uppercase md:items-end"
       >
         <thead className="hidden">
           <tr>

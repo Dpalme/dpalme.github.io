@@ -1,5 +1,5 @@
-import { HandleAsync } from '@/shared/components/handleAsync';
-import { RSSResponseItem } from '@/shared/hooks/useRSS';
+import { HandleAsync } from '#/shared/components/handleAsync';
+import { RSSResponseItem } from '#/shared/hooks/useRSS';
 import { timeDifference } from '../utils/timeDiffrence';
 
 export const LastFmCard = (props: RSSResponseItem) => {
@@ -21,13 +21,13 @@ export const LastFmCard = (props: RSSResponseItem) => {
       loading={props.loading}
       fallback={
         <div className="flex flex-row gap-2">
-          <div className="w-6 h-6 bg-neutral-400  animate-pulse rounded-full inline-block">
+          <div className="inline-block h-6 w-6  animate-pulse rounded-full bg-neutral-400">
             &nbsp;
           </div>
-          <div className="w-32 h-6 bg-neutral-400 animate-pulse rounded-full inline-block">
+          <div className="inline-block h-6 w-32 animate-pulse rounded-full bg-neutral-400">
             &nbsp;
           </div>
-          <div className="w-12 h-6 bg-neutral-400 animate-pulse rounded-full inline-block">
+          <div className="inline-block h-6 w-12 animate-pulse rounded-full bg-neutral-400">
             &nbsp;
           </div>
         </div>
@@ -39,18 +39,18 @@ export const LastFmCard = (props: RSSResponseItem) => {
         role="list-item"
         className="inline-block w-fit"
       >
-        <h3 className="text-xs font-title font-light italic inline">
-          <span className="font-alt font-extrabold mr-2 text-neutral-400 not-italic">
+        <h3 className="inline font-title text-xs font-light italic">
+          <span className="mr-2 font-alt font-extrabold not-italic text-neutral-400">
             {props.pubDate
               ? !!daysAgo
                 ? `${daysAgo}d`
                 : !!hoursAgo
-                ? `${hoursAgo}h`
-                : `${minutesAgo}m`
+                  ? `${hoursAgo}h`
+                  : `${minutesAgo}m`
               : '?'}
           </span>{' '}
           {song}{' '}
-          <span className="font-alt font-extrabold ml-2 text-xs not-italic">
+          <span className="ml-2 font-alt text-xs font-extrabold not-italic">
             {artist}
           </span>
         </h3>

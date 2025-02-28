@@ -3,14 +3,14 @@ import { LoadingSpinner } from './loadingSpinner';
 export const LoadingBackdrop = () => {
   return (
     <div
-      className="fixed z-10 w-full h-full text-main flex
-      flex-col items-center justify-center gap-6"
+      className="fixed z-10 flex h-full w-full flex-col
+      items-center justify-center gap-6 text-main"
     >
-      <p className="text-6xl pb-2">
+      <p className="pb-2 text-6xl">
         Dieg
         <span className="spin" />
       </p>
-      <p className="text-6xl pb-2">Palmerín</p>
+      <p className="pb-2 text-6xl">Palmerín</p>
     </div>
   );
 };

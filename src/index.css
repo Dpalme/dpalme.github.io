@@ -13,11 +13,11 @@
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
 
-    --surface-1: 27 27 31;
-    --surface-2: 39 41 49;
-    --surface-3: 44 46 56;
-    --surface-4: 46 47 58;
-    --surface-5: 49 51 62;
+    --surface-1: #006a4e;
+    --surface-2: #006a4e;
+    --surface-3: #006a4e;
+    --surface-4: #006a4e;
+    --surface-5: #006a4e;
 
     --back: 32 32 32;
     --main: 241 241 241;
@@ -33,7 +33,7 @@
 
     color-scheme: light;
     color: rgb(var(--main));
-    background-color: rgb(var(--surface-2));
+    background-color: #006a4e;
 
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
@@ -58,8 +58,8 @@
   }
 
   body {
-    background-color: #1e1320;
-    @apply font-sans overflow-x-hidden font-extralight text-lg md:text-base;
+    background-color: #006a4e;
+    @apply overflow-x-hidden font-sans text-lg font-extralight;
   }
 
   h1,
@@ -81,15 +81,15 @@
   h5,
   h6,
   label {
-    @apply font-thin font-title uppercase tracking-widest;
+    @apply font-title font-thin uppercase tracking-widest;
   }
 
   h1 {
-    @apply text-4xl md:text-6xl leading-relaxed;
+    @apply text-4xl leading-relaxed md:text-6xl;
   }
 
   h2 {
-    @apply text-xl font-bold mb-4;
+    @apply mb-4 text-xl font-bold;
   }
 
   h3 {
@@ -99,70 +99,26 @@
   input,
   textarea,
   select {
-    @apply bg-surface-2 shadow-inner px-4 py-2 text-lg rounded-lg
-    outline outline-surface-5 hover:bg-surface-1 transition-colors
+    @apply rounded-lg bg-surface-2 px-4 py-2 text-lg shadow-inner
+    outline outline-surface-5 transition-colors hover:bg-surface-1
     focus:bg-surface-1;
   }
 }
 
 @layer components {
-  .stylized-bg {
-    @apply fixed w-full h-screen min-h-screen blur-lg
-    bg-fixed brightness-150 md:blur-none bg-cover bg-center
-    md:brightness-110 object-cover object-center bg-blend-color
-    mix-blend-color -z-40;
-    background-color: #1e1320;
-    background-image: var(--sm-img);
-  }
-
-  .stylized-bg::after {
+  body::after {
     content: '';
-    @apply w-full h-full fixed top-0 left-0
-    from-slate-100 to-slate-800 bg-gradient-to-t
-    opacity-20 mix-blend-multiply;
+    @apply !pointer-events-none fixed left-0 top-0 h-full w-full
+    bg-gradient-to-tl from-slate-100 to-slate-800
+    opacity-40 mix-blend-overlay;
   }
 
-  @screen md {
-    .stylized-bg {
-      background-image: var(--md-img), var(--sm-img);
-    }
-  }
-
-  @screen lg {
-    .stylized-bg {
-      background-image: var(--xl-img), var(--md-img), var(--sm-img);
-    }
-  }
-  .home-bg::after {
+  body::before {
     content: '';
-    @apply fixed w-screen h-screen top-0 left-0 backdrop-brightness-50;
-  }
-
-  .about-bg {
-    @apply brightness-200;
-  }
-
-  .detail-bg.stylized-bg::after {
-    content: '';
-    @apply from-emerald-100 to-emerald-800 bg-gradient-to-t;
-  }
-
-  .png-grain {
-    @apply fixed -z-10 pointer-events-none
-    transform mix-blend-difference;
-    background: url('./assets/noise.png') repeat center center;
-    background-size: 256px;
-    height: 400vw;
-    width: 400vw;
-    background-repeat-x: repeat;
-    background-repeat-y: repeat;
-    left: -100%;
-    top: -100%;
-  }
-  .gif-grain {
-    @apply fixed top-0 w-full h-full bg-repeat
-    left-0 pointer-events-none mix-blend-overlay -z-10;
-    background-size: cover;
+    @apply !pointer-events-none fixed -z-10 transform-gpu bg-cover bg-fixed mix-blend-multiply contrast-200 motion-reduce:hidden;
+    background-image: url('./assets/noise.gif');
+    height: 100vh;
+    width: 100vw;
   }
 
   .s-truncate {
@@ -176,74 +132,74 @@
 @layer components {
   i,
   .italic-serif {
-    @apply font-title font-light italic tracking-wider leading-relaxed uppercase;
+    @apply font-title font-light uppercase italic leading-relaxed tracking-wider;
   }
 }
 
 @-webkit-keyframes grain {
   0%,
   100% {
-    transform: translate(0, 0);
+    --translate-x: 0 --translate-y: 0;
   }
   10% {
-    transform: translate(-5%, -10%);
+    --translate-x: -5% --translate-y: -10%;
   }
   20% {
-    transform: translate(-15%, 5%);
+    --translate-x: -15% --translate-y: 5%;
   }
   30% {
-    transform: translate(7%, -25%);
+    --translate-x: 7% --translate-y: -25%;
   }
   40% {
-    transform: translate(-5%, 25%);
+    --translate-x: -5% --translate-y: 25%;
   }
   50% {
-    transform: translate(-15%, 10%);
+    --translate-x: -15% --translate-y: 10%;
   }
   60% {
-    transform: translate(15%, 0%);
+    --translate-x: 15% --translate-y: 0%;
   }
   70% {
-    transform: translate(0%, 15%);
+    --translate-x: 0% --translate-y: 15%;
   }
   80% {
-    transform: translate(3%, -35%);
+    --translate-x: 3% --translate-y: -35%;
   }
   90% {
-    transform: translate(-10%, 10%);
+    --translate-x: -10% --translate-y: 10%;
   }
 }
 
 @keyframes grain {
   0%,
   100% {
-    transform: translate(0, 0);
+    --translate-x: 0 --translate-y: 0;
   }
   10% {
-    transform: translate(-5%, -10%);
+    --translate-x: -5% --translate-y: -10%;
   }
   20% {
-    transform: translate(-15%, 5%);
+    --translate-x: -15% --translate-y: 5%;
   }
   30% {
-    transform: translate(7%, -25%);
+    --translate-x: 7% --translate-y: -25%;
   }
   40% {
-    transform: translate(-5%, 5%);
+    --translate-x: -5% --translate-y: 25%;
   }
   50% {
-    transform: translate(-15%, 10%);
+    --translate-x: -15% --translate-y: 10%;
   }
   60% {
-    transform: translate(15%, 0%);
+    --translate-x: 15% --translate-y: 0%;
   }
   70% {
-    transform: translate(0%, 15%);
+    --translate-x: 0% --translate-y: 15%;
   }
   80% {
-    transform: translate(3%, -35%);
+    --translate-x: 3% --translate-y: -35%;
   }
   90% {
-    transform: translate(-10%, 10%);
+    --translate-x: -10% --translate-y: 10%;
   }
 }

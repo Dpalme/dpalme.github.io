@@ -1,9 +1,9 @@
-import { RSSResponseItem } from '@/shared/hooks/useRSS';
+import { RSSResponseItem } from '#/shared/hooks/useRSS';
 
 export const VSCOCard = (props: RSSResponseItem) => {
   return (
     <a
-      className="relative hover:scale-110 scale-100 block transition-transform hover:z-30"
+      className="relative block scale-100 transition-transform hover:z-30 hover:scale-110"
       href={props.link}
       target="_blank"
       role="list-item"
@@ -15,14 +15,14 @@ export const VSCOCard = (props: RSSResponseItem) => {
           ${props.thumbnail}?w=260&dpr=3 3x`}
           src={props.thumbnail + '?w=260'}
           alt={props.title}
-          className="bg-neutral-700 w-full outline-none
-          border-transparent"
+          className="w-full border-transparent bg-neutral-700
+          outline-none"
           loading="lazy"
         ></img>
         {props.loading && (
           <div
-            className="absolute left-0 top-0 motion-safe:animate-pulse
-          bg-neutral-700 w-full h-full"
+            className="absolute left-0 top-0 h-full
+          w-full bg-neutral-700 motion-safe:animate-pulse"
           ></div>
         )}
       </div>

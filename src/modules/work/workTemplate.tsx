@@ -1,8 +1,5 @@
 import { ReactNode, useEffect } from 'react';
-import { Container } from '@/shared/components/container';
-import smSrc from '@assets/backgrounds/case/casesm.jpeg';
-import mdSrc from '@assets/backgrounds/case/casemd.jpeg';
-import xlSrc from '@assets/backgrounds/case/casexl.jpeg';
+import { Container } from '#/shared/components/container';
 import { Outlet } from '@tanstack/react-router';
 
 export const WorkPageTemplate = (props: {
@@ -16,7 +13,6 @@ export const WorkPageTemplate = (props: {
 
   return (
     <Container
-      backgroundImage={{ smSrc, mdSrc, xlSrc }}
       className={['detail-bg', props.bgClass].join(' ')}
       containerClass={[
         'gap-8 md:gap-16 md:grid-cols-[1fr_2fr] lg:grid-cols-[1fr_max-content_2fr] w-full',

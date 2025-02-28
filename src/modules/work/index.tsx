@@ -1,4 +1,4 @@
-import { rootRoute } from '@/App';
+import { rootRoute } from '#/App';
 import { createRoute, lazyRouteComponent } from '@tanstack/react-router';
 
 export const WorkRoute = createRoute({
