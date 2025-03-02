@@ -16,7 +16,7 @@ export const HomePage = () => {
       containerClass="w-full h-full"
     >
       <div className="max-w-md">
-        <h1 className="mb-2">
+        <h1 className="mb-2 flex flex-col gap-16">
           <PopInAnimation delay={0.5}>
             <div className="text-lg">
               <span>DIEGO</span>{' '}
