@@ -116,7 +116,6 @@
   body::before {
     content: '';
     @apply !pointer-events-none fixed -z-10 transform-gpu bg-cover bg-fixed mix-blend-multiply contrast-200 motion-reduce:hidden;
-    background-image: url('./assets/noise.gif');
     height: 100vh;
     width: 100vw;
   }

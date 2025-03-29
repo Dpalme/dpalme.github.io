@@ -8,7 +8,6 @@ export const ResponsiveBackground = (props: {
 }) => {
   return (
     <>
-      <Grain />
       <div
         className={[
           'stylized-bg fixed left-0 top-0 -z-20 h-full w-full',

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 function SvgReactLine({
   x1 = 0,
@@ -11,10 +11,11 @@ function SvgReactLine({
   x2?: number;
   y2?: number;
 }) {
+  const width = useMemo(() => Math.random() * 2, []);
   return (
     <line
       stroke="#006a4eC0"
-      strokeWidth={Math.random() * 2}
+      strokeWidth={width}
       strokeLinecap="round"
       className="drop-shadow-sm"
       x1={x1}
@@ -56,7 +57,7 @@ function animate(
   points: [number, number][],
 ): Connection[] {
   const connections: Connection[] = initalLines;
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 40; i++) {
     const connection = connections[(Math.random() * numberOfLines) >> 0];
     connection[0] = points[(Math.random() * numberOfLines) >> 0];
     connection[1] = points[(Math.random() * numberOfLines) >> 0];
@@ -81,7 +82,7 @@ export function HomeAnimation() {
   }, [setConnections]);
 
   useEffect(() => {
-    const interval = setInterval(calculateNewConnections, 1000 / 24);
+    const interval = setInterval(calculateNewConnections, 1000 / 12);
     return () => clearInterval(interval);
   }, [svg.current]);
 
@@ -108,9 +109,9 @@ export function HomeAnimation() {
             fill="white"
           />
           <circle
-            cx="50"
-            cy="50"
-            r="50"
+            cx={R}
+            cy={R}
+            r={R}
             fill="121212"
           />
         </mask>
