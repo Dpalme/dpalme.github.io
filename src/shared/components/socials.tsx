@@ -33,8 +33,8 @@ export const SocialIcons = () => {
   return (
     <m.div
       className="fixed bottom-2 right-2 z-20 flex flex-row gap-2"
-      initial={{ y: shouldReduceMotion ? 0 : '100%', opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
+      initial={{ y: shouldReduceMotion ? 0 : 0.75, opacity: 0 }}
+      animate={{ y: 0, opacity: 0.75 }}
       transition={{ duration: 1, delay: 0.3 }}
     >
       <SocialLink

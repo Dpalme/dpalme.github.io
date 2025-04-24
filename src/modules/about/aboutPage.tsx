@@ -43,9 +43,9 @@ export function AboutPage() {
             build{' '}
             <NavLink
               to="/projects"
-              className="text-amber-500 underline"
+              className="text-[#bf8b73] underline"
             >
-              <span className="!text-white hover:!text-amber-400">
+              <span className="!text-white hover:!text-[#bf8b73]">
                 side projects
               </span>
             </NavLink>
@@ -65,18 +65,18 @@ export function AboutPage() {
           >
             <a
               href="https://metabaseq.com"
-              className="!text-amber-500 underline"
+              className="!text-[#bf8b73] underline"
             >
-              <h3 className="mb-0 font-alt text-base font-extrabold !text-white hover:!text-amber-400">
+              <h3 className="mb-0 font-alt text-base font-extrabold !text-white hover:!text-[#bf8b73]">
                 Metabase Q{' '}
               </h3>
             </a>
             <a
               href="https://www.metabaseq.com/platform/"
               target="_blank"
-              className="!text-amber-500 !underline"
+              className="!text-[#bf8b73] !underline"
             >
-              <p className="italic-serif text-sm !text-white hover:!text-amber-400">
+              <p className="italic-serif text-sm !text-white hover:!text-[#bf8b73]">
                 SOFTWARE ENGINEER -{' '}
                 <span className="font-sans text-xs font-extralight not-italic">
                   AUGUST 2022 - PRESENT DAY

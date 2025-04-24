@@ -33,7 +33,6 @@
 
     color-scheme: light;
     color: rgb(var(--main));
-    background-color: #006a4e;
 
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
@@ -58,7 +57,7 @@
   }
 
   body {
-    background-color: #006a4e;
+    background-color: #1f493d;
     @apply overflow-x-hidden font-sans text-lg font-extralight;
   }
 
@@ -109,15 +108,13 @@
   body::after {
     content: '';
     @apply !pointer-events-none fixed left-0 top-0 h-full w-full
-    bg-gradient-to-tl from-slate-100 to-slate-800
+    bg-gradient-to-tl from-white to-[#041816]
     opacity-40 mix-blend-overlay;
   }
 
   body::before {
     content: '';
-    @apply !pointer-events-none fixed -z-10 transform-gpu bg-cover bg-fixed mix-blend-multiply contrast-200 motion-reduce:hidden;
-    height: 100vh;
-    width: 100vw;
+    @apply !pointer-events-none fixed -z-10 h-screen w-screen transform-gpu bg-cover bg-fixed mix-blend-multiply contrast-200 motion-reduce:hidden;
   }
 
   .s-truncate {

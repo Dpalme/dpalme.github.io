@@ -35,7 +35,7 @@ export const LetterboxdCard = (props: RSSResponseItem) => {
         )}
       </div>
       <div className="bg-black bg-opacity-40 p-2 backdrop-blur-lg">
-        <span className="m-0 font-sans text-xs text-amber-500">{r8}&nbsp;</span>
+        <span className="m-0 font-sans text-xs text-[#bf8b73]">{r8}&nbsp;</span>
         <h3 className="m-0 truncate font-alt text-xs font-extrabold tracking-tight">
           {filmTitle}&nbsp;
         </h3>

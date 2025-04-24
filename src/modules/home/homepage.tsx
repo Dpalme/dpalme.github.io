@@ -16,19 +16,21 @@ export const HomePage = () => {
       containerClass="w-full h-full"
     >
       <div className="max-w-md">
-        <h1 className="mb-2 flex flex-col gap-16">
+        <h1 className="mb-2 flex flex-col gap-8">
           <PopInAnimation delay={0.5}>
             <div className="text-lg">
               <span>DIEGO</span>{' '}
               <span className="font-alt font-extrabold">PALMERÍN</span>
             </div>
           </PopInAnimation>
-          <PopInAnimation delay={0.7}>
-            <span className="text-6xl">SOFTWARE</span>
-          </PopInAnimation>
-          <PopInAnimation delay={1}>
-            <span className="block text-right text-xl italic">ENGINEER</span>
-          </PopInAnimation>
+          <div className="flex flex-col">
+            <PopInAnimation delay={0.7}>
+              <span className="text-5xl font-bold">SOFTWARE</span>
+            </PopInAnimation>
+            <PopInAnimation delay={1}>
+              <span className="text-right text-3xl italic">ENGINEER</span>
+            </PopInAnimation>
+          </div>
         </h1>
         <HomeAnimation />
         <m.p
@@ -40,11 +42,11 @@ export const HomePage = () => {
           viewport={{ once: true }}
           className="font-alt text-sm font-normal italic"
         >
-          Merging Technical and Design Thinking
+          Building pleasant, ergonomic software
         </m.p>
       </div>
       <div className="flex grow flex-wrap justify-end md:text-lg">
-        <div className="flex w-full max-w-md flex-col gap-16 text-right font-title uppercase lg:gap-32">
+        <div className="flex w-full max-w-md flex-col gap-8 text-right font-title uppercase lg:gap-16">
           <PopInAnimation delay={1}>
             <NavLink
               to="/about"

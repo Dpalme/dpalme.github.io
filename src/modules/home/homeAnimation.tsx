@@ -14,7 +14,7 @@ function SvgReactLine({
   const width = useMemo(() => Math.random() * 2, []);
   return (
     <line
-      stroke="#006a4eC0"
+      stroke="#1f493dC0"
       strokeWidth={width}
       strokeLinecap="round"
       className="drop-shadow-sm"
@@ -99,7 +99,7 @@ export function HomeAnimation() {
         cy="50"
         r="50"
         strokeWidth="3"
-        fill="#121212"
+        fill="#041816"
       ></circle>
       <defs>
         <mask id="circle-mask">

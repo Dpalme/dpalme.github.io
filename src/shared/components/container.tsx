@@ -24,12 +24,9 @@ export const Container = (props: {
       }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="main-container fixed h-screen w-screen overflow-hidden"
+      className="fixed h-screen w-screen overflow-hidden"
     >
-      <div
-        className="h-screen min-h-full w-full max-w-full overflow-y-auto overflow-x-hidden overscroll-contain pb-16
-      pl-12 pr-4 pt-8 @container md:pb-4 md:pt-16"
-      >
+      <div className="h-screen min-h-full w-full max-w-full overflow-y-auto overflow-x-hidden overscroll-contain px-8 pb-16 pt-8 @container md:pb-4 md:pt-16">
         <div
           className={[
             'grid grid-cols-1 gap-32 pb-16 md:grid-cols-2 lg:grid-cols-[1fr_2fr]',
