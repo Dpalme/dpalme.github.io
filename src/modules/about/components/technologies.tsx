@@ -63,30 +63,26 @@ export const Technologies = () => {
           name="React"
         />
         <TechCard
-          i={3}
+          i={2}
           name="Tailwind"
         />
         <TechCard
-          i={2}
+          i={3}
           name="Three.js"
         />
         <TechCard
           i={4}
-          name="Jinja"
-        />
-        <TechCard
-          i={5}
           name="HTML/CSS"
         />
       </TechCategory>
       <TechCategory title="Backend">
         <TechCard
           i={2}
-          name="Node.js"
+          name="Python"
         />
         <TechCard
           i={3}
-          name="Python"
+          name="Node.js"
         />
         <TechCard
           i={4}
@@ -103,8 +99,12 @@ export const Technologies = () => {
           name="PostgreSQL"
         />
         <TechCard
-          i={4}
-          name="SQLite"
+          i={5}
+          name="DynamoDB"
+        />
+        <TechCard
+          i={6}
+          name="ElasticSearch"
         />
       </TechCategory>
       <TechCategory title="Cloud">
@@ -114,32 +114,24 @@ export const Technologies = () => {
         />
         <TechCard
           i={6}
-          name="Glitch"
+          name="VPS"
         />
         <TechCard
           i={7}
-          name="Digital Ocean"
+          name="Terraform"
         />
       </TechCategory>
       <TechCategory title="Other">
         <TechCard
           i={6}
-          name="Typescript"
+          name="Git"
         />
         <TechCard
-          i={8}
-          name="PowerBi"
-        />
-        <TechCard
-          i={9}
+          i={7}
           name="Figma"
         />
         <TechCard
-          i={10}
-          name="Github"
-        />
-        <TechCard
-          i={11}
+          i={8}
           name="Docker"
         />
       </TechCategory>

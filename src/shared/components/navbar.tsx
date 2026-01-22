@@ -1,7 +1,9 @@
 import { m, useReducedMotion } from 'framer-motion';
 import { NavLink } from './navlink';
+import { useLocation } from '@tanstack/react-router';
 
 export const Navbar = () => {
+  const location = useLocation()
   const shouldReduceMotion = useReducedMotion();
   return (
     <m.nav
@@ -15,12 +17,12 @@ export const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 1 }}
     >
-      <NavLink to="/">
+      {location.pathname != '/' && <NavLink to="/">
         <span className="font-title text-sm italic md:text-inherit">
           DIEGO&nbsp;&nbsp;
           <span className="font-alt font-extrabold not-italic">PALMERÍN</span>
         </span>
-      </NavLink>
+      </NavLink>}
       <div className="flex gap-6 md:gap-4">
         <NavLink
           to="/work"

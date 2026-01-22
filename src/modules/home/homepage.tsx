@@ -13,24 +13,22 @@ export const HomePage = () => {
   return (
     <Container
       className="home-bg"
-      containerClass="w-full h-full"
+      containerClass="w-full !grid-cols-1 h-full items-start justify-start !flex flex-col !gap-12"
     >
-      <div className="max-w-md">
-        <h1 className="mb-2 flex flex-col gap-8">
+      <div className="max-w-md w-full">
+        <h1 className="mb-2 flex flex-col w-full gap-4 justify-between">
           <PopInAnimation delay={0.5}>
-            <div className="text-lg">
+            <div className="text-5xl flex flex-col">
               <span>DIEGO</span>{' '}
-              <span className="font-alt font-extrabold">PALMERÍN</span>
+              <span className="font-alt text-3xl font-extrabold">PALMERÍN</span>
             </div>
           </PopInAnimation>
-          <div className="flex flex-col">
-            <PopInAnimation delay={0.7}>
-              <span className="text-5xl font-bold">SOFTWARE</span>
-            </PopInAnimation>
-            <PopInAnimation delay={1}>
-              <span className="text-right text-3xl italic">ENGINEER</span>
-            </PopInAnimation>
+          <PopInAnimation delay={0.7}>
+          <div className="w-full items-baseline text-lg font-bold">
+              SOFTWARE{' '}
+              <span className="italic">ENGINEER</span>
           </div>
+            </PopInAnimation>
         </h1>
         <HomeAnimation />
         <m.p
@@ -45,8 +43,25 @@ export const HomePage = () => {
           Building pleasant, ergonomic software
         </m.p>
       </div>
-      <div className="flex grow flex-wrap justify-end md:text-lg">
-        <div className="flex w-full max-w-md flex-col gap-8 text-right font-title uppercase lg:gap-16">
+      <div className="flex justify-start md:text-lg">
+        <div className="flex w-full max-w-md flex-col gap-4 text-left font-title uppercase lg:gap-8">
+          <PopInAnimation delay={0.5}>
+            <div className="w-full">
+              <NavLink
+                to="/work"
+                className="text-3xl"
+              >
+                MY WORK
+              </NavLink>
+            </div>
+          </PopInAnimation>
+          <PopInAnimation delay={0.7}>
+            <div className="w-full text-lg">
+              <NavLink to="/projects">
+                SIDE <span className="font-alt font-extrabold">PROJECTS</span>
+              </NavLink>
+            </div>
+          </PopInAnimation>
           <PopInAnimation delay={1}>
             <NavLink
               to="/about"
@@ -54,23 +69,6 @@ export const HomePage = () => {
             >
               ABOUT <span className="font-alt font-extrabold">ME</span>
             </NavLink>
-          </PopInAnimation>
-          <PopInAnimation delay={0.5}>
-            <div className="w-full text-center">
-              <NavLink
-                to="/work"
-                className="text-6xl"
-              >
-                MY WORK
-              </NavLink>
-            </div>
-          </PopInAnimation>
-          <PopInAnimation delay={0.7}>
-            <div className="w-full text-left">
-              <NavLink to="/projects">
-                SIDE <span className="font-alt font-extrabold">PROJECTS</span>
-              </NavLink>
-            </div>
           </PopInAnimation>
         </div>
       </div>

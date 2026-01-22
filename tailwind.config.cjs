@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         title: [
-          'PPEiko',
+          'Host Grotesk',
           '-apple-system',
           'BlinkMacSystemFont',
           'Segoe UI',

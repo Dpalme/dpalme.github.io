@@ -53,11 +53,31 @@ export function AboutPage() {
         </PopInAnimation>
       </section>
       <section className="mb-4 grid grid-cols-1 justify-start gap-4 overscroll-auto @container">
-        <div className="relative my-8 flex flex-col gap-8">
+        <div className="relative my-8 flex flex-col gap-4">
           <PopInAnimation delay={0.3}>
-            <h2 className="mb-0 text-lg font-thin">
-              Professional and Educational History
-            </h2>
+            <h2 className="text-xl font-thin">Experience</h2>
+          </PopInAnimation>
+          <PopInAnimation
+            delay={0.4}
+            className="flex flex-col gap-2"
+          >
+            <a
+              href="https://lyft.com"
+              className="!text-[#bf8b73] underline"
+            >
+              <h3 className="mb-0 font-alt text-base font-extrabold !text-white hover:!text-[#bf8b73]">
+                Lyft
+              </h3>
+            </a>
+            <h4 className="font-sans text-sm font-bold">
+              SOFTWARE ENGINEER -{' '}
+              <span className="font-sans text-xs font-extralight not-italic">
+                APRIL 2025 - PRESENT DAY
+              </span>
+            </h4>
+            <p className="text-base opacity-80">
+              Working on the B2B team to enable enterprise level scalability and performance for all our customers and millions of riders.
+            </p>
           </PopInAnimation>
           <PopInAnimation
             delay={0.4}
@@ -71,36 +91,31 @@ export function AboutPage() {
                 Metabase Q{' '}
               </h3>
             </a>
-            <a
-              href="https://www.metabaseq.com/platform/"
-              target="_blank"
-              className="!text-[#bf8b73] !underline"
-            >
-              <p className="italic-serif text-sm !text-white hover:!text-[#bf8b73]">
-                SOFTWARE ENGINEER -{' '}
-                <span className="font-sans text-xs font-extralight not-italic">
-                  AUGUST 2022 - PRESENT DAY
-                </span>
-              </p>
-            </a>
-            <p className="italic-serif text-sm">
+            <h4 className="font-sans text-sm font-bold">
+              SOFTWARE ENGINEER -{' '}
+              <span className="font-sans text-xs font-extralight not-italic">
+                AUGUST 2022 - APRIL 2025
+              </span>
+            </h4>
+            <p className="text-base opacity-80">
+              Built the flagship product that eventually became the sole focus
+              of the company, going so far as to rebrand the business around it.
+              <br />
+              Served as a full-stack developer working on projects ranging from
+              scalability to user-centric feature design and implementation.
+            </p>
+            <h4 className="font-sans text-sm font-bold">
               DEVELOPMENT/UX ENGINEER -{' '}
               <span className="font-sans text-xs font-extralight not-italic">
                 APRIL 2022 - AUGUST 2022
               </span>
-            </p>
-            <p className="italic-serif text-sm">
-              TECHNICAL MARKETING ASSOCIATE -{' '}
-              <span className="font-sans text-xs font-extralight not-italic">
-                DECEMBER 2021 - APRIL 2022
-              </span>
-            </p>
-            <p className="italic-serif text-sm">
+            </h4>
+            <h4 className="font-sans text-sm font-bold">
               WEBSITE DEVELOPER -{' '}
               <span className="font-sans text-xs font-extralight not-italic">
-                JANUARY 2021 - DECEMBER 2021
+                JANUARY 2021 - APRIL 2022
               </span>
-            </p>
+            </h4>
           </PopInAnimation>
           <PopInAnimation
             delay={0.8}
@@ -118,10 +133,6 @@ export function AboutPage() {
           </PopInAnimation>
         </div>
         <Technologies />
-      </section>
-      <section className="col-span-full col-start-1 mt-32">
-        <h2>Monitoring my hobbies</h2>
-        <LatestPage />
       </section>
     </Container>
   );

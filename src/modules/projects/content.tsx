@@ -74,7 +74,7 @@ const AboutContent = () => {
           <ProjectLink
             link="https://palabr.dpalmer.in/"
             name="PALABR"
-            description="A wordle clone for spanish to play with my gf"
+            description="A spanish wordl clone"
             i={3}
           />
           <ProjectLink
@@ -93,7 +93,7 @@ const AboutContent = () => {
           <ProjectLink
             link="https://dpalmer.in/Becquer"
             name="BÉCQUER"
-            description="A randomly generated stanza based on the work of Gustavo Adolfo
+            description="Randomly generated stanzas based on the work of Gustavo Adolfo
           Bécquer"
             i={5}
           />
