@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import { m } from 'framer-motion';
 
 export const Container = (props: {
   children: ReactNode;
@@ -7,23 +6,7 @@ export const Container = (props: {
   containerClass?: string;
 }) => {
   return (
-    <m.section
-      layoutScroll
-      layout
-      initial={{
-        opacity: 0,
-        zIndex: 1,
-      }}
-      whileInView={{
-        opacity: 1,
-        zIndex: 0,
-      }}
-      exit={{
-        opacity: 0,
-        zIndex: 0,
-      }}
-      transition={{ duration: 0.5 }}
-      viewport={{ once: true }}
+    <section
       className="fixed h-screen w-screen overflow-hidden"
     >
       <div className="h-screen min-h-full w-full max-w-full overflow-y-auto overflow-x-hidden overscroll-contain px-8 pb-16 pt-8 @container md:pb-4 md:pt-16">
@@ -39,6 +22,6 @@ export const Container = (props: {
           {props.children}
         </div>
       </div>
-    </m.section>
+    </section>
   );
 };

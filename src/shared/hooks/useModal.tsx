@@ -5,7 +5,6 @@ import {
   useContext,
   useState,
 } from 'react';
-import { AnimatePresence, m } from 'framer-motion';
 
 const ModalContext = createContext((modal: ReactNode) => {});
 
@@ -16,25 +15,18 @@ export const ModalProvider = (props: { children: ReactNode }) => {
   }, [setModal]);
   return (
     <ModalContext.Provider value={setModal as (modal: ReactNode) => {}}>
-      <AnimatePresence
-        initial={true}
-        mode="sync"
-      >
+      
         {props.children}
         {!!modal && (
-          <m.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+          <div
             className="fixed left-0 top-0 z-50 h-screen w-screen
         cursor-pointer overflow-hidden bg-black bg-opacity-25 p-4
         backdrop-blur-sm lg:p-16"
             onClick={resetModal}
           >
             {modal}
-          </m.div>
+          </div>
         )}
-      </AnimatePresence>
     </ModalContext.Provider>
   );
 };

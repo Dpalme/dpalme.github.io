@@ -3,7 +3,6 @@ import linkedinIcon from '#assets/logos/linkedin.min.svg';
 import emailIcon from '#assets/icons/mail.min.svg';
 import documentIcon from '#assets/icons/file_blank_outline.min.svg';
 import CVDocument from '#assets/Diego_Palmerin_CV_EN_2025_Q1.pdf';
-import { m, useReducedMotion } from 'framer-motion';
 
 const SocialLink = (props: {
   link: string;
@@ -29,13 +28,9 @@ const SocialLink = (props: {
 };
 
 export const SocialIcons = () => {
-  const shouldReduceMotion = useReducedMotion();
   return (
-    <m.div
+    <div
       className="fixed bottom-2 right-2 z-20 flex flex-row gap-2"
-      initial={{ y: shouldReduceMotion ? 0 : 0.75, opacity: 0 }}
-      animate={{ y: 0, opacity: 0.75 }}
-      transition={{ duration: 1, delay: 0.3 }}
     >
       <SocialLink
         link="https://github.com/Dpalme"
@@ -58,6 +53,6 @@ export const SocialIcons = () => {
         src={documentIcon}
         alt="CV"
       />
-    </m.div>
+    </div>
   );
 };

@@ -92,7 +92,7 @@ export function HomeAnimation() {
       viewBox="0 0 100 100"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="absolute left-1/2 top-1/2 -z-20 size-3/4 -translate-x-1/2 -translate-y-1/2 !transform-gpu"
+      className="fixed left-1/2 top-1/2 -z-20 size-3/4 -translate-x-1/2 -translate-y-1/2 !transform-gpu"
     >
       <circle
         cx="50"
