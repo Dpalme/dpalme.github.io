@@ -1,0 +1,2 @@
+import{r,j as t}from"./main-B_aTVmcs.js";import{C as e}from"./popIn-CQZ2mF8g.js";import{A as o}from"./aboutContent-BGahnOQO.js";import"./technologies--sIQgiqt.js";function i(){return r.useEffect(()=>{document.documentElement.style.setProperty("--main","241 241 241")},[]),t.jsx(e,{className:"about-bg",containerClass:`min-h-full items-start lg:grid-cols-[2fr_3fr]
+      gap-12 lg:gap-x-32 gap-y-8`,children:t.jsx(o,{})})}export{i as AboutPage,i as default};
